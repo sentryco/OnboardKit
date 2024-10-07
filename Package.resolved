@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "hapticfeedback",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/HapticFeedback",
+      "state" : {
+        "branch" : "main",
+        "revision" : "11e5862c8de13d0362b7e55bce4cd04bdfdeb261"
+      }
+    },
+    {
+      "identity" : "hybridcolor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/HybridColor",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6592be98979ff0201e94f0b7a29e98f3c292715b"
+      }
+    },
+    {
+      "identity" : "pagecontrol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/PageControl",
+      "state" : {
+        "branch" : "main",
+        "revision" : "32c3229550086181728c895bcc63a2377dd0e0ac"
+      }
+    },
+    {
+      "identity" : "pagecontrollerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/PageControllerView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "19b9838b1d51b67aac86544632a46d2ae962cab7"
+      }
+    }
+  ],
+  "version" : 2
+}

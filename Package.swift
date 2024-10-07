@@ -1,23 +1,34 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
     name: "OnboardKit",
+    platforms: [
+      .macOS(.v14),
+      .iOS(.v17)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "OnboardKit",
             targets: ["OnboardKit"]),
     ],
+    dependencies: [
+      .package(url: "https://github.com/sentryco/HybridColor", branch: "main"),
+      .package(url: "https://github.com/sentryco/PageControl", branch: "main"),
+      .package(url: "https://github.com/sentryco/PageControllerView", branch: "main"),
+      .package(url: "https://github.com/sentryco/HapticFeedback", branch: "main"),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "OnboardKit"),
-        .testTarget(
-            name: "OnboardKitTests",
-            dependencies: ["OnboardKit"]),
+      .target(
+         name: "OnboardKit",
+         dependencies: [
+            .product(name: "HybridColor", package: "HybridColor"),
+            .product(name: "PageControl", package: "PageControl"),
+            .product(name: "PageControllerView", package: "PageControllerView"),
+            .product(name: "HapticFeedback", package: "HapticFeedback"),
+         ]),
+      .testTarget(
+         name: "OnboardKitTests",
+         dependencies: ["OnboardKit"])
     ]
 )
