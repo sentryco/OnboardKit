@@ -1,4 +1,4 @@
-[![Swift](https://github.com/sentryco/OnboardKit/actions/workflows/swift.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/swift.yml)
+[![Tests](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml)
 
 # OnboardKit
 
