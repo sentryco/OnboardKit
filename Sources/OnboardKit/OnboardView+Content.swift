@@ -29,7 +29,7 @@ extension OnboardView {
          navView // - Fixme: ⚠️️ doc this line
          #if os(macOS) // Only for macOS
          controlOverlay // Makes sense to have this on a device where swiping isnt abvious
-            .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
+            // .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
          #endif
       }
       #if os(macOS) // Only for macOS
