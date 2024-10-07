@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml)
+
 # OnboardKit
 
 > A clean toolkit for onboarding (iOS and macOS)    
