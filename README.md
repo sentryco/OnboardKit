@@ -27,7 +27,7 @@ OnboardKit is a comprehensive SwiftUI library designed to simplify the creation 
 To integrate OnboardKit into your Xcode project using Swift Package Manager, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/sentryco/OnboardKit.git", branch: "main")
+.package(url: "https://github.com/sentryco/OnboardKit", branch: "main")
 ```
 
 ## Usage
