@@ -1,3 +1,5 @@
+[![Swift](https://github.com/sentryco/OnboardKit/actions/workflows/swift.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/swift.yml)
+
 # OnboardKit
 
 > A clean toolkit for onboarding (iOS and macOS)    
