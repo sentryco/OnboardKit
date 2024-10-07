@@ -1,5 +1,4 @@
 import SwiftUI
-import InterfaceLib
 /**
  * Has "continue-button", "dismiss-button" and "pageControl" 
  * - Abstract: The "pager-navigation-view" used to navigate between the onboarding pages.

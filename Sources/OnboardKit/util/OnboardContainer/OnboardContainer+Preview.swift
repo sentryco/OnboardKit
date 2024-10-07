@@ -13,7 +13,7 @@ import HybridColor
          OnboardContainer(needsOnboarding: $needsOnboarding) { (_ needsOnboarding: Binding<Bool>) in
             OnboardView(
                // - Fixme: ⚠️️ Make a dummy model for preview
-               pageModels: OnboardModel.pageModels,
+               pageModels: OnboardModel.dummyModels,
                onComplete: {
                   // Swift.print("finish onboarding")
                   needsOnboarding.wrappedValue = false // Set when finishing onboarding
@@ -23,7 +23,7 @@ import HybridColor
             Rectangle() // this is where the app main view goes
                .fill(Color.blackOrWhite)
                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//               .edgesIgnoringSafeArea(.all) // Ignore safe area to cover entire screen if needed
+               .edgesIgnoringSafeArea(.all) // Ignore safe area to cover entire screen if needed
          }
       }
    }

@@ -67,13 +67,13 @@ extension ControlOverlay {
             iconName: "chevron.left", // Set the icon name to "chevron.left"
             // - Fixme: ⚠️️ use Metric.accessoryIconSize? 👈
             iconSize: 16, // Set the icon size to 16
-            padding: Measure.margin, // Set the padding to Measure.margin
+            padding: 16, // Set the padding to Measure.margin
             iconColor: style.iconColor, // Set the icon color to white or black
             backgroundColor: style.bgColor, // Set the background color to gray with 0.2 opacity
             strokeColor: style.borderColor, // Set the stroke color to white or black with 0.5 opacity
             strokeWidth: 1 // Set the stroke width to 1
          )
-         .background(isTest ? .green : .clear) // ⚠️️ debug
+//         .background(isTest ? .green : .clear) // ⚠️️ debug
    }
    /**
     * Next btn
@@ -91,12 +91,12 @@ extension ControlOverlay {
             // - Fixme: ⚠️️ Move to a const
             iconName: "chevron.right", // Set the icon name to "chevron.right"
             iconSize: 16, // Set the icon size to 16
-            padding: Measure.margin, // Set the padding to Measure.margin
+            padding: 16, // Set the padding to Measure.margin
             iconColor: style.iconColor, // Set the icon color to white or black
             backgroundColor: style.bgColor, // Set the background color to gray with 0.2 opacity
             strokeColor: style.borderColor, // Set the stroke color to white or black with 0.5 opacity
             strokeWidth: 1 // Set the stroke width to 1
          )
-         .background(isTest ? .orange : .clear) // ⚠️️ debug
+//         .background(isTest ? .orange : .clear) // ⚠️️ debug
    }
 }

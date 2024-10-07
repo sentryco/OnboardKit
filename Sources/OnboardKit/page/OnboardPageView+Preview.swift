@@ -6,7 +6,7 @@ import HybridColor
  * - Fixme: ⚠️️ add debug view? if needed?
  */
 #Preview(traits: .fixedLayout(width: 500, height: 500)) {
-   OnboardPageView(model: OnboardModel.page1)
+   OnboardPageView(model: OnboardModel.dummyPage1)
       .padding()
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .ignoresSafeArea()

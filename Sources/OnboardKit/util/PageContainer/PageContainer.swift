@@ -1,7 +1,7 @@
 import PageControl
 import SwiftUI
 import PageControllerView
-import InterfaceLib
+//import InterfaceLib
 /**
  * Adds a "dot-component" and "swipe-capabilities" etc (iOS and macOS)
  * - Abstract: This container is used to display the onboarding pages

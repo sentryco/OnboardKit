@@ -1,6 +1,4 @@
 import SwiftUI
-import ConstLib
-import InterfaceLib
 import PageControllerView
 /**
  * Content
@@ -17,7 +15,8 @@ extension PageContainer {
    var body: some View {
       containerContent // - Fixme: ⚠️️ docthis line
          .onChange(of: currentPageIndex) { _, _ in // This line triggers an action when currentPageIndex changes.
-            TM.PageView.onboarding.pageView() // Ping telemetry
+            // - Fixme: ⚠️️ move this telemtry call to caller scope
+            // TM.PageView.onboarding.pageView() // Ping telemetry
          }
    }
 }
@@ -87,11 +86,11 @@ extension PageContainer {
     *                it creates an OnboardPageView with the corresponding model.
     *                The tag assigned to each page corresponds to its index in the array,
     *                which helps in tracking the current page during the onboarding process.
-    * - Fixme: ⚠️️ doc more, and mark as iOS only?
+    * - Fixme: ⚠️️ Doc more, and mark as iOS only?
     */
    fileprivate var content: some View {
-      // - Fixme: ⚠️️ add the index code here
-      ForEachElementAndIndex(pageModels) { (_ index: Int, _ element: OnboardModel) in
+      // Iterates over the enumerated array with a closure that takes an index and an element as parameters.
+      ForEach(Array(pageModels.enumerated()), id: \.offset) { (_ index: Int, _ element: OnboardModel) in
          OnboardPageView(model: element) // This line creates an OnboardPageView for each model in the pageModels array.
             .tag(index) // This makes the small indicator? not sure, could be more like id setter
       }

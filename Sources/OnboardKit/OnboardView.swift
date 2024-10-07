@@ -9,6 +9,7 @@ import SwiftUI
  * - Note: Onboarding SwiftUI `iOS` and `macOS`: https://github.com/benjaminsage/iPages
  * - Note: https://github.com/demianturner/DTOnboarding
  * - Fixme: ⚠️️⚠️️ Move the onboardview to a standalone module, maybe even opensource it? 👈
+ * - Fixme: ⚠️️ Add onPageChange callback so we can add telemetry etc 👈
  */
 struct OnboardView: View {
    /**
@@ -32,3 +33,4 @@ struct OnboardView: View {
     */
    var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
 }
+

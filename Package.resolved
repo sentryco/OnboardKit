@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "blurview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/BlurView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d895f85cba3228cc1ee6d6d87511dd13418f35b1"
+      }
+    },
+    {
       "identity" : "hapticfeedback",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sentryco/HapticFeedback",
