@@ -2,7 +2,7 @@
 
 # OnboardKit
 
-> A clean toolkit for onboarding (iOS and macOS)    
+> A clean toolkit for onboarding (iOS & macOS)    
 
 ## Overview
 
