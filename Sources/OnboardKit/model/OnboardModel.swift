@@ -10,22 +10,22 @@ import SwiftUI
  * - Fixme: ⚠️️ Figure out a way to pass in the model into the onboard component. then we could move onboarding to a package?
  * - Fixme: ⚠️️ Add a demo model that can be used in preview in the package etc
  */
-struct OnboardModel {
+public struct OnboardModel {
    /**
     * Page title
     * - Description: The title of the page that is displayed to the user during the onboarding process.
     */
-   let title: String
+   public let title: String
    /**
     * Page description
     * - Description: The detailed explanation or information about the page that is displayed to the user during the onboarding process.
     */
-   let description: String
+   public let description: String
    /**
     * The page actions
     * - Description: The actions that can be performed on the page. Each action is represented by a button with a title and an associated function that is executed when the button is clicked.
     */
-   let actions: [OnboardAction]
+   public let actions: [OnboardAction]
 }
 // Bulk
-typealias OnboardModels = [OnboardModel]
+public typealias OnboardModels = [OnboardModel]

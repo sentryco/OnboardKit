@@ -9,7 +9,7 @@ extension OnboardModel {
     *                It takes an ObservableSheet as a parameter and does not return any value.
     * - Fixme: ⚠️️ Make observableSheet optional, so that we can trigger other things with actions as well, like payment action
     */
-   typealias OnboardModelAction = (_ observableSheet: ObservableSheet?) -> Void
+   public typealias OnboardModelAction = (_ observableSheet: ObservableSheet?) -> Void
    /**
     * Action for the onboarding view
     * - Description: This typealias defines a type for actions that can be performed on the onboarding view. 
@@ -20,7 +20,7 @@ extension OnboardModel {
     * - Fixme: ⚠️️ Use a struct 👈 move to own file? maybe
     * - Fixme: ⚠️️ maybe rename this? as copilot for suggestions?
     */
-   typealias OnboardAction = (
+   public typealias OnboardAction = (
       buttonTitle: String, // Title of the button
       action: OnboardModelAction? // Callback for the button
    )
