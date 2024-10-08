@@ -65,7 +65,7 @@ extension View {
     * - Returns: The view with the sheet modifier applied.
     */
    @ViewBuilder
-   public func promptSheet<Content>(isFullScreen: Bool, isShowing: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View where Content: View { // - Fixme: ⚠️️ can we just return Content here?
+   internal func promptSheet<Content>(isFullScreen: Bool, isShowing: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View where Content: View { // - Fixme: ⚠️️ can we just return Content here?
       if isFullScreen {
          #if os(iOS)
          self.fullScreenCover(isPresented: isShowing) { // Shows type-view
