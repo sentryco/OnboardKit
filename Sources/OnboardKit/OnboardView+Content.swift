@@ -23,7 +23,7 @@ extension OnboardView {
     *                provides navigation buttons for users to manually navigate through the onboarding process.
     * - Note: The translucency is done in the `OnboardContainer`
     */
-   var body: some View {
+   public var body: some View {
       ZStack {
          pageContainer // Onboard-page
          navView // - Fixme: ⚠️️ doc this line

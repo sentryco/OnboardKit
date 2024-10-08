@@ -17,6 +17,7 @@ extension PageContainer {
          .onChange(of: currentPageIndex) { _, _ in // This line triggers an action when currentPageIndex changes.
             // - Fixme: ⚠️️ move this telemtry call to caller scope
             // TM.PageView.onboarding.pageView() // Ping telemetry
+            Swift.print("currentPageIndex: \(currentPageIndex)")
          }
    }
 }

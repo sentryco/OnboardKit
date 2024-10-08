@@ -11,7 +11,7 @@ import SwiftUI
  * - Fixme: ⚠️️⚠️️ Move the onboardview to a standalone module, maybe even opensource it? 👈
  * - Fixme: ⚠️️ Add onPageChange callback so we can add telemetry etc 👈
  */
-struct OnboardView: View {
+public struct OnboardView: View {
    /**
     * The current index of the onboarding page being displayed.
     * - Abstract: Desired page index to jump to
@@ -31,6 +31,6 @@ struct OnboardView: View {
     *                It can be used to perform any necessary actions or updates after the user has finished the onboarding.
     * - Fixme: ⚠️️⚠️️ We should animate the transition to hide onboarding, a quick 0.2 alpha outro, similar to how the transition for lockscreen works for iPhone etc
     */
-   var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
+   public var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
 }
 

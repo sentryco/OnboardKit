@@ -14,8 +14,8 @@ import HybridColor
          NavView( // This line initializes the NavView with the specified number of pages and current page bindings.
             numOfPages: 3,
             currentPage: $currentPage,
-            onActionBtnPress: {},
-            onDismissBtnPress: {}
+            onActionBtnPress: { Swift.print("action") },
+            onDismissBtnPress: { Swift.print("dismiss") } 
          )
       }
    }

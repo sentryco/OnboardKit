@@ -10,7 +10,7 @@ import PageControllerView
  * - Note: Background of this covers the entire device
  * - Note: Background behind the dot indicators: `.indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))` // shows hides background beind dots (less is more) ref: https://developer.apple.com/documentation/swiftui/pagetabviewstyle
  * - Note: This container reduce complexity in onboard-view
- * - Note: We don't need preview for this
+ * - Note: We don't need preview for this, debug with `OnboardView+Preview` instead
  * - Note: This container is added to `OnboardView` as a subview
  * - Fixme: ⚠️️ Move this out of the util folder? and one level up instead?
  */

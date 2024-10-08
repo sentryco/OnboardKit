@@ -10,7 +10,7 @@ extension OnboardView {
     *                If the current page is the last one, it triggers the completion of the onboarding
     *                process and dismisses the onboarding view.
     */
-   func goToNextPage() {
+   public func goToNextPage() {
       withAnimation { // Adds the page transition anim
          if currentPageIndex + 1 < pageModels.count {
             currentPageIndex += 1 // itterate by one
@@ -29,7 +29,7 @@ extension OnboardView {
     *                it decreases the current page index by 1,
     *                effectively moving the user back one step in the onboarding process.
     */
-   func goToPrevPage() {
+   public func goToPrevPage() {
       withAnimation { // Adds the page transition anim
          if currentPageIndex > 0 { // If the current page index is less than or equal to 0, return
             currentPageIndex -= 1 // Set the index to the current page index minus 1

@@ -11,10 +11,10 @@ import HybridColor
       let numOfPages = 4
       var body: some View {
          ControlOverlay(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
-            // print("Prev button pressed")
+            Swift.print("Prev button pressed")
             currentPage -= 1
          }, onNextButtonPress: {
-            // print("Next button pressed")
+            Swift.print("Next button pressed")
             currentPage += 1
          })
          .padding()
