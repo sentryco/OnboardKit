@@ -11,7 +11,7 @@ import SwiftUI
  *                This allows for easy management of sheet presentation state within an application.
  * - Fixme: ⚠️️ Could we make all this an enum?
  * - Fixme: ⚠️️ Write about this in swiftui tips, include priv / public etc
- * - Fixme: ⚠️️ Why is this useful? what uses it?
+ * - Fixme: ⚠️️ Why is this useful? what uses it? What does it solve? can we do this simpler?
  */
 public class ObservableSheet: ObservableObject {
    /**
@@ -24,7 +24,7 @@ public class ObservableSheet: ObservableObject {
    /**
     * ref to sheeet to show
     * - Description: This property holds the view that is to be presented as a sheet. When a new view is assigned to this property, the 'isPresenting' property is automatically updated to reflect whether a sheet is currently being presented or not.
-    * - Fixme: ⚠️️ we can move this and the bool into an observable obbject, easier to move around that way, do it after it works, see blog post about it etc
+    * - Fixme: ⚠️️ We can move this and the bool into an observable obbject, easier to move around that way, do it after it works, see blog post about it etc
     */
    @Published public var sheet: AnyView? {  
       didSet { isPresenting = sheet != nil } // ⚠️️ hack to only needing to set sheet etc

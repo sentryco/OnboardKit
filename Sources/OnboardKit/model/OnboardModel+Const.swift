@@ -18,7 +18,7 @@ extension OnboardModel {
     * - Note: Alternative name: `OnBoardButton`, `OnboardActionItem`
     * - Fixme: ⚠️️ Add id again later etc? or use int etc?
     * - Fixme: ⚠️️ Use a struct 👈 move to own file? maybe
-    * - Fixme: ⚠️️ maybe rename this? as copilot for suggestions?
+    * - Fixme: ⚠️️ Maybe rename this? as copilot for suggestions?
     */
    public typealias OnboardAction = (
       buttonTitle: String, // Title of the button

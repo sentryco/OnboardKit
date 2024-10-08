@@ -7,9 +7,9 @@ extension OnboardModel {
     * Dummy models
     */
    public static let dummyModels: OnboardModels = [
-      dummyPage1, // Welcome
-      dummyPage2, // Privacy
-      dummyPage3 // Payment
+      dummyPage1, // Welcome page
+      dummyPage2, // Privacy page
+      dummyPage3 // Payment page
    ]
 }
 /**
@@ -17,7 +17,7 @@ extension OnboardModel {
  */
 extension OnboardModel {
    /**
-    * Welcome
+    * Welcome page
     */
    static let dummyPage1: OnboardModel = {
       .init(
@@ -27,22 +27,34 @@ extension OnboardModel {
       )
    }()
    /**
-    * Privacy
+    * Privacy page
     */
    static let dummyPage2: OnboardModel = {
-      .init(
+       
+      return .init(
          title: "Privacy",
          description: "Understanding your rights is important",
          actions: [
             (
                buttonTitle: "Show privacy agreement",
-               action: { _ in Swift.print("Perform action here" ) }
+               action: { (_ observableSheet: ObservableSheet?) in // attach action to button
+                  // Swift.print("prompt autofill - show steps to complete autofill")
+                  observableSheet?.sheet = {
+                     AnyView(
+                        Button(action: {
+                           observableSheet?.isPresenting = false // Dismiss the sheet
+                        }, label: {
+                           Text("Dismiss")
+                        })
+                     )
+                  }()
+               }
             )
          ]
       )
    }()
    /**
-    * Payment
+    * Payment page
     */
    static let dummyPage3: OnboardModel = {
       .init(title: "Payment",

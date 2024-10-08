@@ -98,6 +98,7 @@ OnboardKit is released under the MIT License. See [LICENSE](LICENSE) for details
 
 ## TODO: 
 - [ ] Fix bug crashing preview 👈
-- [ ] Clean up code
+- [ ] Clean up code 👈
 - [ ] Add gif for iOS and macOS
 - [ ] Add modal sheet example
+- [ ] Enabele isTest in the scope of this package

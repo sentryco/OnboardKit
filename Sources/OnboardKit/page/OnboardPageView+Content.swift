@@ -1,6 +1,4 @@
-//import InterfaceLib
 import SwiftUI
-//import ConstLib
 /**
  * Content
  * - Fixme: ⚠️️ Maybe make description have the same padding as action button
@@ -44,7 +42,7 @@ extension OnboardPageView {
     * Top title
     * - Description: This section of the code generates the title text for the onboarding view. 
     *                The title is fetched from the model and displayed on the screen.
-    * - Fixme: ⚠️️ move width value to const?
+    * - Fixme: ⚠️️ Move width value to const?
     */
    @ViewBuilder
    fileprivate var titleTextView: some View {
