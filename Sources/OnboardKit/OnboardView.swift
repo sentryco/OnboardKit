@@ -19,12 +19,12 @@ public struct OnboardView: View {
     * - Note: We can debug this by changing the value
     * - Fixme: ⚠️️ Maybe set this in the init? 👈
     */
-   @State var currentPageIndex: Int = 0 // Set initial state
+   @State public var currentPageIndex: Int = 0 // Set initial state
    /**
     * Array of page models for onboarding
     * - Description: This is an array of models that represent each page in the onboarding process. Each model contains the data necessary to populate the content of its corresponding onboarding page.
     */
-   let pageModels: OnboardModels
+   public let pageModels: OnboardModels
    /**
     * Callback signature for when onboarding completes
     * - Description: This is a callback that gets triggered when the onboarding process is completed. 
