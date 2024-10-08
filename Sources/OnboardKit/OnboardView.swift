@@ -35,7 +35,7 @@ public struct OnboardView: View {
    /**
     * Needed when class is public
     */
-   public init(currentPageIndex: Int, pageModels: OnboardModels, onComplete: OnOnboardingComplete? = nil) {
+   public init(currentPageIndex: Int = 0, pageModels: OnboardModels, onComplete: OnOnboardingComplete? = nil) {
       self.currentPageIndex = currentPageIndex
       self.pageModels = pageModels
       self.onComplete = onComplete
