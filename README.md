@@ -4,6 +4,8 @@
 
 > A clean toolkit for onboarding (iOS & macOS)    
 
+<img width="355" alt="img" src="https://s11.gifyu.com/images/SBlzV.gif">
+
 ## Overview
 
 OnboardKit is a comprehensive SwiftUI library designed to simplify the creation of onboarding experiences for iOS and macOS applications. It provides a range of customizable components that can be easily integrated and adapted to fit the branding and functional requirements of your app.
@@ -97,9 +99,10 @@ Contributions are welcome! Please fork the repository and submit pull requests w
 OnboardKit is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## TODO: 
-- [ ] Fix bug crashing preview 👈
-- [ ] Clean up code 👈
-- [ ] Add gif for iOS and macOS
-- [ ] Add modal sheet example
-- [ ] Enabele isTest in the scope of this package
-- [ ] Add note regarding implemnting a lockable view with onboardview. How the structure will look etc
+- Fix bug crashing preview ✅
+- Clean up code
+- Add gif for iOS ✅
+- Add gif for macOS 
+- Add modal sheet example
+- Enabele isTest in the scope of this package
+- Add note regarding implemnting a lockable view with onboardview. How the structure will look etc
