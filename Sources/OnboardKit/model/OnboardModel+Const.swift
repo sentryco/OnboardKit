@@ -8,6 +8,7 @@ extension OnboardModel {
     * - Description: This typealias defines a type for actions that can be performed in the onboarding model. 
     *                It takes an ObservableSheet as a parameter and does not return any value.
     * - Fixme: ⚠️️ Make observableSheet optional, so that we can trigger other things with actions as well, like payment action
+    * - Fixme: ⚠️️ ask copilot for a better name
     */
    public typealias OnboardModelAction = (_ observableSheet: ObservableSheet?) -> Void
    /**
@@ -17,7 +18,7 @@ extension OnboardModel {
     * - Important: ⚠️️ Make sure button-title must be unique as it's used for for-each id
     * - Note: Alternative name: `OnBoardButton`, `OnboardActionItem`
     * - Fixme: ⚠️️ Add id again later etc? or use int etc?
-    * - Fixme: ⚠️️ Use a struct 👈 move to own file? maybe
+    * - Fixme: ⚠️️⚠️️⚠️️ Use a struct 👈 move to own file? maybe yes
     * - Fixme: ⚠️️ Maybe rename this? as copilot for suggestions?
     */
    public typealias OnboardAction = (

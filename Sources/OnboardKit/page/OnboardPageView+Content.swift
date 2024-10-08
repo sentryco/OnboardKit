@@ -1,6 +1,7 @@
 import SwiftUI
 /**
  * Content
+ * - Description: Each page consists of a title, description, button column
  * - Fixme: ⚠️️ Maybe make description have the same padding as action button
  */
 extension OnboardPageView {
@@ -33,9 +34,9 @@ extension OnboardPageView {
          alignment: .center, // Center horisontally
          spacing: Self.spacing
       ) {
-         titleTextView // Top title
-         descriptionTextView // Top description
-         actionbuttons // Center buttons
+         titleTextView // Top title (top)
+         descriptionTextView // Top description (aligned under title)
+         actionButtons // Center buttons (centered vertically)
       } // End of vstack
    }
    /**
@@ -79,8 +80,8 @@ extension OnboardPageView {
       }
    }
    /**
-    * Center action-buttons
-    * - Description: This section of the code generates the action buttons for the onboarding view. 
+    * Create action-buttons (stacked from center vertically)
+    * - Description: This section of the code generates the action buttons for the onboarding view.
     *                Each button corresponds to an action defined in the model.
     *                When a button is clicked, it executes the associated action's closure,
     *                passing in the observableSheet as a parameter.
@@ -88,19 +89,20 @@ extension OnboardPageView {
     * - Fixme: ⚠️️ Seems like adding type to actions isn't straight forward
     */
    @ViewBuilder
-   fileprivate var actionbuttons: some View {
+   fileprivate var actionButtons: some View {
       if let actions = model?.actions { // buttons in the center
          VStack(spacing: Self.spacing) { // needed for custom spacing between buttons
-            ForEach(Array(actions.enumerated()), id: \.offset) { (_: Int, _ action: OnboardModel.OnboardAction) in // horizontal list of buttons // ForEach(actions, id: \.self.buttonTitle) { action in // horizontal list of buttons
-               // var view = self // ⚠️️ hack to get self to work with inout
+            let array = Array(actions.enumerated())
+            ForEach(array, id: \.offset) { (i: Int, _ action: OnboardModel.OnboardAction) in // horizontal list of buttons // ForEach(actions, id: \.self.buttonTitle) { action in // horizontal list of buttons
                Button(action.buttonTitle) { // Creates a button with the action's title
                   action.action?(observableSheet) // Executes the action's closure with the observableSheet parameter
                }
                .actionButtonStyle() // Applies the action button style
-               self.accessibilityIdentifier("pageButton") // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
+               .accessibilityIdentifier("pageButton") // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
                // .background(isTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
             }
          }
       }
+      
    }
 }

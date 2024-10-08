@@ -23,10 +23,14 @@ public class ObservableSheet: ObservableObject {
    @Published public var isPresenting: Bool = false
    /**
     * ref to sheeet to show
-    * - Description: This property holds the view that is to be presented as a sheet. When a new view is assigned to this property, the 'isPresenting' property is automatically updated to reflect whether a sheet is currently being presented or not.
+    * - Description: This property holds the view that is to be presented as a sheet. 
+    *                When a new view is assigned to this property, the 'isPresenting' property is 
+    *                automatically updated to reflect whether a sheet is currently being presented or not.
     * - Fixme: ⚠️️ We can move this and the bool into an observable obbject, easier to move around that way, do it after it works, see blog post about it etc
     */
    @Published public var sheet: AnyView? {  
-      didSet { isPresenting = sheet != nil } // ⚠️️ hack to only needing to set sheet etc
+      didSet {
+         isPresenting = sheet != nil
+      } // ⚠️️ hack to only needing to set sheet etc
    }
 }

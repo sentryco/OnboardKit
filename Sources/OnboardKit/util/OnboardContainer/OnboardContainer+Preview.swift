@@ -5,6 +5,7 @@ import HybridColor
  * Preview for onboarding (iOS and macOS) (Dark-mode)
  * - Description: This section previews the OnboardContainer in dark mode for both iOS and macOS. It helps in visualizing the appearance and functionality of the onboarding process with a translucent background.
  * - Note: This shows the translucent background that works in preview
+ * - Note: You can also put the needOnboarding in a rebinder closure that changes userdefault
  */
 #Preview(traits: .fixedLayout(width: 680, height: 440)) {
    struct DebugView: View {
@@ -33,15 +34,3 @@ import HybridColor
    #endif
    .environment(\.colorScheme, .dark)
 }
-//let _ = {
-//   PrefsStore.$shouldPresentOnboarding.wrappedValue = true // ⚠️️ Reset to test onboarding
-//   // Swift.print("PrefsStore.$shouldPresentOnboarding.wrappedValue: \(PrefsStore.$shouldPresentOnboarding.wrappedValue)")
-//}()
-
-//         var needsOnboarding: Binding<Bool> { // We rebind user-default
-//            .init {
-//               PrefsStore.$shouldPresentOnboarding.wrappedValue
-//            } set: { bool in
-//               PrefsStore.$shouldPresentOnboarding.wrappedValue = bool
-//            }
-//         }

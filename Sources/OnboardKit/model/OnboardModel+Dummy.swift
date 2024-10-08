@@ -28,10 +28,10 @@ extension OnboardModel {
    }()
    /**
     * Privacy page
+    * - Note: Has example regarding how Sheet prompting works
     */
    static let dummyPage2: OnboardModel = {
-       
-      return .init(
+       .init(
          title: "Privacy",
          description: "Understanding your rights is important",
          actions: [
@@ -62,7 +62,7 @@ extension OnboardModel {
             actions: [
                (
                   buttonTitle: "Monthly $5.99", // Button title for the action
-                  action: { _ in Swift.print("buy1") } // No action for this button
+                  action: nil/*{ _ in Swift.print("buy1") }*/ // No action for this button
                ),
                (
                   buttonTitle: "Yearly $49.99", // Button title for the action
