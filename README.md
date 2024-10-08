@@ -102,3 +102,4 @@ OnboardKit is released under the MIT License. See [LICENSE](LICENSE) for details
 - [ ] Add gif for iOS and macOS
 - [ ] Add modal sheet example
 - [ ] Enabele isTest in the scope of this package
+- [ ] Add note regarding implemnting a lockable view with onboardview. How the structure will look etc

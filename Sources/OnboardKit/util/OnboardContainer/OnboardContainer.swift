@@ -25,11 +25,13 @@ public struct OnboardContainer<Foreground: View, Background: View>: View {
     */
    @Binding var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
    /**
-    * Onboarding cover
+    * Onboarding foreground cover
+    * - Description: This covers the app beneath. We use a semi translucent background so that the app behind can be slightly visible
     */
    let foreground: ForegroundClosure
    /**
     *  App main view
+    *  - Description: This is where the rest of your app concides
     */
    let background: BackgroundClosure
    /**
