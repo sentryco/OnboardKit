@@ -26,6 +26,14 @@ public struct OnboardModel {
     * - Description: The actions that can be performed on the page. Each action is represented by a button with a title and an associated function that is executed when the button is clicked.
     */
    public let actions: [OnboardAction]
+   /**
+    * Init (needed to support public scope)
+    */
+   public init(title: String, description: String, actions: [OnboardAction]) {
+      self.title = title
+      self.description = description
+      self.actions = actions
+   }
 }
 // Bulk
 public typealias OnboardModels = [OnboardModel]
