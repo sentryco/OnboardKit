@@ -9,7 +9,7 @@ extension OnboardContainer {
     * - Description: This is the main body of the OnboardContainer. It consists of a ZStack that contains the main app view and, if onboarding is needed, a translucent underlay and the onboarding view. The state of 'needsOnboarding' is monitored and any changes are reflected in the PrefsStore.
     * - Note: `scenePhase` handles background mode etc
     */
-   var body: some View {
+   public var body: some View {
       ZStack { // This ZStack layers the main app view with the onboarding components when needed.
          background() // Main view of the app
          if $needsOnboarding.wrappedValue { // if needs onboarding add the onboarding views

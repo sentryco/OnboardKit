@@ -12,7 +12,7 @@ import SwiftUI
  * - Fixme: ⚠️️ Move typealias to const ext?
  * - Fixme: ⚠️️ Maybe move this out of utils folder?
  */
-struct OnboardContainer<Foreground: View, Background: View>: View {
+public struct OnboardContainer<Foreground: View, Background: View>: View {
    /**
     * The state is used to determine if the onboarding is needed.
     * - Description: This binding variable is used to control the visibility of the onboarding view.
@@ -42,7 +42,7 @@ struct OnboardContainer<Foreground: View, Background: View>: View {
     *   - background: App main view
     *   - needsOnboarding: Use rebound user-default property
     */
-   init(needsOnboarding: Binding<Bool>, @ViewBuilder foreground: @escaping ForegroundClosure, @ViewBuilder background: @escaping BackgroundClosure) {
+   public init(needsOnboarding: Binding<Bool>, @ViewBuilder foreground: @escaping ForegroundClosure, @ViewBuilder background: @escaping BackgroundClosure) {
       self._needsOnboarding = needsOnboarding
       self.foreground = foreground
       self.background = background

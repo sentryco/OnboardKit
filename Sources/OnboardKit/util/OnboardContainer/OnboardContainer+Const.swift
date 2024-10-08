@@ -6,9 +6,9 @@ extension OnboardContainer {
    /**
     * - Fixme: ⚠️️ Add doc
     */
-   typealias ForegroundClosure = (_ needsOnboarding: Binding<Bool>) -> Foreground
+   public typealias ForegroundClosure = (_ needsOnboarding: Binding<Bool>) -> Foreground
    /**
     * - Fixme: ⚠️️ Add doc
     */
-   typealias BackgroundClosure = () -> Background
+   public typealias BackgroundClosure = () -> Background
 }
