@@ -6,7 +6,7 @@ extension OnboardModel {
    /**
     * Dummy models
     */
-   static let dummyModels: OnboardModels = [
+   public static let dummyModels: OnboardModels = [
       dummyPage1, // Welcome
       dummyPage2, // Privacy
       dummyPage3 // Payment
