@@ -14,17 +14,15 @@
 
 ## Features
 
-- **Page Container**: Utilizes `PageContainer` to manage onboarding pages with swipe capabilities and dot indicators for navigation.
-  - iOS: Implements a `TabView` with customizable appearance.
-  - macOS: Uses a `PageControllerView` for managing page transitions.
-  
-- **Navigation View**: `NavView` includes navigation controls like a continue button, dismiss button, and page control, enhancing the user navigation experience through the onboarding flow.
-
-- **Observable Sheet**: Manage modal sheets dynamically with `ObservableSheet`, which allows for presenting and dismissing views based on user actions.
-
-- **Customizable Content**: Each onboarding page can be customized with titles, descriptions, and action buttons that are defined in the `OnboardPageView`.
-
-- **Styling and Accessibility**: Extensive support for custom styles and accessibility features, ensuring that the onboarding process is inclusive and adaptable to various user needs.
+- Dark / Light mode support 
+- Haptic feedback (iPhone only)
+- Subdued translucent background (app as background)
+- Prompt sheet via button actions (from bottom for iOS, from top for macOS)
+- Add custom steps via sheet (Great for aditional onboarding customizations)
+- BYO page model (easily create model via array of tuples)
+- Multiplatform iOS and macOS (iPad / iPhone / Mac)
+- Left / right chevron buttons are added for macOS (Expected UX)
+- Panning support for macOS (navigate left / right)
 
 ## Installation
 
