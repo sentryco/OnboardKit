@@ -32,5 +32,13 @@ public struct OnboardView: View {
     * - Fixme: ⚠️️⚠️️ We should animate the transition to hide onboarding, a quick 0.2 alpha outro, similar to how the transition for lockscreen works for iPhone etc
     */
    public var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
+   /**
+    * Needed when class is public
+    */
+   public init(currentPageIndex: Int, pageModels: OnboardModels, onComplete: OnOnboardingComplete? = nil) {
+      self.currentPageIndex = currentPageIndex
+      self.pageModels = pageModels
+      self.onComplete = onComplete
+   }
 }
 
