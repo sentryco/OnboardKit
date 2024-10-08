@@ -8,7 +8,9 @@
 
 ## Overview
 
-OnboardKit is a comprehensive SwiftUI library designed to simplify the creation of onboarding experiences for iOS and macOS applications. It provides a range of customizable components that can be easily integrated and adapted to fit the branding and functional requirements of your app.
+- OnboardKit is a comprehensive SwiftUI library designed to simplify the creation of onboarding experiences for iOS and macOS applications. 
+- Supply your own page models with title, description and buttons. 
+- Customize the sheet content with your own views. Sheets are prompted via button actions. Button actions can also trigger other actions you wish to add.
 
 ## Features
 
@@ -41,30 +43,33 @@ import SwiftUI
 import OnboardKit
 
 @main
-struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+struct MyAppIOSApp: App {
+   var body: some Scene {
+      WindowGroup {
+         ContentView()
+      }
+   }
 }
 struct ContentView: View {
-    @State var needsOnboarding: Bool = true
-    var body: some View {
-        OnboardContainer(needsOnboarding: $needsOnboarding) { (_ needsOnboarding: Binding<Bool>) in
-            OnboardView(
-                pageModels: OnboardModel.dummyModels, // point to your own onboarding models here
-                onComplete: {
-                    needsOnboarding.wrappedValue = false
-                }
-            )
-        } background: {
+   @State var needsOnboarding: Bool = true
+   var body: some View {
+      OnboardContainer(needsOnboarding: $needsOnboarding) { (_ needsOnboarding: Binding<Bool>) in
+         OnboardView(
+            pageModels: OnboardModel.dummyModels, // point to your own onboarding models here
+            onComplete: {
+               needsOnboarding.wrappedValue = false
+            }
+         )
+      } background: {
+         ZStack {
             Rectangle() // this is where the app main view goes
-                .fill(Color.blackOrWhite) // light or dark mode
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
-        }
-    }
+               .fill(Color.init(light: Color.lightGray.lighter(amount: 0.8), dark: Color.darkGray.darker(amount: 0.8))) // light or dark mode
+            Text("Your app goes here")
+         }
+         .frame(maxWidth: .infinity, maxHeight: .infinity)
+         .edgesIgnoringSafeArea(.all)
+      }
+   }
 }
 ```
       
