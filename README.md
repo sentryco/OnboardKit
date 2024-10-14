@@ -108,4 +108,5 @@ OnboardKit is released under the MIT License. See [LICENSE](LICENSE) for details
 - Add gif for macOS 
 - Add modal sheet example
 - Enabele isTest in the scope of this package
+- Add high level doc regarding the simplistic approch with models that can have btns, title, decription, and popover sheet, and how this ultimatly makes making multipleplatform onbiarding a breeze, yet makes it possible to build powerful and complex onboarding experiences, while leaving the nitty gritty to this kit
 - Add note regarding implemnting a lockable view with onboardview. How the structure will look etc
