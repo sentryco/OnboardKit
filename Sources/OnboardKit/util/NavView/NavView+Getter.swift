@@ -1,6 +1,4 @@
 import SwiftUI
-//import InterfaceLib
-//import ConstLib
 /**
  * Getter
  */

@@ -4,8 +4,11 @@ import SwiftUI
  * - Fixme: ⚠️️ figure out how to inject consts somehow. ask copilot etc
  */
 extension NavView {
+   // fix: add doc
    static let skipButtonTitle: String = "Skip" // Const.Onboarding.skipButtonTitle
+   // fix: add doc
    static let continueButtonTitle: String = "Continue" // Const.Onboarding.continueButtonTitle
+   // fix: add doc
    static let finishButtonTitle: String = "Finish" // Const.Onboarding.finishButtonTitle
    
    /**

@@ -49,8 +49,8 @@ extension OnboardView {
     */
    fileprivate var pageContainer: some View {
       PageContainer(
-         currentPageIndex: $currentPageIndex, // index of the current page
-         pageModels: self.pageModels // array of page models
+         currentPageIndex: $currentPageIndex, // Index of the current page
+         pageModels: self.pageModels // Array of page models
       )
       // .background(isTest ? Color.brown : .clear)
    }

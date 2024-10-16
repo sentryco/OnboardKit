@@ -6,34 +6,35 @@ import HybridColor
  * - Note: Used in many places that has an Icon
  * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc
  * - Fixme: ⚠️️ Doc each variable
+ * - Fixme: ⚠️️ Rename to something else
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
    /**
-    * - Description: The name of the icon to display.
+    * The name of the icon to display.
     */
    fileprivate let iconName: String
    /**
-    * - Description: The size of the icon to display.
+    * The size of the icon to display.
     */
    fileprivate let iconSize: CGFloat
    /**
-    * - Description: The color of the icon to display.
+    * The color of the icon to display.
     */
    fileprivate let iconColor: Color
    /**
-    * - Description: The color of the background to display.
+    * The color of the background to display.
     */
    fileprivate let backgroundColor: Color
    /**
-    * - Description: The color of the stroke to display.
+    * The color of the stroke to display.
     */
    fileprivate let strokeColor: Color
    /**
-    * - Description: The width of the stroke to display.
+    * The width of the stroke to display.
     */
    fileprivate let strokeWidth: CGFloat
    /**
-    * - Description: The padding to use for the icon.
+    * The padding to use for the icon.
     */
    fileprivate let padding: CGFloat
 }

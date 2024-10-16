@@ -32,6 +32,7 @@ extension ControlOverlay {
    /**
     * Style
     * - Fixme: ⚠️️ rename to buttonStyle? 👈
+    * - Fixme: ⚠️️ Move type to typealias?
     */
    fileprivate var style: (iconColor: Color, bgColor: Color, borderColor: Color) {
       let iconColor = Color.whiteOrBlack
@@ -73,6 +74,7 @@ extension ControlOverlay {
             strokeColor: style.borderColor, // Set the stroke color to white or black with 0.5 opacity
             strokeWidth: 1 // Set the stroke width to 1
          )
+         // fix: add isTest as internal var etc
 //         .background(isTest ? .green : .clear) // ⚠️️ debug
    }
    /**
@@ -97,6 +99,6 @@ extension ControlOverlay {
             strokeColor: style.borderColor, // Set the stroke color to white or black with 0.5 opacity
             strokeWidth: 1 // Set the stroke width to 1
          )
-//         .background(isTest ? .orange : .clear) // ⚠️️ debug
+         // .background(isTest ? .orange : .clear) // ⚠️️ debug
    }
 }

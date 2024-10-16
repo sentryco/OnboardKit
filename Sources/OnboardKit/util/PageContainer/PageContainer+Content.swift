@@ -57,8 +57,15 @@ extension PageContainer {
    #endif // macOS doesn't support tab-view yet, so we just fade in each view etc
    /**
     * PageControllerView (macOS)
-    * - Description: This is the PageControllerView for macOS that displays the onboarding pages with swipe capabilities. It also includes a small indicator to show the current page in the onboarding process.
-    * - Description: This method configures the `PageControllerView` for macOS. It converts the indices of `pageModels` into an array of strings, sets up the `PageControllerView` with the data source, current page index binding, and effect view configuration, and defines a closure to create the view for each page. The closure uses the identifier string to get the index of the page model, then returns a view for that page model.
+    * - Abstract: This is the PageControllerView for macOS that displays the onboarding 
+    *             pages with swipe capabilities. It also includes a small indicator to show 
+    *             the current page in the onboarding process.
+    * - Description: This method configures the `PageControllerView` for macOS. It converts 
+    *                the indices of `pageModels` into an array of strings, sets up the 
+    *                `PageControllerView` with the data source, current page index binding, 
+    *                and effect view configuration, and defines a closure to create the view 
+    *                for each page. The closure uses the identifier string to get the index 
+    *                of the page model, then returns a view for that page model.
     */
    #if os(macOS)
    fileprivate var pageController: some View {

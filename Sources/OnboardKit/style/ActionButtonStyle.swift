@@ -10,7 +10,9 @@ import HybridColor
  */
 internal struct ActionButtonStyle: ButtonStyle {
    /**
-    * body
+    * Provides the visual representation of the button style.
+    * - Description: This method is responsible for defining the appearance and interactive behavior of buttons that adopt the ActionButtonStyle.
+    * - Parameter configuration: The configuration of the button, which provides the label and other properties needed to style the button.
     */
    internal func makeBody(configuration: Configuration) -> some View {
       configuration.label
@@ -27,7 +29,7 @@ internal struct ActionButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Convenient
-    * - Fixme: ⚠️️ make this a var
+    * - Fixme: ⚠️️ make this a var?
     */
    internal func actionButtonStyle() -> some View {
       let style = ActionButtonStyle()
@@ -40,6 +42,7 @@ extension Button {
 fileprivate struct ActionButtonViewModifier: ViewModifier {
    /**
     * body
+    * - Parameter content: The content view that will be modified by this view modifier.
     * - Fixme: ⚠️️ padding should be done in the caller?
     */
    func body(content: Content) -> some View {
@@ -86,7 +89,7 @@ extension View {
       .padding(.horizontal)
       #endif
    }()
-   return ZStack {
+   return ZStack { // fix: add PreviewContainer as a debug helper etc
       Rectangle() // A rectangle to fill the background
          .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color
          .ignoresSafeArea(.all) // Ignores the safe area on all sides

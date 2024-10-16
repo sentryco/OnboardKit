@@ -1,7 +1,6 @@
 import PageControl
 import SwiftUI
 import PageControllerView
-//import InterfaceLib
 /**
  * Adds a "dot-component" and "swipe-capabilities" etc (iOS and macOS)
  * - Abstract: This container is used to display the onboarding pages
@@ -16,7 +15,8 @@ import PageControllerView
  */
 struct PageContainer: View {
    /**
-    * - Description: The PageContainer struct is a view that displays the onboarding pages with a dot component and swipe capabilities. It also keeps track of the current page index in the onboarding process.
+    * - Description: The PageContainer struct is a view that displays the onboarding pages with a dot component and swipe capabilities.
+    *                It also keeps track of the current page index in the onboarding process.
     */
    @Binding var currentPageIndex: Int
    /**

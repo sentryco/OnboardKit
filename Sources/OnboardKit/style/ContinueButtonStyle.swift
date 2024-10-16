@@ -61,7 +61,7 @@ extension Button {
  * Preview
  */
 #Preview(traits: .fixedLayout(width: 340, height: 300)) {
-   // the closure is a mechanism to show the two states
+   // The closure is a mechanism to show the two states
    let closure: (_ isEnabled: Bool) -> some View = { isEnabled in
       Button(action: {
          Swift.print("action")

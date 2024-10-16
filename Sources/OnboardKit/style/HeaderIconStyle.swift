@@ -8,6 +8,7 @@ import HybridColor
  * - Note: Used for back and more button in header and in onboarding
  * - Note: Alternative name: `HeaderIconButtonStyle`
  * - Fixme: ⚠️️ doc each variable
+ * - Fixme: ⚠️️ Rename to something else
  * ## Examples:
  * IconButtonStyle(strokeColor, backgroundColor, iconColor, size, iconSize)
  */
@@ -48,7 +49,9 @@ struct HeaderIconStyle: ButtonStyle {
     */
    let padding: CGFloat
    /**
-    * body
+    * Creates the body of the button style.
+    * - Parameter configuration: The configuration of the button, containing its label and other properties.
+    * - Returns: A view that represents the body of the button.
     */
    func makeBody(configuration: Configuration) -> some View {
       configuration.label // The label of the button

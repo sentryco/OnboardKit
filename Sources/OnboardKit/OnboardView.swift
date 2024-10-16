@@ -33,7 +33,12 @@ public struct OnboardView: View {
     */
    public var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
    /**
-    * Needed when class is public
+    * Initializes a new instance of OnboardView.
+    * - Parameters:
+    *   - currentPageIndex: The initial page index when the onboarding view is first displayed. Defaults to 0.
+    *   - pageModels: The models representing each page in the onboarding process.
+    *   - onComplete: An optional callback that is triggered when the onboarding process completes.
+    * - Note: This initializer is public to allow external modules to create instances of OnboardView.
     */
    public init(currentPageIndex: Int = 0, pageModels: OnboardModels, onComplete: OnOnboardingComplete? = nil) {
       self.currentPageIndex = currentPageIndex
@@ -41,4 +46,3 @@ public struct OnboardView: View {
       self.onComplete = onComplete
    }
 }
-
