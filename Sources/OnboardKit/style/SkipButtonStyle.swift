@@ -2,7 +2,9 @@ import SwiftUI
 import HybridColor
 /**
  * Used in onboarding and bottom-bar
- * - Description: A button style that provides a minimalistic text button, typically used for skip actions in onboarding flows or as secondary actions in various parts of the app.
+ * - Description: A button style that provides a minimalistic text button,
+ *                typically used for skip actions in onboarding flows or as
+ *                secondary actions in various parts of the app.
  * - Note: Alternate name: blue-text-button or secondary-button-style
  */
 internal struct SkipButtonStyle: ButtonStyle {

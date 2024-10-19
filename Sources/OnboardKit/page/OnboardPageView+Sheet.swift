@@ -5,10 +5,11 @@ import SwiftUI
 extension OnboardPageView {
    /**
     * Configures the sheet to be shown
-    * - Description: This method configures a sheet to be shown on top of the provided view. 
-    *                It sets up the sheet to be non-fullscreen, binds its presentation state
-    *                to the `observableSheet.isPresenting` property, and defines an empty closure
-    *                for when the sheet is dismissed. The content of the sheet is set to the
+    * - Description: This method configures a sheet to be shown on top of the
+    *                provided view. It sets up the sheet to be non-fullscreen,
+    *                binds its presentation state to the `observableSheet.isPresenting`
+    *                property, and defines an empty closure for when the sheet is
+    *                dismissed. The content of the sheet is set to the
     *                `observableSheet.sheet` property.
     * - Fixme: ⚠️️ This might not work, as the closure isn't created when this method is called, or it might, if .sheet is called on binding change etc, seems to work fine? still relevant?
     * - Parameter view: The view to attach the sheet to

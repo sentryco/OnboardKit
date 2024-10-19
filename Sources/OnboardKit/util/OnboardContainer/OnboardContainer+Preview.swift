@@ -3,7 +3,10 @@ import SwiftUI
 import HybridColor
 /**
  * Preview for onboarding (iOS and macOS) (Dark-mode)
- * - Description: This section previews the OnboardContainer in dark mode for both iOS and macOS. It helps in visualizing the appearance and functionality of the onboarding process with a translucent background.
+ * - Description: This section previews the OnboardContainer in dark mode
+ *                for both iOS and macOS. It helps in visualizing the
+ *                appearance and functionality of the onboarding process
+ *                with a translucent background.
  * - Note: This shows the translucent background that works in preview
  * - Note: You can also put the needOnboarding in a rebinder closure that changes userdefault
  */

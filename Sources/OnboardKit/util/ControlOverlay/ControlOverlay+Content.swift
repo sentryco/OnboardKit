@@ -2,8 +2,12 @@ import SwiftUI
 //import InterfaceLib
 import HybridColor
 /**
- * The control overlay is a simple view that contains two buttons (prev and next) that are used to navigate through the pages.
- * - Description: The ControlOverlay extension provides the user interface for the navigation controls in the onboarding flow. It includes a previous and next button for navigating through the onboarding pages.
+ * - Abstract: The control overlay is a simple view that contains two buttons
+ *             (prev and next) that are used to navigate through the pages.
+ * - Description: The ControlOverlay extension provides the user interface for
+ *                the navigation controls in the onboarding flow. It includes a
+ *                previous and next button for navigating through the onboarding
+ *                pages.
  * - Fixme: ⚠️️⚠️️ Use the `HeaderIconButtonStyle` instead, it looks better, still valid?
  * - Fixme: ⚠️️ add comments from legacy etc?
  */
@@ -50,7 +54,9 @@ extension ControlOverlay {
    /**
     * Prev btn
     * - Abstract: The previous button is used to navigate to the previous page.
-    * - Description: The previous button allows the user to navigate back to the previous page in the onboarding process. It triggers the 'onPrevButtonPress' closure when pressed.
+    * - Description: The previous button allows the user to navigate back to the
+    *                previous page in the onboarding process. It triggers the
+    *                'onPrevButtonPress' closure when pressed.
     * - Note: The button has to be setup like it is now.
     * - Note: We can also use: .chevronButtonStyle(systemName: "chevron.left")
     * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
@@ -80,7 +86,9 @@ extension ControlOverlay {
    /**
     * Next btn
     * - Abstract: The next button is used to navigate to the next page.
-    * - Description: The next button allows the user to navigate forward to the next page in the onboarding process. It triggers the 'onNextButtonPress' closure when pressed.
+    * - Description: The next button allows the user to navigate forward to the
+    *                next page in the onboarding process. It triggers the
+    *                'onNextButtonPress' closure when pressed.
     * - Note: The button has to be setup like it is now.
     * - Note: We can also use: .chevronButtonStyle(systemName: "chevron.right")
     * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?

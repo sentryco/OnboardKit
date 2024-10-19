@@ -2,9 +2,10 @@ import SwiftUI
 import HybridColor
 /**
  * Cirle stroke, with icon inside, fill behind
- * - Description: A button style that features a circular stroke with an icon in the center, 
- *                backed by a solid fill color. It is designed to be used for header icons
- *                such as back and more options, providing a clear and recognizable interactive element.
+ * - Description: A button style that features a circular stroke with an icon
+ *                in the center, backed by a solid fill color. It is designed
+ *                to be used for header icons such as back and more options,
+ *                providing a clear and recognizable interactive element.
  * - Note: Used for back and more button in header and in onboarding
  * - Note: Alternative name: `HeaderIconButtonStyle`
  * - Fixme: ⚠️️ doc each variable
@@ -67,7 +68,8 @@ struct HeaderIconStyle: ButtonStyle {
    }
 }
 /**
- * - Note: Add extension ButtonStyle where Self == HeaderIconStyle later if we need to store the style for switching etc
+ * - Note: Add extension ButtonStyle where Self == HeaderIconStyle later
+ *         if we need to store the style for switching etc
  */
 extension Button {
    /**

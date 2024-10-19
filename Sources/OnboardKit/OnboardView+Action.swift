@@ -6,8 +6,9 @@ extension OnboardView {
    /**
     * Go to next page (called by tapping continue btn)
     * - Abstract: Step forward in the onboarding pages
-    * - Description: This function is used to navigate to the next page in the onboarding process. 
-    *                If the current page is the last one, it triggers the completion of the onboarding
+    * - Description: This function is used to navigate to the next page in
+    *                the onboarding process. If the current page is the last
+    *                one, it triggers the completion of the onboarding
     *                process and dismisses the onboarding view.
     */
    public func goToNextPage() {
@@ -24,10 +25,11 @@ extension OnboardView {
    /**
     * Step backward
     * - Abstract: Step backward in the onboarding pages
-    * - Description: This function is used to navigate to the previous page in the onboarding process. 
-    *                If the current page is the first one, it does nothing. Otherwise,
-    *                it decreases the current page index by 1,
-    *                effectively moving the user back one step in the onboarding process.
+    * - Description: This function is used to navigate to the previous page
+    *                in the onboarding process. If the current page is the
+    *                first one, it does nothing. Otherwise, it decreases the
+    *                current page index by 1, effectively moving the user back
+    *                one step in the onboarding process.
     */
    public func goToPrevPage() {
       withAnimation { // Adds the page transition anim

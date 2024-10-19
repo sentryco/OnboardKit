@@ -16,7 +16,9 @@ import SwiftUI
 public class ObservableSheet: ObservableObject {
    /**
     * This is used to trigger presenting the sheet and also to rewind sheet etc
-    * - Description: This property is used to control the presentation state of the sheet. When set to true, the sheet is presented. When set to false, the sheet is dismissed.
+    * - Description: This property manages the visibility of the sheet.
+    *                Setting it to true displays the sheet, while setting it to
+    *                false hides it.
     * - Note: @Published is a property wrapper that automatically notifies any observers (such as SwiftUI views) when the value of the property changes.
     * - Note: this must be public, can't be priv pub. Because we also set it
     */

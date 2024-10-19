@@ -36,7 +36,12 @@ public struct OnboardContainer<Foreground: View, Background: View>: View {
    let background: BackgroundClosure
    /**
     * init
-    * - Description: This initializer sets up the OnboardContainer view. It takes two closures as parameters, one for the foreground (onboarding view) and one for the background (main app view). It also initializes the 'needsOnboarding' state variable based on the user's onboarding status stored in the PrefsStore.
+    * - Description: This initializer sets up the OnboardContainer view. It
+    *                takes two closures as parameters, one for the foreground
+    *                (onboarding view) and one for the background (main app
+    *                view). It also initializes the 'needsOnboarding' state
+    *                variable based on the user's onboarding status stored in
+    *                the PrefsStore.
     * - Fixme: ⚠️️ Doc why we use viewbuilder etc and escaping
     * - Fixme: ⚠️️ We should probably be able to pass the $shouldPresentOnboarding via init param, so that its more modular, find another code snippet where we do something similar and reuse that
     * - Parameters:

@@ -14,7 +14,12 @@ import BlurView
 extension View {
    /**
     * Adds translucent underlay (iOS and macOS)
-    * - Description: This function adds a translucent underlay to the view it is applied to. It is primarily used to create a blurred background effect for the lock screen view during user authentication. The function adjusts its behavior based on the operating system, applying different visual effects for iOS and macOS.
+    * - Description: This function adds a translucent underlay to the view it
+    *                is applied to. It is primarily used to create a blurred
+    *                background effect for the lock screen view during user
+    *                authentication. The function adjusts its behavior based on
+    *                the operating system, applying different visual effects for
+    *                iOS and macOS.
     * - Note: How to add blur view: https://github.com/sentryco/Sentry/issues/918
     * - Fixme: ⚠️️⚠️️ Try the legacy effectview as well, it might have nicer saturated black translucent etc
     * - Fixme: ⚠️️ Add animation to unlock sequence etc

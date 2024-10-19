@@ -4,7 +4,10 @@ import UIKit
 #endif
 /**
  * Is or isn't iphone
- * - Description: This variable checks if the current device is an iPhone. It returns true if the device is an iPhone, and false otherwise. This is useful for adjusting UI or functionality based on the device type.
+ * - Description: This variable checks if the current device is an iPhone.
+ *                It returns true if the device is an iPhone, and false otherwise.
+ *                This is useful for adjusting UI or functionality based on the
+ *                device type.
  * - Note: We can get isIpadOrMacos by doin !IsIphone device
  */
 internal var isPhoneDevice: Bool {

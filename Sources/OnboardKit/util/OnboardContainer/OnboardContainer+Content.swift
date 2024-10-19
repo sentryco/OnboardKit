@@ -6,7 +6,11 @@ import SwiftUI
 extension OnboardContainer {
    /**
     * Body
-    * - Description: This is the main body of the OnboardContainer. It consists of a ZStack that contains the main app view and, if onboarding is needed, a translucent underlay and the onboarding view. The state of 'needsOnboarding' is monitored and any changes are reflected in the PrefsStore.
+    * - Description: This is the main body of the OnboardContainer. It consists
+    *                of a ZStack that contains the main app view and, if
+    *                onboarding is needed, a translucent underlay and the
+    *                onboarding view. The state of 'needsOnboarding' is monitored
+    *                and any changes are reflected in the PrefsStore.
     * - Note: `scenePhase` handles background mode etc
     */
    public var body: some View {
@@ -33,7 +37,12 @@ extension OnboardContainer {
 extension OnboardContainer {
    /**
     * Adds the translucent background underlay
-    * - Description: This method creates a translucent underlay for the onboarding view. It returns a `View` that represents a rectangle with a clear fill, which is then modified to have a translucent effect. This underlay is used to create a subtle background for the onboarding process, enhancing the visual appeal of the onboarding experience.
+    * - Description: This method creates a translucent underlay for the
+    *                onboarding view. It returns a `View` that represents a
+    *                rectangle with a clear fill, which is then modified to
+    *                have a translucent effect. This underlay is used to create
+    *                a subtle background for the onboarding process, enhancing
+    *                the visual appeal of the onboarding experience.
     */
    fileprivate var underlay: some View {
       Rectangle().fill(.clear) // Create a rectangle with clear fill

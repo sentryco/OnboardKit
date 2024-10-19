@@ -7,9 +7,12 @@ import SwiftUI
 extension OnboardPageView {
    /**
     * Body
-    * - Description: This property represents the main content view of an onboard page. 
-    *                It constructs the view by stacking the title, description, and action buttons vertically.
-    *                The background color is set to teal for testing purposes, and a sheet configuration is applied to the entire stack.
+    * - Description: This property represents the main content view of an
+    *                onboard page. It constructs the view by stacking the
+    *                title, description, and action buttons vertically.
+    *                The background color is set to teal for testing
+    *                purposes, and a sheet configuration is applied to the
+    *                entire stack.
     */
    var body: some View {
       let stack: some View = self.stack
@@ -23,9 +26,12 @@ extension OnboardPageView {
 extension OnboardPageView {
    /**
     * Stack
-    * - Description: This view stacks the title, description, and action buttons vertically with custom spacing. 
-    *                It's designed to center these elements on the screen, providing a clear and focused user interface for the onboarding process.
-    * - Note: We use Spacers instead of VStack spacing, to have individual control over spacing,  space between text and title and buttons differs etc
+    * - Description: This view stacks the title, description, and action buttons
+    *                vertically with custom spacing. It's designed to center these
+    *                elements on the screen, providing a clear and focused user
+    *                interface for the onboarding process.
+    * - Note: We use Spacers instead of VStack spacing, to have individual control
+    *         over spacing, space between text and title and buttons differs etc
     * - Fixme: ⚠️️ Rename to vStack?
     */
    @ViewBuilder
@@ -81,11 +87,13 @@ extension OnboardPageView {
    }
    /**
     * Create action-buttons (stacked from center vertically)
-    * - Description: This section of the code generates the action buttons for the onboarding view.
-    *                Each button corresponds to an action defined in the model.
-    *                When a button is clicked, it executes the associated action's closure,
-    *                passing in the observableSheet as a parameter.
-    *                This allows for dynamic control over the presentation of sheets within the onboarding process.
+    * - Description: This section of the code generates the action buttons
+    *                for the onboarding view. Each button corresponds to an
+    *                action defined in the model. When a button is clicked, it
+    *                executes the associated action's closure, passing in the
+    *                observableSheet as a parameter. This allows for dynamic
+    *                control over the presentation of sheets within the
+    *                onboarding process.
     * - Fixme: ⚠️️ Seems like adding type to actions isn't straight forward
     */
    @ViewBuilder

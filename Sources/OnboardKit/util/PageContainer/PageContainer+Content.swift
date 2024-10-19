@@ -7,9 +7,11 @@ import PageControllerView
 extension PageContainer {
    /**
     * Body
-    * - Description: This is the main body of the PageContainer. 
-    *                It consists of a containerContent view that changes based on the operating system.
-    *                It also monitors the currentPageIndex and sends telemetry data when it changes.
+    * - Description: This is the main body of the PageContainer.
+    *                It consists of a containerContent view that changes
+    *                based on the operating system.
+    *                It also monitors the currentPageIndex and sends
+    *                telemetry data when it changes.
     * - Note: @ViewBuilder is not needed for OS clauses like this
     * - Fixme: ⚠️️ add a callback here? or do we also have something similar elsewhere?
     */
@@ -27,8 +29,9 @@ extension PageContainer {
  */
 extension PageContainer {
    /**
-    * - Description: This property provides a view that adapts to different operating systems, 
-    *                displaying a `TabView` on iOS and a `PageControllerView` on macOS.
+    * - Description: This property provides a view that adapts to different
+    *                operating systems, displaying a `TabView` on iOS and a
+    *                `PageControllerView` on macOS.
     */
    @ViewBuilder
    var containerContent: some View {
@@ -40,9 +43,15 @@ extension PageContainer {
    }
    /**
     * This is the pages and the small indicator (iOS)
-    * - Description: This is the TabView for iOS that displays the onboarding pages with swipe capabilities. It also includes a small indicator to show the current page in the onboarding process.
+    * - Description: This is the TabView for iOS that displays the onboarding
+    *                pages with swipe capabilities. It also includes a small
+    *                indicator to show the current page in the onboarding
+    *                process.
     * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
-    * - Note: The implementation of `tabView` and `pageController` differ between iOS and macOS. On iOS, a `TabView` is used with a custom appearance, while on macOS, a `PageControllerView` is used to manage the display of pages.
+    * - Note: The implementation of `tabView` and `pageController` differ
+    *         between iOS and macOS. On iOS, a `TabView` is used with a custom
+    *         appearance, while on macOS, a `PageControllerView` is used to
+    *         manage the display of pages.
     */
    #if os(iOS)
    fileprivate var tabView: some View {
@@ -111,7 +120,9 @@ extension PageContainer {
 extension PageContainer {
    /**
     * Setup Page Control Appearance
-    * - Description: This method configures the appearance of the page control for iOS devices. It sets the current page indicator tint color to white.
+    * - Description: This method configures the appearance of the page control
+    *                for iOS devices. It sets the current page indicator tint
+    *                color to white.
     * - Fixme: ⚠️️ Can we style the tab component more? is it needed?
     * - Fixme: ⚠️️ See legacy project on how to style this more etc, still relevant?
     */

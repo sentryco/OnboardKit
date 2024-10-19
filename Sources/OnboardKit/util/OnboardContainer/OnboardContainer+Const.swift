@@ -4,7 +4,9 @@ import SwiftUI
  */
 extension OnboardContainer {
    /**
-    * Type alias for a closure that takes a SwiftUI binding to a Boolean indicating the need for onboarding and returns a `Foreground` view component.
+    * - Description: Type alias for a closure that takes a SwiftUI binding
+    *                to a Boolean indicating the need for onboarding and returns a
+    *                `Foreground` view component.
     */
    public typealias ForegroundClosure = (_ needsOnboarding: Binding<Bool>) -> Foreground
    /**

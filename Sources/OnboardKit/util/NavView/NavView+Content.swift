@@ -1,7 +1,5 @@
 import SwiftUI
 import PageControl
-//import InterfaceLib
-//import ConstLib
 import HybridColor
 import HapticFeedback
 /**
@@ -11,7 +9,13 @@ import HapticFeedback
 extension NavView {
    /**
     * Body
-    * - Description: This is the main body of the NavView. It consists of a vertical stack (VStack) that contains the page control, action button, and dismiss button. The page control shows the current page in the onboarding process, the action button allows the user to proceed to the next page, and the dismiss button allows the user to skip the onboarding process.
+    * - Description: This is the main body of the NavView. It consists of a
+    *                vertical stack (VStack) that contains the page control,
+    *                action button, and dismiss button. The page control shows
+    *                the current page in the onboarding process, the action
+    *                button allows the user to proceed to the next page, and the
+    *                dismiss button allows the user to skip the onboarding
+    *                process.
     * - Fixme: ⚠️️ Add spacing in vstack?
     */
    var body: some View {
@@ -76,7 +80,9 @@ extension NavView {
    /**
     * Skip button
     * - Abstract: Button with text: `Skip onboarding` or if last page its hidden
-    * - Description: The skip button allows the user to bypass the onboarding process. It is visible on all pages except the last one, where it is hidden.
+    * - Description: The skip button allows the user to bypass the onboarding
+    *                process. It is visible on all pages except the last one,
+    *                where it is hidden.
     * - Fixme: ⚠️️ Use HapticFeedback.play(.credentialsPasted) etc ? 👈
     * - Fixme: ⚠️️ Use const for width etc?
     * - Fixme: ⚠️️ Rename to skipButton?

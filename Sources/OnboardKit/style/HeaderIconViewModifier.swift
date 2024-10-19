@@ -2,7 +2,9 @@ import SwiftUI
 import HybridColor
 /**
  * View modifier
- * - Description: A view modifier that applies a header icon style to the view, including icon name, size, color, background color, stroke color, stroke width, and padding.
+ * - Description: A view modifier that applies a header icon style to the view,
+ *                including icon name, size, color, background color, stroke color,
+ *                stroke width, and padding.
  * - Note: Used in many places that has an Icon
  * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc
  * - Fixme: ⚠️️ Doc each variable

@@ -2,7 +2,10 @@ import SwiftUI
 import HybridColor
 /**
  * Preview the navview (Dark / light mode)
- * - Description: This section previews the NavView in both dark and light modes. It helps in visualizing the appearance and functionality of the navigation controls during the onboarding process.
+ * - Description: This section previews the NavView in both dark and light
+ *                modes. It helps in visualizing the appearance and
+ *                functionality of the navigation controls during the
+ *                onboarding process.
  * - Fixme: ⚠️️ Add some extra background with gray
  * - Fixme: ⚠️️ Add fixed layout again?
  */

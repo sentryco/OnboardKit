@@ -13,14 +13,16 @@ extension NavView {
    
    /**
     * A closure that is called when the action button is pressed.
-    * - Description: This closure is triggered when the action button is pressed. 
-    *                It allows for custom behavior to be defined for the action button in the onboarding process.
+    * - Description: This closure is triggered when the action button is
+    *                pressed. It allows for custom behavior to be defined for
+    *                the action button in the onboarding process.
     */
    typealias OnActionBtnPress = () -> Void
    /**
     * A closure that is called when the dismiss button is pressed.
-    * - Description: This closure is triggered when the dismiss button is pressed. 
-    *                It allows for custom behavior to be defined for dismissing the onboarding process.
+    * - Description: This closure is triggered when the dismiss button is
+    *                pressed. It allows for custom behavior to be defined for
+    *                dismissing the onboarding process.
     */
    typealias OnDismissBtnPress = () -> Void
 }

@@ -2,7 +2,11 @@ import SwiftUI
 /**
  * Standard onboard page
  * - Abstract: The main view for the onboarding 
- * - Description: This view represents a single page in the onboarding process. It uses the provided model to display the page's title, description, and actions. It also manages the presentation of sheets, which are used for additional user interactions during the onboarding process.
+ * - Description: This view represents a single page in the onboarding
+ *                process. It uses the provided model to display the page's
+ *                title, description, and actions. It also manages the
+ *                presentation of sheets, which are used for additional user
+ *                interactions during the onboarding process.
  * - Note: Design inspo: text styles from: https://github.com/Krupanshu-Sharma/OnBoardingViewSwiftUI/blob/main/OnBoardingViewSwiftUI/OnBoardingViewSwiftUI/View/FruitCardView.swift
  * - Note: Design inspo: https://medium.com/@sharma17krups/onboarding-view-with-swiftui-b26096049be3
  * - Note: Design inspo: Neumorphic to button?: https://sarunw.com/posts/swiftui-buttonstyle/

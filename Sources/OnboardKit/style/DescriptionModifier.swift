@@ -2,7 +2,10 @@ import SwiftUI
 import HybridColor
 /**
  * Used for onboarding for descripton text
- * - Description: A view modifier that provides a consistent style for description text in onboarding screens, including color adjustments for light and dark modes, centered text alignment, and increased line spacing for better readability.
+ * - Description: A view modifier that provides a consistent style for
+ *                description text in onboarding screens, including color
+ *                adjustments for light and dark modes, centered text
+ *                alignment, and increased line spacing for better readability.
  * - Fixme: ⚠️️ Rename to `OnboardDescModifier`?
  */
 fileprivate struct DescriptionModifier: ViewModifier {

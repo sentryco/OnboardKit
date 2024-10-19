@@ -2,7 +2,10 @@ import SwiftUI
 import HybridColor
 /**
  * Used for onboarding
- * - Description: A button style that creates a capsule-shaped button, typically used in onboarding screens to navigate the user to the next step. It features a customizable background and text color, with a design that emphasizes prominence and encourages action.
+ * - Description: A button style that creates a capsule-shaped button,
+ *                typically used in onboarding screens to navigate the user to the next
+ *                step. It features a customizable background and text color, with a
+ *                design that emphasizes prominence and encourages action.
  * - Note: Alt name: `pale-capsule-button-style` or `primarybuttonstyle`
  * - Fixme: ⚠️️ Make text sharper?
  * - Fixme: ⚠️️ Break out view-modifier to own file?
@@ -35,8 +38,12 @@ internal struct ContinueButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Continue
-    * - Description: This extension provides a convenient method to apply the `ContinueButtonStyle` to a button.
-    * - Note: `isEnabled state for buttons: (but only if Button is wrapped in a view struct) https://medium.com/geekculture/custom-swiftui-button-with-on-pressed-configuration-in-ios-13-145d78699fff
+    * - Description: This extension provides a convenient method to apply
+    *                the `ContinueButtonStyle` to a button.
+    * - Note: `isEnabled state for buttons: (but only if Button is wrapped
+    *         in a view struct)
+    *         https://medium.com/geekculture/custom-swiftui-button-with-on-
+    *         pressed-configuration-in-ios-13-145d78699fff
     * - Fixme: ⚠️️ make this a var?
     * - Parameter isEnabled: A Boolean value that determines whether the button is enabled.
     * - Returns: A view that applies the `ContinueButtonStyle` to the button.

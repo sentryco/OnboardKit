@@ -2,7 +2,10 @@ import SwiftUI
 import HybridColor
 /**
  * Preview (dark / light)
- * - Description: This section of the code previews the ControlOverlay view in both dark and light modes. It helps in visualizing the appearance and functionality of the navigation controls during the onboarding process.
+ * - Description: This section of the code previews the ControlOverlay view
+ *                in both dark and light modes. It helps in visualizing the
+ *                appearance and functionality of the navigation controls during
+ *                the onboarding process.
  */
 #Preview(traits: .fixedLayout(width: 300, height: 300)) {
    struct DebugContainer: View {

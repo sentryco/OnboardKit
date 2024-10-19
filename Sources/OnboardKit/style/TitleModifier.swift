@@ -2,7 +2,10 @@ import SwiftUI
 //import MockGen
 /**
  * Used for onboarding
- * - Description: A view modifier that centralizes text, applies a large title font style, and sets the foreground color to adapt to dark or light mode. Intended for use in onboarding screens where prominent, attention-grabbing text is required.
+ * - Description: A view modifier that centralizes text, applies a large title
+ *                font style, and sets the foreground color to adapt to dark or
+ *                light mode. Intended for use in onboarding screens where
+ *                prominent, attention-grabbing text is required.
  * - Important: ⚠️️ `TextFieldStyle` doesn't work on `Text`
  * - Note: This will work, but will apply to all view types
  * - Fixme: ⚠️️⚠️️ Add this: System font that also scales (relative): https://stackoverflow.com/a/75720217/5389500 add this later when we upgrade to scaled and relative sizing etc

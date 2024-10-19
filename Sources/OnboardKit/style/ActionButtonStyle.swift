@@ -2,7 +2,11 @@ import SwiftUI
 import HybridColor
 /**
  * Used for onboarding
- * - Description: A button style designed for primary actions in onboarding flows, providing a prominent visual cue for users to proceed with the next step. This style emphasizes the button with a capsule shape and a clear call-to-action, ensuring high visibility and accessibility.
+ * - Description: A button style designed for primary actions in onboarding
+ *                flows, providing a prominent visual cue for users to proceed
+ *                with the next step. This style emphasizes the button with a
+ *                capsule shape and a clear call-to-action, ensuring high
+ *                visibility and accessibility.
  * - Note: similar to SecondaryButtonStyle, - Fixme: ⚠️️ reuse that instead?
  * - Fixme: ⚠️️ Move view-modifier into own file? with a preview etc?
  * - Fixme: ⚠️️ Move foregroundColor to buttonstyle?
@@ -11,7 +15,9 @@ import HybridColor
 internal struct ActionButtonStyle: ButtonStyle {
    /**
     * Provides the visual representation of the button style.
-    * - Description: This method is responsible for defining the appearance and interactive behavior of buttons that adopt the ActionButtonStyle.
+    * - Description: This method is responsible for defining the appearance
+    *                and interactive behavior of buttons that adopt the
+    *                ActionButtonStyle.
     * - Parameter configuration: The configuration of the button, which provides the label and other properties needed to style the button.
     */
    internal func makeBody(configuration: Configuration) -> some View {
