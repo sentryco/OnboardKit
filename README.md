@@ -94,14 +94,6 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - https://github.com/Krupanshu-Sharma/OnBoardingViewSwiftUI 
 - macos: https://github.com/ishaanbedi/Voyager/tree/main/Swift%20Post/Views/OnboardingViews
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit pull requests with any new features or fixes.
-
-## License
-
-OnboardKit is released under the MIT License. See [LICENSE](LICENSE) for details.
-
 ## TODO: 
 - Fix bug crashing preview ✅
 - Clean up code
