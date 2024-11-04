@@ -1,4 +1,5 @@
 [![Tests](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/eb515b0e-475b-439a-81b9-28ec363ab04a)](https://codebeat.co/projects/github-com-sentryco-onboardkit-main)
 
 # OnboardKit
 
