@@ -17,12 +17,11 @@ import HybridColor
          OnboardContainer(needsOnboarding: $needsOnboarding) { (_ needsOnboarding: Binding<Bool>) in
             OnboardView(
                // - Fixme: ⚠️️ Make a dummy model for preview
-               pageModels: OnboardModel.dummyModels,
-               onComplete: {
+               pageModels: OnboardModel.dummyModels
+            )               {
                   // Swift.print("finish onboarding")
                   needsOnboarding.wrappedValue = false // Set when finishing onboarding
                }
-            )
          } background: {
             Rectangle() // this is where the app main view goes
                .fill(Color.blackOrWhite)

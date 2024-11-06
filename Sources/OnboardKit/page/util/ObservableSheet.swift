@@ -30,7 +30,7 @@ public class ObservableSheet: ObservableObject {
     *                automatically updated to reflect whether a sheet is currently being presented or not.
     * - Fixme: ⚠️️ We can move this and the bool into an observable obbject, easier to move around that way, do it after it works, see blog post about it etc
     */
-   @Published public var sheet: AnyView? {  
+   @Published public var sheet: AnyView? {
       didSet {
          isPresenting = sheet != nil
       } // ⚠️️ hack to only needing to set sheet etc

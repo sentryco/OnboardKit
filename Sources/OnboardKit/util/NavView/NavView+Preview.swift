@@ -17,7 +17,7 @@ import HybridColor
             numOfPages: 3,
             currentPage: $currentPage,
             onActionBtnPress: { Swift.print("action") },
-            onDismissBtnPress: { Swift.print("dismiss") } 
+            onDismissBtnPress: { Swift.print("dismiss") }
          )
       }
    }

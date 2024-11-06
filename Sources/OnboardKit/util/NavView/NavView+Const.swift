@@ -10,7 +10,7 @@ extension NavView {
    static let continueButtonTitle: String = "Continue" // Const.Onboarding.continueButtonTitle
    // fix: add doc
    static let finishButtonTitle: String = "Finish" // Const.Onboarding.finishButtonTitle
-   
+
    /**
     * A closure that is called when the action button is pressed.
     * - Description: This closure is triggered when the action button is

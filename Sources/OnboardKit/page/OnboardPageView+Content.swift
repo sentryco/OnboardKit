@@ -75,9 +75,9 @@ extension OnboardPageView {
          Text("\(description)") // Description
             .descriptionStyle
             // .background(isTest ? .blue : .clear) // ⚠️️ debug
-            .isMacOrIPad ({ // Max width for medium or large devices
+            .isMacOrIPad { // Max width for medium or large devices
                $0.frame(maxWidth: Self.maxWidth) // by using maxWidth, the text grows vertically when there is little wide space available
-            }) // .background(.green) // Debug
+            }
             #if os(iOS)
             .padding(.horizontal, Self.horPadding)
             #elseif os(macOS)
@@ -101,7 +101,7 @@ extension OnboardPageView {
       if let actions = model?.actions { // buttons in the center
          VStack(spacing: Self.spacing) { // needed for custom spacing between buttons
             let array = Array(actions.enumerated())
-            ForEach(array, id: \.offset) { (i: Int, _ action: OnboardModel.OnboardAction) in // horizontal list of buttons // ForEach(actions, id: \.self.buttonTitle) { action in // horizontal list of buttons
+            ForEach(array, id: \.offset) { (_: Int, _ action: OnboardModel.OnboardAction) in // horizontal list of buttons // ForEach(actions, id: \.self.buttonTitle) { action in // horizontal list of buttons
                Button(action.buttonTitle) { // Creates a button with the action's title
                   action.action?(observableSheet) // Executes the action's closure with the observableSheet parameter
                }
@@ -111,6 +111,5 @@ extension OnboardPageView {
             }
          }
       }
-      
    }
 }
