@@ -1,5 +1,4 @@
 import SwiftUI
-//import Auth
 /**
  * A wrapper so we can have `onboarding-view` above the `main-view` etc
  * - Abstract: This struct serves as a wrapper to display the onboarding view above the main view.
@@ -24,17 +23,17 @@ public struct OnboardContainer<Foreground: View, Background: View>: View {
     * - Fixme: ⚠️️ Not straight forward to bind the UserDef to this value, try to figure out a simpler construct later, maybe we do something similar elsewhere?
     * - Fixme: ⚠️️ Maybe make this a binding instead? rebind to user def etc?
     */
-   @Binding var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
+   @Binding internal var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
    /**
     * Onboarding foreground cover
     * - Description: This covers the app beneath. We use a semi translucent background so that the app behind can be slightly visible
     */
-   let foreground: ForegroundClosure
+   internal let foreground: ForegroundClosure
    /**
     *  App main view
     *  - Description: This is where the rest of your app concides
     */
-   let background: BackgroundClosure
+   internal let background: BackgroundClosure
    /**
     * init
     * - Description: This initializer sets up the OnboardContainer view. It

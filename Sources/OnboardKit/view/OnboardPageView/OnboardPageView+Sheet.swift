@@ -14,7 +14,7 @@ extension OnboardPageView {
     * - Fixme: ⚠️️ This might not work, as the closure isn't created when this method is called, or it might, if .sheet is called on binding change etc, seems to work fine? still relevant?
     * - Parameter view: The view to attach the sheet to
     */
-   func configSheet(view: some View) -> some View {
+   internal func configSheet(view: some View) -> some View {
       view.promptSheet( // Attaches a sheet to the view using the promptSheet modifier
          isFullScreen: false, // Set the sheet to not be full screen
          isShowing: $observableSheet.isPresenting, // Bind the presentation state of the sheet

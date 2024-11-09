@@ -10,22 +10,22 @@ import HybridColor
  * - Fixme: ⚠️️ Make text sharper?
  * - Fixme: ⚠️️ Break out view-modifier to own file?
  */
-internal struct ContinueButtonStyle: ButtonStyle {
+fileprivate struct ContinueButtonStyle: ButtonStyle {
    /**
     * - Description: The background color of the button.
     */
-   internal let color: Color
+   fileprivate let color: Color
    /**
     * - Description: The color of the button text.
     */
-   internal let textColor: Color
+   fileprivate let textColor: Color
    /**
     * Body
     * - Fixme: ⚠️️ we should probably use contentShape for hit area as well, or does the clipshape do the same?
     * - Parameter content: The content view to be modified.
     * - Returns: The modified view with the continue button style applied.
     */
-   internal func makeBody(configuration: Configuration) -> some View {
+   fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label
          .frame(maxWidth: .infinity, maxHeight: 52) // 44
          .background(color) // Sets the background color of the button based on the color scheme
@@ -66,6 +66,7 @@ extension Button {
 }
 /**
  * Preview
+ * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 340, height: 300)) {
    // The closure is a mechanism to show the two states

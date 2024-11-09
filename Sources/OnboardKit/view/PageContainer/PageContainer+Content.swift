@@ -15,12 +15,12 @@ extension PageContainer {
     * - Note: @ViewBuilder is not needed for OS clauses like this
     * - Fixme: ⚠️️ add a callback here? or do we also have something similar elsewhere?
     */
-   var body: some View {
+   internal var body: some View {
       containerContent // - Fixme: ⚠️️ docthis line
          .onChange(of: currentPageIndex) { _, _ in // This line triggers an action when currentPageIndex changes.
             // - Fixme: ⚠️️ move this telemtry call to caller scope
             // TM.PageView.onboarding.pageView() // Ping telemetry
-//            Swift.print("currentPageIndex: \(currentPageIndex)")
+            // Swift.print("currentPageIndex: \(currentPageIndex)")
          }
    }
 }

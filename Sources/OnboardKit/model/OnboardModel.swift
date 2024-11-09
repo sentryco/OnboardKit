@@ -16,25 +16,31 @@ public struct OnboardModel {
     * Page title
     * - Description: The title of the page that is displayed to the user during the onboarding process.
     */
-   public let title: String
+   internal let title: String
    /**
     * Page description
     * - Description: The detailed explanation or information about the page
     *                that is displayed to the user during the onboarding process.
     */
-   public let description: String
+   internal let description: String
    /**
     * The page actions
+    * - Abstract: Called on button press, ref to observable sheet is passed in the action call, this way we can prompt a sheet, but its optional
     * - Description: The actions that can be performed on the page. Each
     *                action is represented by a button with a title and an
     *                associated function that is executed when the button is
     *                clicked.
+    * - Fixme: ⚠️️ make abstract max 80char wide
     */
-   public let actions: [OnboardAction]
+   internal let actions: OnboardActions
    /**
     * Init (needed to support public scope)
+    * - Parameters:
+    *   - title: Page title
+    *   - description: Page description
+    *   - actions: Button title and action
     */
-   public init(title: String, description: String, actions: [OnboardAction]) {
+   public init(title: String, description: String, actions: OnboardActions) {
       self.title = title
       self.description = description
       self.actions = actions

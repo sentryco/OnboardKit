@@ -13,48 +13,48 @@ import HybridColor
  * ## Examples:
  * IconButtonStyle(strokeColor, backgroundColor, iconColor, size, iconSize)
  */
-struct HeaderIconStyle: ButtonStyle {
+fileprivate struct HeaderIconStyle: ButtonStyle {
    /**
     * Icon name
     * - Description: The name of the icon to be displayed on the button.
     */
-   let iconName: String
+   fileprivate let iconName: String
    /**
     * Icon size
     * - Description: The size of the icon to be displayed on the button.
     */
-   let iconSize: CGFloat
+   fileprivate let iconSize: CGFloat
    /**
     * Icon color
     * - Description: The color of the icon to be displayed on the button.
     */
-   let iconColor: Color
+   fileprivate let iconColor: Color
    /**
     * Background color
     * - Description: The background color of the button.
     */
-   let backgroundColor: Color
+   fileprivate let backgroundColor: Color
    /**
     * Stroke color
     * - Description: The color of the stroke around the icon.
     */
-   let strokeColor: Color
+   fileprivate let strokeColor: Color
    /**
     * Stroke width
     * - Description: The width of the stroke around the icon.
     */
-   let strokeWidth: CGFloat
+   fileprivate let strokeWidth: CGFloat
    /**
     * Padding
     * - Description: The padding around the button.
     */
-   let padding: CGFloat
+   fileprivate let padding: CGFloat
    /**
     * Creates the body of the button style.
     * - Parameter configuration: The configuration of the button, containing its label and other properties.
     * - Returns: A view that represents the body of the button.
     */
-   func makeBody(configuration: Configuration) -> some View {
+   fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label // The label of the button
          .headerIconViewModifier( // Applies the headerIconViewModifier to the label
             iconName: iconName, // The name of the icon to be displayed on the button
@@ -103,6 +103,7 @@ extension Button {
 }
 /**
  * Preview
+ * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
    let view = Button(action: {}) {}

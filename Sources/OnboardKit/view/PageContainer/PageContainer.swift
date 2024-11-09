@@ -20,16 +20,16 @@ import PageControllerView
  * - Fixme: ⚠️️ Move this out of the util folder? and one level up instead?
  * - Fixme: ⚠️️ rename to PageContainerView?
  */
-struct PageContainer: View {
+internal struct PageContainer: View {
    /**
     * - Description: The PageContainer struct is a view that displays the
     *                onboarding pages with a dot component and swipe
     *                capabilities. It also keeps track of the current page
     *                index in the onboarding process.
     */
-   @Binding var currentPageIndex: Int
+   @Binding internal var currentPageIndex: Int
    /**
     * - Description: This binding variable keeps track of the current page index in the onboarding process.
     */
-   let pageModels: OnboardModels
+   internal let pageModels: OnboardModels
 }

@@ -107,3 +107,6 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - Add styling struct as well?
 - Add access-id struct as well?
 - Add xcodproj file like we do with SplitViewKit?
+- Add PreviewContainer
+- Use struct or tuple to store style configs and default values
+- Bump spm package to 6.0 and iOS 18 and macOS 15 etc

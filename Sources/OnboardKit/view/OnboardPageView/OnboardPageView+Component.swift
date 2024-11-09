@@ -1,26 +1,5 @@
 import SwiftUI
 /**
- * Content
- * - Description: Each page consists of a title, description, button column
- * - Fixme: ⚠️️ Maybe make description have the same padding as action button
- */
-extension OnboardPageView {
-   /**
-    * Body
-    * - Description: This property represents the main content view of an
-    *                onboard page. It constructs the view by stacking the
-    *                title, description, and action buttons vertically.
-    *                The background color is set to teal for testing
-    *                purposes, and a sheet configuration is applied to the
-    *                entire stack.
-    */
-   var body: some View {
-      let stack: some View = self.stack
-      // .background(isTest ? .teal : .clear) // ⚠️️ debug
-      return configSheet(view: stack)
-   }
-}
-/**
  * Components
  */
 extension OnboardPageView {
@@ -35,7 +14,7 @@ extension OnboardPageView {
     * - Fixme: ⚠️️ Rename to vStack?
     */
    @ViewBuilder
-   fileprivate var stack: some View {
+   internal var stack: some View {
       VStack(
          alignment: .center, // Center horisontally
          spacing: Self.spacing
@@ -45,9 +24,14 @@ extension OnboardPageView {
          actionButtons // Center buttons (centered vertically)
       } // End of vstack
    }
+}
+/**
+ * Private
+ */
+extension OnboardPageView {
    /**
     * Top title
-    * - Description: This section of the code generates the title text for the onboarding view. 
+    * - Description: This section of the code generates the title text for the onboarding view.
     *                The title is fetched from the model and displayed on the screen.
     * - Fixme: ⚠️️ Move width value to const?
     */
@@ -57,14 +41,14 @@ extension OnboardPageView {
          Text("\(title)") // Title
             .titleStyle
             // .background(isTest ? .indigo : .clear) // ⚠️️ debug
-            .isMacOrIPad {
+            .isMacOrIPad { // target only iPad and mac
                $0.frame(maxWidth: Self.maxWidth) // Max width for medium or large devices
             }
       }
    }
    /**
     * Top description
-    * - Description: This section of the code generates the description text for the onboarding view. 
+    * - Description: This section of the code generates the description text for the onboarding view.
     *                The description is fetched from the model and displayed on the screen.
     * - Fixme: ⚠️️ Move width value to const?
     * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad?

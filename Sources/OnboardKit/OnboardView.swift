@@ -24,14 +24,14 @@ public struct OnboardView: View {
     * - Note: We can debug this by changing the value
     * - Fixme: ⚠️️ Maybe set this in the init? 👈
     */
-   @State public var currentPageIndex: Int = 0 // Set initial state
+   @State internal var currentPageIndex: Int = 0 // Set initial state
    /**
     * Array of page models for onboarding
     * - Description: This is an array of models that represent each page in the
     *                onboarding process. Each model contains the data necessary to
     *                populate the content of its corresponding onboarding page.
     */
-   public let pageModels: OnboardModels
+   internal let pageModels: OnboardModels
    /**
     * Callback signature for when onboarding completes
     * - Description: This is a callback that gets triggered when the onboarding
@@ -39,7 +39,7 @@ public struct OnboardView: View {
     *                actions or updates after the user has finished the onboarding.
     * - Fixme: ⚠️️⚠️️ We should animate the transition to hide onboarding, a quick 0.2 alpha outro, similar to how the transition for lockscreen works for iPhone etc
     */
-   public var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
+   internal var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
    /**
     * Initializes a new instance of OnboardView.
     * - Parameters:

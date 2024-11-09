@@ -8,7 +8,7 @@ import UIKit
  *                It returns true if the device is an iPhone, and false otherwise.
  *                This is useful for adjusting UI or functionality based on the
  *                device type.
- * - Note: We can get isIpadOrMacos by doin !IsIphone device
+ * - Note: We can get `isIpadOrMacos` by doin `!IsIphone` device
  */
 internal var isPhoneDevice: Bool {
    #if os(iOS) // Check if the target platform is iOS

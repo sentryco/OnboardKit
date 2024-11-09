@@ -12,7 +12,7 @@ import HybridColor
  * - Fixme: ⚠️️ Move foregroundColor to buttonstyle?
  * - Fixme: ⚠️️ buttonstyle might not be needed .buttonStyle(.plain) 
  */
-internal struct ActionButtonStyle: ButtonStyle {
+fileprivate struct ActionButtonStyle: ButtonStyle {
    /**
     * Provides the visual representation of the button style.
     * - Description: This method is responsible for defining the appearance
@@ -20,7 +20,7 @@ internal struct ActionButtonStyle: ButtonStyle {
     *                ActionButtonStyle.
     * - Parameter configuration: The configuration of the button, which provides the label and other properties needed to style the button.
     */
-   internal func makeBody(configuration: Configuration) -> some View {
+   fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label
          .padding()
          .frame(maxWidth: .infinity, maxHeight: 44) // Padding around text
@@ -51,7 +51,7 @@ fileprivate struct ActionButtonViewModifier: ViewModifier {
     * - Parameter content: The content view that will be modified by this view modifier.
     * - Fixme: ⚠️️ padding should be done in the caller?
     */
-   func body(content: Content) -> some View {
+   fileprivate func body(content: Content) -> some View {
       content
          .background(
             Capsule() // Creates a capsule shape for the background
@@ -80,6 +80,7 @@ extension View {
 }
 /**
  * Preview
+ * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 300, height: 200)) {
    let view = {

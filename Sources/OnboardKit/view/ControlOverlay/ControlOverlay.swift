@@ -15,7 +15,7 @@ struct ControlOverlay: View {
     *                onboarding flow. It is used to track the user's progress and
     *                control the navigation between different pages.
     */
-   @Binding var currentPage: Int // Bind the current page number to the view
+   @Binding internal var currentPage: Int // Bind the current page number to the view
    /**
     * The total number of pages
     * - Description: This property represents the total number of pages in
@@ -23,7 +23,7 @@ struct ControlOverlay: View {
     *                and determine when the navigation buttons should be enabled
     *                or disabled.
     */
-   let numOfPages: Int // Total number of pages in the onboarding flow
+   internal let numOfPages: Int // Total number of pages in the onboarding flow
    /**
     * Closure for handling the action when the previous button is pressed
     * - Description: This closure is triggered when the previous button
@@ -31,12 +31,12 @@ struct ControlOverlay: View {
     *                defined for navigating backwards in the onboarding
     *                flow.
     */
-   var onPrevButtonPress: OnPrevButtonPress? = defaultPrevButtonPress // Default action for previous button press
+   internal var onPrevButtonPress: OnPrevButtonPress? = defaultPrevButtonPress // Default action for previous button press
    /**
     * Closure for handling the action when the next button is pressed
     * - Description: This closure is triggered when the next button is pressed.
     *                It allows for custom behavior to be defined for navigating
     *                forwards in the onboarding flow.
     */
-   var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress // Default action for next button press
+   internal var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress // Default action for next button press
 }

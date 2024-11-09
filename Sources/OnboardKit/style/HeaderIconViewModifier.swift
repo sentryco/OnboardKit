@@ -9,6 +9,7 @@ import HybridColor
  * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc
  * - Fixme: ⚠️️ Doc each variable
  * - Fixme: ⚠️️ Rename to something else
+ * - Fixme: ⚠️️ store style in tuple or struct?
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
    /**
@@ -142,6 +143,7 @@ extension View {
 }
 /**
  * Preview
+ * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
    let view = {

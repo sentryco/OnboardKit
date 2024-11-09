@@ -1,10 +1,12 @@
 import SwiftUI
 /**
  * Dummy
+ * - Fixme: ⚠️️ fence this as debug only
  */
 extension OnboardModel {
    /**
     * Dummy models
+    * - Note: This is meant to be used as testing only
     */
    public static let dummyModels: OnboardModels = [
       dummyPage1, // Welcome page

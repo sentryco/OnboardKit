@@ -9,10 +9,11 @@ extension OnboardModel {
     *                performed in the onboarding model. It takes an
     *                ObservableSheet as a parameter and does not return any
     *                value.
-    * - Fixme: ⚠️️ Make observableSheet optional, so that we can trigger other things with actions as well, like payment action
     * - Note: Consider renaming `OnboardModelAction` to `OnboardInteraction`
     *         to better reflect its purpose of handling user interactions
     *         within the onboarding process.
+    * - Fixme: ⚠️️ add abstract
+    * - Fixme: ⚠️️ Make observableSheet optional, so that we can trigger other things with actions as well, like payment action
     */
    public typealias OnboardModelAction = (_ observableSheet: ObservableSheet?) -> Void
    /**
@@ -27,9 +28,15 @@ extension OnboardModel {
     * - Fixme: ⚠️️ Add id again later etc? or use int etc?
     * - Fixme: ⚠️️⚠️️⚠️️ Use a struct 👈 move to own file? maybe yes
     * - Fixme: ⚠️️ Consider renaming to `OnboardButtonAction` for clarity and alignment with domain terminology.
+    * - Fixme: ⚠️️ add abstract
     */
    public typealias OnboardAction = (
       buttonTitle: String, // Title of the button
       action: OnboardModelAction? // Callback for the button
    )
+   /**
+    * Bulk
+    * - Fixme: ⚠️️ add more doc
+    */
+   public typealias OnboardActions = [OnboardAction]
 }

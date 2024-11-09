@@ -6,7 +6,7 @@ import HybridColor
  *                page in dark mode for the application. It sets the
  *                environment color scheme to dark and tests the view
  *                with a pure black background.
- * - Fixme: ⚠️️ add debug view? if needed?
+ * - Fixme: ⚠️️ Add debug view? if needed?
  */
 #Preview(traits: .fixedLayout(width: 500, height: 500)) {
    OnboardPageView(model: OnboardModel.dummyPage1)

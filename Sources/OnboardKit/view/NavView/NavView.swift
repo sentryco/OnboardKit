@@ -20,7 +20,7 @@ struct NavView: View {
     *                determine when the navigation buttons should be enabled or
     *                disabled.
     */
-   let numOfPages: Int
+   internal let numOfPages: Int
    /**
     * The current page being displayed in the navigation view.
     * - Description: This property represents the current page being displayed
@@ -28,19 +28,19 @@ struct NavView: View {
     *                progress through the onboarding process and control the
     *                navigation between different pages.
     */
-   @Binding var currentPage: Int
+   @Binding internal var currentPage: Int
    /**
     * Action btn press - Callback for action
     * - Description: This closure is triggered when the action button is
     *                pressed. It allows for custom behavior to be defined for
     *                the action button in the navigation view.
     */
-   var onActionBtnPress: OnActionBtnPress?
+   internal var onActionBtnPress: OnActionBtnPress?
    /**
     * Dismiss btn press - Callback for dismiss
     * - Description: This closure is triggered when the dismiss button is
     *                pressed. It allows for custom behavior to be defined for
     *                the dismiss button in the navigation view.
     */
-   var onDismissBtnPress: OnDismissBtnPress?
+   internal var onDismissBtnPress: OnDismissBtnPress?
 }

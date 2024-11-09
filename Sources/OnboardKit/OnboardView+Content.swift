@@ -24,10 +24,10 @@ extension OnboardView {
    public var body: some View {
       ZStack {
          pageContainer // Onboard-page
-         navView // - Fixme: ⚠️️ doc this line
+         navView // Bottom onboarding navigation bar
          #if os(macOS) // Only for macOS
          controlOverlay // Makes sense to have this on a device where swiping isnt abvious
-            // .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
+         // .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
          #endif
       }
       #if os(macOS) // Only for macOS
