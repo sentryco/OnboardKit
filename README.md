@@ -93,6 +93,7 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - Good tutorial for onboarding: https://medium.com/@sharma17krups/onboarding-view-with-swiftui-b26096049be3 
 - https://github.com/Krupanshu-Sharma/OnBoardingViewSwiftUI 
 - macos: https://github.com/ishaanbedi/Voyager/tree/main/Swift%20Post/Views/OnboardingViews
+- [https://eon.codes/blog/2023/03/11/onboarding-best-practice/](https://eon.codes/blog/2023/03/11/onboarding-best-practice/) 
 
 ## TODO: 
 - Fix bug crashing preview ✅
