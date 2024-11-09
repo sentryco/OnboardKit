@@ -7,7 +7,7 @@ import HybridColor
  *                appearance and functionality of the onboarding process
  *                with a translucent background.
  * - Note: This shows the translucent background that works in preview
- * - Note: You can also put the needOnboarding in a rebinder closure that changes userdefault
+ * - Note: You can also put the `needOnboardin`g in a rebinder closure that changes userdefault
  */
 #Preview(traits: .fixedLayout(width: 680, height: 440)) {
    struct DebugView: View {
@@ -15,12 +15,11 @@ import HybridColor
       var body: some View {
          OnboardContainer(needsOnboarding: $needsOnboarding) { (_ needsOnboarding: Binding<Bool>) in
             OnboardView(
-               // - Fixme: ⚠️️ Make a dummy model for preview
                pageModels: OnboardModel.dummyModels
-            )               {
-                  // Swift.print("finish onboarding")
-                  needsOnboarding.wrappedValue = false // Set when finishing onboarding
-               }
+            ) {
+//               Swift.print("finish onboarding")
+               needsOnboarding.wrappedValue = false // Set when finishing onboarding
+            }
          } background: {
             Rectangle() // this is where the app main view goes
                .fill(Color.blackOrWhite)
