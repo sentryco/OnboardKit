@@ -18,5 +18,5 @@ import SwiftUI
          .frame(width: 420, height: 640) // ⚠️️ Must be here
          #endif
    } // End of zstack
-   .environment(\.colorScheme, .dark)
+   // .environment(\.colorScheme, .dark)
 }
