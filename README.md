@@ -96,14 +96,14 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - [https://eon.codes/blog/2023/03/11/onboarding-best-practice/](https://eon.codes/blog/2023/03/11/onboarding-best-practice/) 
 
 ## TODO: 
-- Fix bug crashing preview ✅
 - Clean up code
-- Add gif for iOS ✅
-- Add gif for macOS 
+- Add gif for macOS / iPad
 - Add modal sheet example
-- Enabele isTest in the scope of this package
+- Enable isTest in the scope of this package
 - Add high level doc regarding the simplistic approch with models that can have btns, title, decription, and popover sheet, and how this ultimatly makes making multipleplatform onbiarding a breeze, yet makes it possible to build powerful and complex onboarding experiences, while leaving the nitty gritty to this kit
 - Add note regarding implemnting a lockable view with onboardview. How the structure will look etc, and link to the repo etc?
-- better handling of platform-specific features or UI components.
+- Better handling of platform-specific features or UI components.
 - Add a const struct that can be inject when initiating, that has variouse custom sizes etc
 - Add styling struct as well?
+- Add access-id struct as well?
+- Add xcodproj file like we do with SplitViewKit?

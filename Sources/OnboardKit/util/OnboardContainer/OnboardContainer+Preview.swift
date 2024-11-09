@@ -1,5 +1,4 @@
 import SwiftUI
-//import InterfaceLib
 import HybridColor
 /**
  * Preview for onboarding (iOS and macOS) (Dark-mode)

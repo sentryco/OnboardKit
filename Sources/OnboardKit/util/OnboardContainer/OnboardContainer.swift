@@ -11,6 +11,7 @@ import SwiftUI
  * - Fixme: ⚠️️ Add high level explinaiton how this works
  * - Fixme: ⚠️️ Move typealias to const ext?
  * - Fixme: ⚠️️ Maybe move this out of utils folder?
+ * - Fixme: ⚠️️ Rename to OnboardContainerView?
  */
 public struct OnboardContainer<Foreground: View, Background: View>: View {
    /**

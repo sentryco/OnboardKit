@@ -20,7 +20,7 @@ extension PageContainer {
    }
 }
 /**
- * Components
+ * Private
  */
 extension PageContainer {
    /**

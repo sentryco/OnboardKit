@@ -6,6 +6,7 @@ import SwiftUI
  * - Note: The `onPrevButtonPress` and `onNextButtonPress` closures are used as the actions for the buttons.
  *         The foregroundColor, background, and cornerRadius modifiers are used to style the buttons.
  * - Fixme: ⚠️️ Store margin, spacing etc in const
+ * - Fixme: ⚠️️ rename to ControlOverlayView?
  */
 struct ControlOverlay: View {
    /**
