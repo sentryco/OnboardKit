@@ -73,7 +73,7 @@ extension View {
    /**
     * Modifier
     */
-   internal var actionButtonViewModifier: some View {
+   fileprivate var actionButtonViewModifier: some View {
       let modifier = ActionButtonViewModifier()
       return self.modifier(modifier)
    }

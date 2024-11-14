@@ -7,7 +7,6 @@ import HybridColor
  *                the navigation controls in the onboarding flow. It includes a
  *                previous and next button for navigating through the onboarding
  *                pages.
- * - Fixme: ⚠️️⚠️️ Use the `HeaderIconButtonStyle` instead, it looks better, still valid?
  * - Fixme: ⚠️️ Add comments from legacy etc?
  */
 extension ControlOverlay {
@@ -17,15 +16,15 @@ extension ControlOverlay {
     */
    var body: some View {
       HStack { // HStack (horizontal stack) with two Button views
-         if currentPage != .zero { // not first page
+         if currentPage != .zero { // Not first page
             prevBtn // This line adds the previous button to the view
          }
          Spacer() // The Spacer view is used to push the buttons to the left and right edges of the HStack.
-         if currentPage != (numOfPages - 1) { // not last page
+         if currentPage != (numOfPages - 1) { // Not last page
             nextBtn // This line creates the 'Next' button for navigating to the next page in the onboarding process.
          }
       }
-      // - Fixme: ⚠️️ add const for the bellow?
+      // - Fixme: ⚠️️ Add const for the bellow?
       .padding(.horizontal) // The padding modifier is used to add horizontal padding to the HStack.
    }
 }

@@ -22,7 +22,8 @@ public class ObservableSheet: ObservableObject {
     *                false hides it.
     * - Note: @Published is a property wrapper that automatically notifies any observers (such as SwiftUI views) when the value of the property changes.
     * - Note: this must be public, can't be priv pub. Because we also set it
-    * - Fixme: ⚠️️ add better abstract? use copilot?
+    * - Fixme: ⚠️️ Add better abstract? use copilot?
+    * - Fixme: ⚠️️ add doc regarding not using @Published vs using it in ObservableObject
     */
    @Published public var isPresenting: Bool = false
    /**
@@ -31,13 +32,14 @@ public class ObservableSheet: ObservableObject {
     *                When a new view is assigned to this property, the 'isPresenting' property is 
     *                automatically updated to reflect whether a sheet is currently being presented or not.
     * - Fixme: ⚠️️ We can move this and the bool into an observable obbject, easier to move around that way, do it after it works, see blog post about it etc
-    * - Fixme: ⚠️️ rewrite the description to be max 80char wide
-    * - Fixme: ⚠️️ add better abstract? use copilot?
-    * - Fixme: ⚠️️ Can we use alert? or no?
+    * - Fixme: ⚠️️ Rewrite the description to be max 80char wide
+    * - Fixme: ⚠️️ Add better abstract? use copilot?
+    * - Fixme: ⚠️️ Can we use alert? or no? Or do we only use sheet, and from sheet we can use alert. Should we add support for standalone alert as well? does it already work?
+    * - Fixme: ⚠️️ Doc the hack a bit more
     */
    @Published public var sheet: AnyView? {
-      didSet {
+      didSet { // ⚠️️ hack to only needing to set sheet etc
          isPresenting = sheet != nil
-      } // ⚠️️ hack to only needing to set sheet etc
+      }
    }
 }

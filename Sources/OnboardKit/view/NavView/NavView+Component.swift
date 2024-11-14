@@ -8,7 +8,7 @@ import HapticFeedback
 extension NavView {
    /**
     * Create `PageControl` instance
-    * - Abstract: Dots for each page
+    * - Abstract: Dots that represents each page
     * - Description: This represents the dots indicating which page the user is currently on
     * - Remark: Custom dots: https://spin.atomicobject.com/2016/02/11/move-uipageviewcontroller-dots/
     * - Note: PageControl doesn't have any interaction events yet, might add in the future, iOS has this etc
@@ -30,11 +30,12 @@ extension NavView {
       #endif
    }
    /**
-    * Continue-button - Button has text with: `Skip onboarding` etc
+    * Continue-button - Button has text with: "Skip onboarding" etc
     * - Abstract: Action button "Continue" etc
     * - Description: Button with text: `Continue`, or if last page: `All done`
     * - Fixme: ⚠️️ Try to add a more subtle stroke around continue-button ? 👈 yes maybe, do it later when tweaking design etc
-    * - Fixme: ⚠️️ Make a universal feedback generator for all oses? so we can add it with one line?
+    * - Fixme: ⚠️️ Make a universal feedback generator for all OSes? so we can add it with one line? I think there is one now in HapticFeedbackkit etc add support for style for universal call etc
+    * - Fixme: ⚠️️ Use const for access id ?
     */
    internal var actionBtn: some View {
       Button(buttonTitle) {
@@ -46,7 +47,6 @@ extension NavView {
       .continueButtonStyle() // - Fixme: ⚠️️ Move this into style folder in this scope
       // .background(isTest ? .purple : .clear) // ⚠️️ Debug
       .animation(nil, value: currentPage) // Animates next view
-      // - Fixme: ⚠️️ Use const here?
       .accessibilityIdentifier("actionButton") // Accessibility.Onboarding.actionButton
       // - Fixme: ⚠️️ Add this somehow, add View+Ext in ext folder
       .isMacOrIPad { // limit width of pad device
@@ -59,26 +59,23 @@ extension NavView {
     * - Description: The skip button allows the user to bypass the onboarding
     *                process. It is visible on all pages except the last one,
     *                where it is hidden.
-    * - Fixme: ⚠️️ Use HapticFeedback.play(.credentialsPasted) etc ? 👈
     * - Fixme: ⚠️️ Use const for width etc?
     * - Fixme: ⚠️️ Rename to skipButton?
+    * - Fixme: ⚠️️ Use const for access id?
+    * - Fixme: ⚠️️ Move width value to const
     */
    internal var dismissBtn: some View {
       Button(action: {
          onDismissBtnPress?() // Invokes the dismiss button press action handler
-         #if os(iOS) // - Fixme: ⚠️️ Add support for disregarding haptic for macOS directly in the call etc
-         HapticFeedback().vibrate() // Triggers a medium style haptic feedback
-         #endif
+         HapticFeedback.play(.entry)
       }, label: {
          Text(skipButtonTitle)
       })
       .skipButtonStyle() // - Fixme: ⚠️️ Move this style to this scope
       // .background(isTest ? .pink : .clear) // ⚠️️ debug
-      // - Fixme: ⚠️️ Use const here?
       .accessibilityIdentifier("dismissButton") // Accessibility.Onboarding.dismissButton
       // .background(.green) // ⚠️️ Debug
       .isMacOrIPad {
-         // - Fixme: ⚠️️ move value to const
          $0.frame(width: 360) // - Fixme: ⚠️️ Probably build this into the modifier etc?
       }
    }

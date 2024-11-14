@@ -96,6 +96,7 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - [https://eon.codes/blog/2023/03/11/onboarding-best-practice/](https://eon.codes/blog/2023/03/11/onboarding-best-practice/) 
 
 ## TODO: 
+
 - Clean up code
 - Add gif for macOS / iPad
 - Add modal sheet example
@@ -104,10 +105,11 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - Add note regarding implemnting a lockable view with onboardview. How the structure will look etc, and link to the repo etc?
 - Better handling of platform-specific features or UI components.
 - Add a const struct that can be inject when initiating, that has variouse custom sizes etc
-- Add styling struct as well?
+- Make some sort of style struct we can inject on init of onboardkit?
 - Add access-id struct as well?
-- Add xcodproj file like we do with SplitViewKit?
-- Add PreviewContainer
+- Add demo xcodproj file like we do with SplitViewKit?
+- Add PreviewContainer class
 - Use struct or tuple to store style configs and default values
 - Bump spm package to 6.0 and iOS 18 and macOS 15 etc
 - Add note in readme about importance of using frame width max infinity and edgeIgnores... etc
+

@@ -1,15 +1,21 @@
 import SwiftUI
 /**
  * Const
- * - Fixme: ⚠️️ figure out how to inject consts somehow. ask copilot etc
+ * - Fixme: ⚠️️ figure out how to inject consts somehow in the init process etc. ask copilot etc
  */
 extension NavView {
-   // fix: add doc
-   static let skipButtonTitle: String = "Skip" // Const.Onboarding.skipButtonTitle
-   // fix: add doc
-   static let continueButtonTitle: String = "Continue" // Const.Onboarding.continueButtonTitle
-   // fix: add doc
-   static let finishButtonTitle: String = "Finish" // Const.Onboarding.finishButtonTitle
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   static let skipButtonTitle: String = "Skip"
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   static let continueButtonTitle: String = "Continue"
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   static let finishButtonTitle: String = "Finish"
 
    /**
     * A closure that is called when the action button is pressed.

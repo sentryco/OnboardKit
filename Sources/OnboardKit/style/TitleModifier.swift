@@ -8,13 +8,13 @@ import SwiftUI
  * - Important: ⚠️️ `TextFieldStyle` doesn't work on `Text`
  * - Note: This will work, but will apply to all view types
  * - Fixme: ⚠️️⚠️️ Add this: System font that also scales (relative): https://stackoverflow.com/a/75720217/5389500 add this later when we upgrade to scaled and relative sizing etc
- * - Fixme: ⚠️️ move this back into onboarding scope? if this is the only strict that uses it?
  */
 fileprivate struct TitleModifier: ViewModifier {
    /**
     * This function applies the TitleModifier to the given content.
     * - Parameter content: The content to be modified with the TitleModifier.
     * - Returns: A view with the TitleModifier applied.
+    * - Fixme: ⚠️️ Move font size to const
     */
    fileprivate func body(content: Content) -> some View {
       content
@@ -43,7 +43,7 @@ extension Text {
  */
 #Preview(traits: .fixedLayout(width: 400, height: 400)) {
    let view = {
-      let brand = /*MockGen.randomBrand?.capitalized ??*/ "Apple"
+      let brand = "Apple"
       return Text(brand)
          .titleStyle
          .padding()

@@ -11,21 +11,20 @@ extension ControlOverlay {
     *                previous page in the onboarding process. It triggers the
     *                'onPrevButtonPress' closure when pressed.
     * - Note: The button has to be setup like it is now.
-    * - Note: We can also use: .chevronButtonStyle(systemName: "chevron.left")
+    * - Note: We can also use: `.chevronButtonStyle(systemName: "chevron.left")`
     * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
     * - Fixme: ⚠️️ Use the arrow icons instead? or fine as is?
     * - Fixme: ⚠️️ Use relative sizing for icon?
     * - Fixme: ⚠️️ Make this const in ConstLib etc
-    * - Fixme: ⚠️️ Rename to previousButton?
+    * - Fixme: ⚠️️ Rename to `previousButton`?
+    * - Fixme: ⚠️️ Move the style into this scope?
+    * - Fixme: ⚠️️ Icon name Move to a const
+    * - Fixme: ⚠️️ use Metric.accessoryIconSize? 👈
     */
    internal var prevBtn: some View {
       Button(action: { self.onPrevButtonPress?() }) {}
-      // .chevronButtonStyle(systemName: "chevron.left")
-      // - Fixme: ⚠️️ Move the style into this scope
          .headerIconStyle(
-            // - Fixme: ⚠️️ Move to a const
             iconName: "chevron.left", // Set the icon name to "chevron.left"
-            // - Fixme: ⚠️️ use Metric.accessoryIconSize? 👈
             iconSize: 16, // Set the icon size to 16
             padding: 16, // Set the padding to Measure.margin
             iconColor: style.iconColor, // Set the icon color to white or black
@@ -46,12 +45,11 @@ extension ControlOverlay {
     * - Note: We can also use: .chevronButtonStyle(systemName: "chevron.right")
     * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
     * - Fixme: ⚠️️ Rename to nextButton
+    * - Fixme: ⚠️️ Move iconName to a const
     */
    internal var nextBtn: some View {
       Button(action: { self.onNextButtonPress?() }) {}
-      // .chevronButtonStyle(systemName: "chevron.right")
          .headerIconStyle(
-            // - Fixme: ⚠️️ Move to a const
             iconName: "chevron.right", // Set the icon name to "chevron.right"
             iconSize: 16, // Set the icon size to 16
             padding: 16, // Set the padding to Measure.margin
@@ -70,13 +68,11 @@ extension ControlOverlay {
    /**
     * Style
     * - Fixme: ⚠️️ Rename to buttonStyle? 👈
-    * - Fixme: ⚠️️ Move type to typealias?
+    * - Fixme: ⚠️️ Move type to typealias? 👈 name it ControlOverlayStyle?
     */
    fileprivate var style: (iconColor: Color, bgColor: Color, borderColor: Color) {
-      let iconColor = Color.whiteOrBlack
-      // let iconColor = Palette.Button.icon
-      // let bgColor = Palette.Background.secondary
-      let bgColor: Color = .gray.opacity(0.2)
+      let iconColor = Color.whiteOrBlack // Palette.Button.icon
+      let bgColor: Color = .gray.opacity(0.2) // Palette.Background.secondary
       let borderColor = Color.whiteOrBlack.opacity(0.5)
       // let borderColor = Palette.Background.primary
       return (

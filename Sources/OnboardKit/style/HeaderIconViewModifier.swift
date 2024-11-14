@@ -7,8 +7,7 @@ import HybridColor
  *                stroke width, and padding.
  * - Note: Used in many places that has an Icon
  * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc
- * - Fixme: ⚠️️ Doc each variable
- * - Fixme: ⚠️️ Rename to something else
+ * - Fixme: ⚠️️ Rename to something else?
  * - Fixme: ⚠️️ store style in tuple or struct?
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
@@ -53,9 +52,9 @@ extension HeaderIconViewModifier {
     * - Parameter content: The content to display.
     * - Returns: A modified version of the content with the header icon view modifier applied.
     */
-   @ViewBuilder // - Fixme: ⚠️️ remove this when we add a stack
+   @ViewBuilder // - Fixme: ⚠️️ Remove this when we add a stack
    fileprivate func body(content: Content) -> some View {
-      content // - Fixme: ⚠️️ remove this?
+      content // - Fixme: ⚠️️ Remove this?
       ZStack(alignment: .init(horizontal: .center, vertical: .center)) {
          background // Background shape
          stroke // Stroke shape
@@ -65,8 +64,8 @@ extension HeaderIconViewModifier {
    }
    /**
     * Background
-    * - Fixme: ⚠️️ make a background circle modifier for this, see similar code elsewhere
-    * - Fixme: ⚠️️ try to figure out how use padding for sizing?
+    * - Fixme: ⚠️️ Make a background circle modifier for this, see similar code elsewhere
+    * - Fixme: ⚠️️ Try to figure out how use padding for sizing?
     */
    fileprivate var background: some View {
       Circle() // icon
@@ -91,7 +90,7 @@ extension HeaderIconViewModifier {
             height: iconSize + padding, // Height of the stroke circle
             alignment: .center // Aligns the stroke circle to the center
          )
-         .aspectRatio(contentMode: .fit) // - Fixme: ⚠️️ probably not needed
+         .aspectRatio(contentMode: .fit) // - Fixme: ⚠️️ Probably not needed
    }
    /**
     * Icon

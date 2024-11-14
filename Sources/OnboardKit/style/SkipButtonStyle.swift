@@ -5,12 +5,13 @@ import HybridColor
  * - Description: A button style that provides a minimalistic text button,
  *                typically used for skip actions in onboarding flows or as
  *                secondary actions in various parts of the app.
- * - Note: Alternate name: blue-text-button or secondary-button-style
+ * - Note: Alternate name: `blue-text-button` or `secondary-button-style`
  */
 internal struct SkipButtonStyle: ButtonStyle {
    /**
     * body
     * - Fixme: ⚠️️ use padding instead of height?
+    * - Fixme: ⚠️️ move height to const?
     */
    internal func makeBody(configuration: Configuration) -> some View {
       configuration.label
@@ -37,8 +38,9 @@ extension Button {
 fileprivate struct SkipButtonViewModifier: ViewModifier {
    /**
     * body
+    * - Fixme: ⚠️️ move stroke values and padding to const?
     */
-   func body(content: Content) -> some View {
+   fileprivate func body(content: Content) -> some View {
       content
          .background(
             Capsule()
@@ -54,7 +56,7 @@ extension View {
    /**
     * Modifier
     */
-   internal var skipButtonViewModifier: some View {
+   fileprivate var skipButtonViewModifier: some View {
       let modifier = SkipButtonViewModifier()
       return self.modifier(modifier)
    }
@@ -91,12 +93,3 @@ extension View {
       }
    }
 }
-//, textColor: /*.white.opacity(0.4)*/
-/**
- * - Fixme: ⚠️️ remove this?
- */
-//extension ButtonStyle where Self == SkipButtonStyle {
-//   static func skipButtonStyle() -> Self {
-//      return .init()
-//   }
-//}

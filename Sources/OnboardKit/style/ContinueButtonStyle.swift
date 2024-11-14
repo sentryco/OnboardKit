@@ -31,7 +31,7 @@ fileprivate struct ContinueButtonStyle: ButtonStyle {
          .background(color) // Sets the background color of the button based on the color scheme
          .clipShape(Capsule()) // Clips the button shape to a capsule
          .foregroundStyle(textColor)
-      // .buttonStyle(.plain) // Resets the button style to plain
+         // .buttonStyle(.plain) // Resets the button style to plain
          .padding(.horizontal, 20) // Applies horizontal padding to the button
    }
 }

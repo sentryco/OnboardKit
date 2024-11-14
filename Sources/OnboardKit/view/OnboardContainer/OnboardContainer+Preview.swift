@@ -17,7 +17,7 @@ import HybridColor
             OnboardView(
                pageModels: OnboardModel.dummyModels
             ) {
-//               Swift.print("finish onboarding")
+               // Swift.print("finish onboarding")
                needsOnboarding.wrappedValue = false // Set when finishing onboarding
             }
          } background: {

@@ -6,24 +6,26 @@ import SwiftUI
  * - Note: The `onPrevButtonPress` and `onNextButtonPress` closures are used as the actions for the buttons.
  *         The foregroundColor, background, and cornerRadius modifiers are used to style the buttons.
  * - Fixme: ⚠️️ Store margin, spacing etc in const
- * - Fixme: ⚠️️ rename to ControlOverlayView?
+ * - Fixme: ⚠️️ Rename to `ControlOverlayView`?
  */
 struct ControlOverlay: View {
    /**
     * The current page number
+    * - Abstract: Bind the current page number to the view
     * - Description: This property represents the current page number in the
     *                onboarding flow. It is used to track the user's progress and
     *                control the navigation between different pages.
     */
-   @Binding internal var currentPage: Int // Bind the current page number to the view
+   @Binding internal var currentPage: Int
    /**
     * The total number of pages
+    * - Abstract: Total number of pages in the onboarding flow
     * - Description: This property represents the total number of pages in
     *                the onboarding flow. It is used to control the navigation
     *                and determine when the navigation buttons should be enabled
     *                or disabled.
     */
-   internal let numOfPages: Int // Total number of pages in the onboarding flow
+   internal let numOfPages: Int
    /**
     * Closure for handling the action when the previous button is pressed
     * - Description: This closure is triggered when the previous button
@@ -31,12 +33,12 @@ struct ControlOverlay: View {
     *                defined for navigating backwards in the onboarding
     *                flow.
     */
-   internal var onPrevButtonPress: OnPrevButtonPress? = defaultPrevButtonPress // Default action for previous button press
+   internal var onPrevButtonPress: OnPrevButtonPress? = defaultPrevButtonPress
    /**
     * Closure for handling the action when the next button is pressed
     * - Description: This closure is triggered when the next button is pressed.
     *                It allows for custom behavior to be defined for navigating
     *                forwards in the onboarding flow.
     */
-   internal var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress // Default action for next button press
+   internal var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress
 }

@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Dummy
- * - Fixme: ⚠️️ fence this as debug only
+ * - Fixme: ⚠️️ Fence this as debug only
+ * - Fixme: ⚠️️ Or move it to an xcode proj embedded in the package? See SlideViewKit etc
  */
 extension OnboardModel {
    /**
@@ -39,8 +40,7 @@ extension OnboardModel {
          actions: [
             (
                buttonTitle: "Show privacy agreement",
-               action: { (_ observableSheet: ObservableSheet?) in // attach action to button
-                  // Swift.print("prompt autofill - show steps to complete autofill")
+               action: { (_ observableSheet: ObservableSheet?) in // Attach action to button
                   observableSheet?.sheet = {
                      AnyView(
                         Button(action: {
@@ -64,7 +64,7 @@ extension OnboardModel {
             actions: [
                (
                   buttonTitle: "Monthly $5.99", // Button title for the action
-                  action: nil/*{ _ in Swift.print("buy1") }*/ // No action for this button
+                  action: nil // No action for this button
                ),
                (
                   buttonTitle: "Yearly $49.99", // Button title for the action
