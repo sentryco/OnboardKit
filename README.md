@@ -112,4 +112,4 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 - Use struct or tuple to store style configs and default values
 - Bump spm package to 6.0 and iOS 18 and macOS 15 etc
 - Add note in readme about importance of using frame width max infinity and edgeIgnores... etc
-
+- Add emojies to the features list. Use gpt
