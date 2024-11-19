@@ -6,7 +6,7 @@
       "location" : "https://github.com/sentryco/BlurView",
       "state" : {
         "branch" : "main",
-        "revision" : "d895f85cba3228cc1ee6d6d87511dd13418f35b1"
+        "revision" : "05043c4dd8b05a5fa211eecfd9411f05e6e990b8"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/sentryco/HapticFeedback",
       "state" : {
         "branch" : "main",
-        "revision" : "11e5862c8de13d0362b7e55bce4cd04bdfdeb261"
+        "revision" : "f0da8fd1b614623a6262b92d435197dcdcce34e9"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/sentryco/HybridColor",
       "state" : {
         "branch" : "main",
-        "revision" : "6592be98979ff0201e94f0b7a29e98f3c292715b"
+        "revision" : "08310836ed7a7c36c9cc9955f62c2befbf6084e0"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/sentryco/PageControl",
       "state" : {
         "branch" : "main",
-        "revision" : "32c3229550086181728c895bcc63a2377dd0e0ac"
+        "revision" : "181eec0460b7d10c1895df2ffa00097952ee8ab2"
       }
     },
     {
@@ -42,7 +42,7 @@
       "location" : "https://github.com/sentryco/PageControllerView",
       "state" : {
         "branch" : "main",
-        "revision" : "19b9838b1d51b67aac86544632a46d2ae962cab7"
+        "revision" : "fe544edf23eabc73bbd4e68187e6b6910dafc302"
       }
     }
   ],
