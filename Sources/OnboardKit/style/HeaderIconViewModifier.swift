@@ -116,6 +116,7 @@ extension View {
     * - Note: We use this for `main-row-brand-icon` and `header-circle-icon`
     * - Fixme: ⚠️️ Add stroke to this?
     * - Fixme: ⚠️️ This could be better if we just made a struct? instead of a modifier, and instead add modifer to the icon at least? or?
+    * - Fixme: ⚠️️ using @warn_unqualified_access causes warnings in swift 6.0 Fiure out what the right aroache is?
     * - Parameters:
     *   - iconName: The name of the system icon to display.
     *   - iconSize: The size of the icon.
@@ -126,7 +127,7 @@ extension View {
     *   - strokeWidth: The width of the stroke around the icon.
     * - Returns: A modified version of the view with the header icon view modifier applied.
     */
-   @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
+   // @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
    internal func headerIconViewModifier(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = .white, backgroundColor: Color = Color(light: Color.darkGray.opacity(0.1), dark: Color.darkGray.opacity(0.2)), strokeColor: Color = Color.blackOrWhite, strokeWidth: CGFloat = 2) -> some View {
       let modifier = HeaderIconViewModifier(
          iconName: iconName, // Sets the name of the system icon to display.

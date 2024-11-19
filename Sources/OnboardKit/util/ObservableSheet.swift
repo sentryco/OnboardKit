@@ -14,6 +14,7 @@ import SwiftUI
  * - Fixme: ⚠️️ Write about this in swiftui tips, include priv / public etc
  * - Fixme: ⚠️️ Why is this useful? what uses it? What does it solve? can we do this simpler?
  */
+@MainActor // ⚠️️ Added inorder to comply with swift 6.0
 public class ObservableSheet: ObservableObject {
    /**
     * This is used to trigger presenting the sheet and also to rewind sheet etc

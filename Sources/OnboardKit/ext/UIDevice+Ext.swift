@@ -10,9 +10,16 @@ import UIKit
  *                device type.
  * - Note: We can get `isIpadOrMacos` by doin `!IsIphone` device
  */
+@MainActor
 internal var isPhoneDevice: Bool {
    #if os(iOS) // Check if the target platform is iOS
-   return UIDevice.current.userInterfaceIdiom == .phone // Return true if the device is an iPhone
+//   var isPhoneDevice: Bool? // ⚠️️ hack to comply to swift 6.0 - Fixme: ⚠️️ We might want to make this MainActor
+//   DispatchQueue.main.sync {
+     let device = UIDevice.current
+     /*isPhoneDevice =*/ return device.userInterfaceIdiom == .phone // Return true if the device is an iPhone
+//   }
+//   guard let isPhoneDevice = isPhoneDevice else { fatalError("🚫 unable to obtain device") }
+//   return isPhoneDevice
    #elseif os(macOS) // Check if the target platform is macOS
    return false // Return false as macOS is not an iPhone
    #endif
