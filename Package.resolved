@@ -33,7 +33,7 @@
       "location" : "https://github.com/sentryco/PageControl",
       "state" : {
         "branch" : "main",
-        "revision" : "181eec0460b7d10c1895df2ffa00097952ee8ab2"
+        "revision" : "c83f433f9c65d72c6078ffc80cbf66da6f4a03f5"
       }
     },
     {
@@ -42,7 +42,7 @@
       "location" : "https://github.com/sentryco/PageControllerView",
       "state" : {
         "branch" : "main",
-        "revision" : "fe544edf23eabc73bbd4e68187e6b6910dafc302"
+        "revision" : "a6a594e46de68a7bf809534a987b0caac9a41950"
       }
     }
   ],
