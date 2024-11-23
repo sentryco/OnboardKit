@@ -1,4 +1,5 @@
 import SwiftUI
+import BlurView
 /**
  * Content
  */
@@ -45,6 +46,8 @@ extension OnboardContainer {
     */
    fileprivate var underlay: some View {
       Rectangle().fill(.clear) // Create a rectangle with clear fill
-         .translucentUnderlay() // Apply translucent underlay effect
+         .translucentUnderlay( // Apply translucent underlay effect
+            overlayColor: Color(light: Color.white.opacity(0.1), dark: Color.black.opacity(0.6))
+         )
    }
 }
