@@ -30,19 +30,25 @@ public struct OnboardModel {
     *                action is represented by a button with a title and an
     *                associated function that is executed when the button is
     *                clicked.
-    * - Fixme: ⚠️️ make abstract max 80char wide
+    * - Fixme: ⚠️️ Make abstract max 80char wide
     */
    internal let actions: OnboardActions
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   internal var isSheetFullScreen: Bool
    /**
     * Init (needed to support public scope)
     * - Parameters:
     *   - title: Page title
     *   - description: Page description
     *   - actions: Button title and action
+    *   - isSheetFullScreen: - Fixme: ⚠️️ add doc
     */
-   public init(title: String, description: String, actions: OnboardActions) {
+   public init(title: String, description: String, isSheetFullScreen: Bool = false, actions: OnboardActions) {
       self.title = title
       self.description = description
+      self.isSheetFullScreen = isSheetFullScreen
       self.actions = actions
    }
 }

@@ -20,6 +20,7 @@ internal struct OnboardPageView: View {
      * The model for the onboard page view
      * - Description: This property holds the data model for the onboard page, 
      *                which includes the necessary information to display the content of the page.
+     * - Fixme: ⚠️️ Why is this optional?
      */
    internal let model: OnboardModel?
    /**

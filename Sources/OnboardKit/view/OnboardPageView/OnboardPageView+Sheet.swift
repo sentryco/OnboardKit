@@ -16,7 +16,7 @@ extension OnboardPageView {
     */
    internal func configSheet(view: some View) -> some View {
       view.promptSheet( // Attaches a sheet to the view using the promptSheet modifier
-         isFullScreen: false, // Set the sheet to not be full screen
+         isFullScreen: model?.isSheetFullScreen ?? false, // Set the sheet to not be full screen
          isShowing: $observableSheet.isPresenting, // Bind the presentation state of the sheet
          onDismiss: {}, // Define an empty closure for when the sheet is dismissed
          content: { // Define the content of the sheet
