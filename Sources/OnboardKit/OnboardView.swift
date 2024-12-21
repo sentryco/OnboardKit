@@ -46,7 +46,7 @@ public struct OnboardView: View {
     *   - currentPageIndex: The initial page index when the onboarding view is first displayed. Defaults to 0.
     *   - pageModels: The models representing each page in the onboarding process.
     *   - onComplete: An optional callback that is triggered when the onboarding process completes.
-    *   - onPageChange: - Fixme: ⚠️️ add doc
+    *   - onPageChange: An optional callback that is triggered when the current page in the onboarding process changes.
     * - Note: This initializer is public to allow external modules to create instances of OnboardView.
     */
    public init(currentPageIndex: Int = 0, pageModels: OnboardModels, onPageChange: OnOnboardingPageChange? = defaultOnOnboardingPageChange, onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete) {

@@ -34,7 +34,9 @@ public struct OnboardModel {
     */
    internal let actions: OnboardActions
    /**
-    * - Fixme: ⚠️️ add doc
+    * Indicates if the sheet should be displayed in full screen.
+    * - Description: This property determines whether the sheet presented during the onboarding process should occupy the entire screen.
+    *                When set to `true`, the sheet will be displayed in full screen mode. When set to `false`, the sheet may be displayed with a different presentation style, such as a modal or a popover, depending on the context and platform.
     */
    internal var isSheetFullScreen: Bool
    /**
@@ -43,7 +45,7 @@ public struct OnboardModel {
     *   - title: Page title
     *   - description: Page description
     *   - actions: Button title and action
-    *   - isSheetFullScreen: - Fixme: ⚠️️ add doc
+    *   - isSheetFullScreen: Indicates if the sheet should be displayed in full screen.
     */
    public init(title: String, description: String, isSheetFullScreen: Bool = false, actions: OnboardActions) {
       self.title = title

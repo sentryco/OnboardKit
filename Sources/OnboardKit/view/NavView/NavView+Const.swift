@@ -5,15 +5,18 @@ import SwiftUI
  */
 extension NavView {
    /**
-    * - Fixme: ⚠️️ add doc
+    * The title for the skip button.
+    * - Description: This constant defines the text displayed on the skip button within the navigation view.
     */
    static let skipButtonTitle: String = "Skip"
    /**
-    * - Fixme: ⚠️️ add doc
+    * The title for the continue button.
+    * - Description: This constant defines the text displayed on the continue button within the navigation view.
     */
    static let continueButtonTitle: String = "Continue"
    /**
-    * - Fixme: ⚠️️ add doc
+    * The title for the finish button.
+    * - Description: This constant defines the text displayed on the finish button within the navigation view.
     */
    static let finishButtonTitle: String = "Finish"
 

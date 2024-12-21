@@ -17,9 +17,6 @@ public struct OnboardContainerView<Foreground: View, Background: View>: View {
     * - Fixme: ⚠️️ rename to isOnboardingComplete? 
     */
    @Binding internal var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
 //   @State internal var pageIndex: Int
    /**
     * Onboarding foreground cover

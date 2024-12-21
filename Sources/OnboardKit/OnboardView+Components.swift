@@ -24,7 +24,10 @@ extension OnboardView {
  */
 extension OnboardView {
    /**
-    * - Fixme: ⚠️️ add doc
+    * Vertical stack container for onboarding content
+    * - Description: This view arranges the page container and navigation view in a vertical stack.
+    *                The spacing between elements is set to zero to maintain precise layout control.
+    * - Note: Used by both iOS and macOS targets, but wrapped in ZStack for macOS to support control overlay
     */
    fileprivate var vStack: some View {
       VStack(spacing: .zero) {

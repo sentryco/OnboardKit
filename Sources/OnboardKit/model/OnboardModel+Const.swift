@@ -36,7 +36,10 @@ extension OnboardModel {
    )
    /**
     * Bulk
-    * - Fixme: ⚠️️ add more doc
+    * - Description: This typealias defines a collection of actions that can be performed on the onboarding view.
+    *                Each action is represented by a button with a unique title and an associated function that is
+    *                executed when the button is clicked. This collection allows for multiple actions to be defined
+    *                and managed together.
     */
    public typealias OnboardActions = [OnboardAction]
 }

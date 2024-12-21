@@ -20,8 +20,20 @@ extension OnboardView {
       Swift.print("default onComplete - idx: \(idx)")
    }  // Used to trigger login-view
    /**
-    * - Fixme: ⚠️️ add doc
+    * A closure that is called when the onboarding page changes.
+    * - Description: This closure is triggered whenever the user navigates to a
+    *                different page during the onboarding process. It receives
+    *                the index of the new page as a parameter, allowing for
+    *                tracking or responding to page changes during onboarding.
+    * - Parameter idx: The index of the new page that was navigated to.
     */
    public typealias OnOnboardingPageChange = (_ idx: Int) -> Void
+   /**
+    * The default closure that is called when the onboarding page changes.
+    * - Description: This is the default closure that is called when the
+    *                onboarding page changes. It currently does nothing. This
+    *                can be replaced with any action that needs to be performed
+    *                when the page changes during onboarding.
+    */
    public static let defaultOnOnboardingPageChange: OnOnboardingPageChange = { _ in }
 }
