@@ -4,7 +4,7 @@ import PageControllerView
 /**
  * Components
  */
-extension PageContainer {
+extension PageContainerView {
    /**
     * - Description: This property provides a view that adapts to different
     *                operating systems, displaying a `TabView` on iOS and a
@@ -22,7 +22,7 @@ extension PageContainer {
 /**
  * Private
  */
-extension PageContainer {
+extension PageContainerView {
    /**
     * This is the pages and the small indicator (iOS)
     * - Description: This is the TabView for iOS that displays the onboarding
@@ -30,6 +30,7 @@ extension PageContainer {
     *                indicator to show the current page in the onboarding
     *                process.
     * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
+    * - Fixme: ⚠️️ move the value to a const
     * - Note: The implementation of `tabView` and `pageController` differ
     *         between iOS and macOS. On iOS, a `TabView` is used with a custom
     *         appearance, while on macOS, a `PageControllerView` is used to
@@ -39,8 +40,7 @@ extension PageContainer {
    fileprivate var tabView: some View {
       TabView(selection: $currentPageIndex) { // currentPageIndex is the 2-way binding
          content // This line injects the content view which dynamically generates the onboarding pages based on the pageModels data.
-      } // .ignoresSafeArea()
-      // - Fixme: ⚠️️ move the value to a const
+      }
       .padding(.bottom, 120) // Padding from the bottom
       .onAppear(perform: setupPageControlAppearance) // Configs iOS
       .tabViewStyle(.page) // This will hide this : .tabViewStyle(.page(indexDisplayMode: .never))
@@ -86,8 +86,9 @@ extension PageContainer {
     *                it creates an OnboardPageView with the corresponding model.
     *                The tag assigned to each page corresponds to its index in the array,
     *                which helps in tracking the current page during the onboarding process.
-    * - Fixme: ⚠️️ Doc more, and mark as iOS only?
+    * - Fixme: ⚠️️ Doc more, use copilot
     */
+   #if os(iOS)
    fileprivate var content: some View {
       // Iterates over the enumerated array with a closure that takes an index and an element as parameters.
       ForEach(Array(pageModels.enumerated()), id: \.offset) { (_ index: Int, _ element: OnboardModel) in
@@ -95,17 +96,18 @@ extension PageContainer {
             .tag(index) // This makes the small indicator? not sure, could be more like id setter
       }
    }
+   #endif
 }
 /**
  * Config
  */
-extension PageContainer {
+extension PageContainerView {
    /**
     * Setup Page Control Appearance
     * - Description: This method configures the appearance of the page control
     *                for iOS devices. It sets the current page indicator tint
     *                color to white.
-    * - Fixme: ⚠️️ Can we style the tab component more? is it needed?
+    * - Fixme: ⚠️️ Can we style the tab component more? is it needed? doc options?
     * - Fixme: ⚠️️ See legacy project on how to style this more etc, still relevant?
     */
    fileprivate func setupPageControlAppearance() {

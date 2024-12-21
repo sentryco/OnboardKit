@@ -13,13 +13,9 @@ extension NavView {
     * - Remark: Custom dots: https://spin.atomicobject.com/2016/02/11/move-uipageviewcontroller-dots/
     * - Note: PageControl doesn't have any interaction events yet, might add in the future, iOS has this etc
     * - Fixme: ⚠️️ We can add interaction event for pagecontroller: `$0.addTarget(self, action: #selector(pageControlHandle), for: .valueChanged)` move this to pagecontrol github issues?
-    * - Fixme: ⚠️️ I think we can just fence macOS here, and not return emptyview for iOS etc
     */
-   @ViewBuilder // - Fixme: ⚠️️ Might not be needed
+   #if os(macOS)
    internal var pageControl: some View {
-      #if os(iOS)
-      EmptyView() // - Fixme: ⚠️️ Might not be needed?
-      #elseif os(macOS)
       PageControl(
          currentPage: $currentPage, // current page index
          numberOfPages: numOfPages, // total number of pages
@@ -27,8 +23,8 @@ extension NavView {
          currentPageIndicatorTintColor: .whiteOrBlack // color of active page indicator
       )
       .padding(.vertical, 12) // - Fixme: ⚠️️ move value to const
-      #endif
    }
+   #endif
    /**
     * Continue-button - Button has text with: "Skip onboarding" etc
     * - Abstract: Action button "Continue" etc
@@ -45,7 +41,7 @@ extension NavView {
          #endif
       }
       .continueButtonStyle() // - Fixme: ⚠️️ Move this into style folder in this scope
-      // .background(isTest ? .purple : .clear) // ⚠️️ Debug
+      .background(isTest ? .green : .clear) // ⚠️️ Debug
       .animation(nil, value: currentPage) // Animates next view
       .accessibilityIdentifier("actionButton") // Accessibility.Onboarding.actionButton
       // - Fixme: ⚠️️ Add this somehow, add View+Ext in ext folder
@@ -72,9 +68,8 @@ extension NavView {
          Text(skipButtonTitle)
       })
       .skipButtonStyle() // - Fixme: ⚠️️ Move this style to this scope
-      // .background(isTest ? .pink : .clear) // ⚠️️ debug
+       .background(isTest ? .pink : .clear) // ⚠️️ debug
       .accessibilityIdentifier("dismissButton") // Accessibility.Onboarding.dismissButton
-      // .background(.green) // ⚠️️ Debug
       .isMacOrIPad {
          $0.frame(width: 360) // - Fixme: ⚠️️ Probably build this into the modifier etc?
       }

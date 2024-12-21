@@ -19,4 +19,9 @@ extension OnboardView {
    public static let defaultOnOnboardingComplete: OnOnboardingComplete = {
       Swift.print("default onComplete")
    }  // Used to trigger login-view
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   public typealias OnOnboardingPageChange = (_ idx: Int) -> Void
+   public static let defaultOnOnboardingPageChange: OnOnboardingPageChange = { _ in }
 }

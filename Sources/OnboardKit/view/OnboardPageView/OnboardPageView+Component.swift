@@ -5,6 +5,7 @@ import SwiftUI
 extension OnboardPageView {
    /**
     * Stack
+    * - Fixme: ⚠️️ add abstract
     * - Description: This view stacks the title, description, and action buttons
     *                vertically with custom spacing. It's designed to center these
     *                elements on the screen, providing a clear and focused user
@@ -31,16 +32,16 @@ extension OnboardPageView {
 extension OnboardPageView {
    /**
     * Top title
+    * - Fixme: ⚠️️ add abstract
     * - Description: This section of the code generates the title text for the onboarding view.
     *                The title is fetched from the model and displayed on the screen.
-    * - Fixme: ⚠️️ Move width value to const?
     */
    @ViewBuilder
    fileprivate var titleTextView: some View {
       if let title: String = model?.title { // Top title
          Text("\(title)") // Title
             .titleStyle
-            // .background(isTest ? .indigo : .clear) // ⚠️️ debug
+            .background(isTest ? .indigo : .clear) // ⚠️️ debug
             .isMacOrIPad { // target only iPad and mac
                $0.frame(maxWidth: Self.maxWidth) // Max width for medium or large devices
             }
@@ -48,9 +49,9 @@ extension OnboardPageView {
    }
    /**
     * Top description
+    * - Fixme: ⚠️️ add abstract
     * - Description: This section of the code generates the description text for the onboarding view.
     *                The description is fetched from the model and displayed on the screen.
-    * - Fixme: ⚠️️ Move width value to const?
     * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad?
     */
    @ViewBuilder
@@ -58,7 +59,7 @@ extension OnboardPageView {
       if let description: String = model?.description { // bellow title
          Text("\(description)") // Description
             .descriptionStyle
-            // .background(isTest ? .blue : .clear) // ⚠️️ debug
+            .background(isTest ? .blue : .clear) // ⚠️️ debug
             .isMacOrIPad { // Max width for medium or large devices
                $0.frame(maxWidth: Self.maxWidth) // by using maxWidth, the text grows vertically when there is little wide space available
             }
@@ -71,6 +72,7 @@ extension OnboardPageView {
    }
    /**
     * Create action-buttons (stacked from center vertically)
+    * - Fixme: ⚠️️ add abstract
     * - Description: This section of the code generates the action buttons
     *                for the onboarding view. Each button corresponds to an
     *                action defined in the model. When a button is clicked, it
@@ -91,7 +93,7 @@ extension OnboardPageView {
                }
                .actionButtonStyle() // Applies the action button style
                .accessibilityIdentifier("pageButton") // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
-               // .background(isTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
+               .background(isTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
             }
          }
       }

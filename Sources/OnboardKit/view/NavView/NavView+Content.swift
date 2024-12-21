@@ -20,8 +20,10 @@ extension NavView {
     */
    var body: some View {
       VStack(spacing: .zero) {
+         #if os(macOS)
          pageControl // Dots for macOS
-         actionBtn // Continue / finish
+         #endif
+         actionBtn // Continue / Finish
          dismissBtn // Skip onboarding
       }
    }

@@ -12,7 +12,7 @@ import SwiftUI
  * - Note: Design inspo: Neumorphic to button?: https://sarunw.com/posts/swiftui-buttonstyle/
  * - Note: Design inspo: and https://sarunw.com/posts/how-to-create-neomorphism-design-in-swiftui/
  * - Note: Design inspo: and https://github.com/costachung/neumorphic and https://www.figma.com/community/file/1133043795722403790/neumorphism-dark-theme-ui
- * - Fixme: ⚠️️ Maybe we should make each page a view? instead of using data as the model? cosnider it etc
+ * - Fixme: ⚠️️ Maybe we should make each page a view? instead of using data as the model? consider it etc, or use viewmodel observedobject etc?
  * - Fixme: ⚠️️ Improve the abstract with copilot
  */
 internal struct OnboardPageView: View {

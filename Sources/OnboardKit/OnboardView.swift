@@ -13,8 +13,6 @@ import SwiftUI
  * - Note: Alternative name: `OnboardContainerView`
  * - Note: Onboarding SwiftUI `iOS` and `macOS`: https://github.com/benjaminsage/iPages
  * - Note: https://github.com/demianturner/DTOnboarding
- * - Fixme: ⚠️️⚠️️ Move the onboardview to a standalone module, maybe even opensource it? 👈
- * - Fixme: ⚠️️ Add onPageChange callback so we can add telemetry etc 👈
  */
 public struct OnboardView: View {
    /**
@@ -22,9 +20,8 @@ public struct OnboardView: View {
     * - Abstract: Desired page index to jump to
     * - Description: Calculate the frame that should scroll to based on the page control current page
     * - Note: We can debug this by changing the value
-    * - Fixme: ⚠️️ Maybe set this in the init? 👈
     */
-   @State internal var currentPageIndex: Int = 0 // Set initial state
+   @State internal var currentPageIndex: Int // Set initial state
    /**
     * Array of page models for onboarding
     * - Description: This is an array of models that represent each page in the
@@ -33,24 +30,31 @@ public struct OnboardView: View {
     */
    internal let pageModels: OnboardModels
    /**
+    * - Note: Cann be used as a callback so we can add telemetry etc
+    */
+   internal var onPageChange: OnOnboardingPageChange?
+   /**
     * Callback signature for when onboarding completes
     * - Description: This is a callback that gets triggered when the onboarding
     *                process is completed. It can be used to perform any necessary
     *                actions or updates after the user has finished the onboarding.
     * - Fixme: ⚠️️⚠️️ We should animate the transition to hide onboarding, a quick 0.2 alpha outro, similar to how the transition for lockscreen works for iPhone etc
     */
-   internal var onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete
+   internal var onComplete: OnOnboardingComplete?
    /**
     * Initializes a new instance of OnboardView.
     * - Parameters:
     *   - currentPageIndex: The initial page index when the onboarding view is first displayed. Defaults to 0.
     *   - pageModels: The models representing each page in the onboarding process.
     *   - onComplete: An optional callback that is triggered when the onboarding process completes.
+    *   - onPageChange: - Fixme: ⚠️️ add doc
     * - Note: This initializer is public to allow external modules to create instances of OnboardView.
     */
-   public init(currentPageIndex: Int = 0, pageModels: OnboardModels, onComplete: OnOnboardingComplete? = nil) {
+   public init(currentPageIndex: Int = 0, pageModels: OnboardModels, onPageChange: OnOnboardingPageChange? = defaultOnOnboardingPageChange, onComplete: OnOnboardingComplete? = defaultOnOnboardingComplete) {
       self.currentPageIndex = currentPageIndex
       self.pageModels = pageModels
+      self.onPageChange = onPageChange
       self.onComplete = onComplete
    }
 }
+internal let isTest: Bool = true

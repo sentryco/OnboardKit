@@ -11,14 +11,13 @@ extension OnboardView {
     *                pages and the page control indicator. It binds to the
     *                `currentPageIndex` to update the currently visible page and
     *                uses `pageModels` to populate the content of each page.
-    * - Fixme: ⚠️️ Describe the diff between iOS and macOS and why
     */
    internal var pageContainer: some View {
-      PageContainer(
+      PageContainerView(
          currentPageIndex: $currentPageIndex, // Index of the current page
          pageModels: self.pageModels // Array of page models
       )
-      // .background(isTest ? Color.brown : .clear)
+       .background(isTest ? Color.brown : .clear)
    }
    /**
     * Create `ControlOverlay` (has `left-button` and `right-button`) (macOS only)
@@ -30,8 +29,8 @@ extension OnboardView {
     *                as intuitive as they are on iOS devices. The overlay
     *                includes both previous and next buttons, allowing users to
     *                move through the onboarding pages at their own pace.
-    * - Fixme: ⚠️️ Add the hide and show logic for control-overlay for macos, or less is more? (maybe do it!) just needs activating and some styling
-    * - Fixme: ⚠️️ Should we add this for iPad as well?
+    * - Fixme: ⚠️️ Add the hide and show logic for control-overlay for macos, or less is more? (maybe do it!) just needs activating and some styling, elaborate?
+    * - Fixme: ⚠️️ Should we add this for iPad as well? Probably not?
     */
    #if os(macOS)
    internal var controlOverlay: some View {
@@ -70,12 +69,9 @@ extension OnboardView {
             onActionBtnPress: { // Action when action button is pressed
                goToNextPage() // Go to the next onboarding page
             }, onDismissBtnPress: { // Action when dismiss button is pressed
-               // - Fixme: ⚠️️ move this into the caller?
-               //TM.Misc.skippedOnboarding.event() // Ping telemetry
                onComplete?() // Complete the onboarding process
             })
-         // .background(isTest ? .indigo : .clear) // ⚠️️ debug
-         // .background(isTest ? Color.yellow.opacity(0.4) : .clear) // ⚠️️ debug
+          .background(isTest ? .indigo : .clear) // ⚠️️ debug
       }
    }
 }

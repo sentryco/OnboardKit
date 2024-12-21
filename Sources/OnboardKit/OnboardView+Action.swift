@@ -16,8 +16,6 @@ extension OnboardView {
          if currentPageIndex + 1 < pageModels.count {
             currentPageIndex += 1 // itterate by one
          } else { // Loop to first step // currentPageIndex = 0
-            // - Fixme: ⚠️️ Move the bellow to the caller of onboardview
-            // TM.Misc.completedOnboarding.event() // Ping telemetry
             onComplete?() // Here we should dismiss onboarding
          }
       }
