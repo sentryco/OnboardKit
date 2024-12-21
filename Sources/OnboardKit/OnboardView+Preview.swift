@@ -8,6 +8,7 @@ import SwiftUI
  * - Note: The translucent is demoed in the `OnboardContainer` preview
  * - Fixme: ⚠️️ add an abstract description
  */
+#if DEBUG // ⚠️️ GA Fix
 #Preview(traits: .fixedLayout(width: 420, height: 640)) {
    ZStack(alignment: .top) { // Needed for dark scheme and dark bg to work etc
       Rectangle()
@@ -21,3 +22,4 @@ import SwiftUI
    } // End of zstack
    .environment(\.colorScheme, .dark)
 }
+#endif
