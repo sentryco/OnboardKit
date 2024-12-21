@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 import HybridColor
 /**
@@ -9,7 +10,7 @@ import HybridColor
  *                pages.
  * - Fixme: ⚠️️ Add comments from legacy etc?
  */
-extension ControlOverlay {
+extension ControlOverlayView {
    /**
     * Body
     * - Description: This is the main body of the ControlOverlay view. It contains a horizontal stack (HStack) with two conditional buttons for navigation - previous and next. The previous button appears if the current page is not the first one, and the next button appears if the current page is not the last one. The buttons are pushed to the left and right edges of the HStack by a Spacer view. The entire HStack has horizontal padding for better visual appearance.
@@ -28,3 +29,4 @@ extension ControlOverlay {
       .padding(.horizontal) // The padding modifier is used to add horizontal padding to the HStack.
    }
 }
+#endif

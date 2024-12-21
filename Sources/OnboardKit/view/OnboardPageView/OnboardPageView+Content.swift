@@ -16,6 +16,6 @@ extension OnboardPageView {
     */
    internal var body: some View {
       configSheet(view: self.stack)
-       .background(isTest ? .teal : .clear) // ⚠️️ debug
+         .background(isTest ? .teal : .clear) // ⚠️️ debug
    }
 }

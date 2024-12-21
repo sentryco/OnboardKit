@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 import HybridColor
 /**
@@ -12,7 +13,7 @@ import HybridColor
       @State var currentPage: Int = 1
       let numOfPages = 4
       var body: some View {
-         ControlOverlay(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
+         ControlOverlayView(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
             Swift.print("Prev button pressed")
             currentPage -= 1
          }, onNextButtonPress: {
@@ -28,9 +29,7 @@ import HybridColor
    }
    let view = {
       DebugContainer()
-         #if os(macOS)
          .padding(.horizontal)
-         #endif
    }()
    return ZStack {
       Rectangle() // A rectangle to fill the background
@@ -45,3 +44,4 @@ import HybridColor
    }
    .environment(\.colorScheme, .dark)
 }
+#endif

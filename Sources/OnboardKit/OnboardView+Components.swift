@@ -6,18 +6,45 @@ import PageControllerView
  */
 extension OnboardView {
    /**
+    * Stack
+    */
+   internal var stack: some View {
+      #if os(macOS) // Only for macOS
+      ZStack {
+         vStack
+         controlOverlay // Makes sense to have this on a device where swiping isnt abvious
+      }
+      #elseif os(iOS)
+      vStack
+      #endif
+   }
+}
+/**
+ * Private
+ */
+extension OnboardView {
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   fileprivate var vStack: some View {
+      VStack(spacing: .zero) {
+         pageContainer // Onboard-page
+         navView // Bottom onboarding navigation bar
+      }
+   }
+   /**
     * Page-container (has pages and dots controller) (iOS / macOS)
     * - Description: The `PageContainer` view manages the display of onboarding
     *                pages and the page control indicator. It binds to the
     *                `currentPageIndex` to update the currently visible page and
     *                uses `pageModels` to populate the content of each page.
     */
-   internal var pageContainer: some View {
+   fileprivate var pageContainer: some View {
       PageContainerView(
          currentPageIndex: $currentPageIndex, // Index of the current page
          pageModels: self.pageModels // Array of page models
       )
-       .background(isTest ? Color.brown : .clear)
+         .background(isTest ? Color.brown : .clear)
    }
    /**
     * Create `ControlOverlay` (has `left-button` and `right-button`) (macOS only)
@@ -33,15 +60,17 @@ extension OnboardView {
     * - Fixme: ⚠️️ Should we add this for iPad as well? Probably not?
     */
    #if os(macOS)
-   internal var controlOverlay: some View {
-      ControlOverlay(
+   fileprivate var controlOverlay: some View {
+      ControlOverlayView(
          currentPage: $currentPageIndex, // Index of the current page
          numOfPages: pageModels.count, // Total number of pages
          onPrevButtonPress: { // Add event callbacks
             goToPrevPage() // Go to the previous onboarding page
          }, onNextButtonPress: { // Add event callbacks
             goToNextPage() // Go to the next onboarding page
-         })
+         }
+      )
+         .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
    }
    #endif
    /**
@@ -60,18 +89,16 @@ extension OnboardView {
     *                and completing the onboarding process remains consistent
     *                across both platforms.
     */
-   internal var navView: some View {
-      VStack(alignment: .center) { // Bottom-bar, center alignex
-         Spacer() // Pins nav-view to the bottom
-         NavView(
-            numOfPages: pageModels.count, // Number of pages based on the count of pageModels
-            currentPage: $currentPageIndex, // Current page index bound to currentPageIndex
-            onActionBtnPress: { // Action when action button is pressed
-               goToNextPage() // Go to the next onboarding page
-            }, onDismissBtnPress: { // Action when dismiss button is pressed
-               onComplete?() // Complete the onboarding process
-            })
-          .background(isTest ? .indigo : .clear) // ⚠️️ debug
-      }
+   fileprivate var navView: some View {
+      NavView(
+         numOfPages: pageModels.count, // Number of pages based on the count of pageModels
+         currentPage: $currentPageIndex, // Current page index bound to currentPageIndex
+         onActionBtnPress: { // Action when action button is pressed
+            goToNextPage() // Go to the next onboarding page
+         }, onDismissBtnPress: { // Action when dismiss button is pressed
+            onComplete?() // Complete the onboarding process
+         }
+      )
+         .background(isTest ? .indigo : .clear) // ⚠️️ debug
    }
 }

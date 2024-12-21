@@ -1,14 +1,15 @@
+#if os(macOS)
 import SwiftUI
 /**
- * Onboarding Controller (Next / Prev buttons)
+ * Onboarding Controller (macOS only)
+ * - Abstract: Next / Prev buttons
  * - Description: Has left and right buttons for navigating back and forth.
  *                Back button is hidden at first index, and Next button is hidden at last index.
  * - Note: The `onPrevButtonPress` and `onNextButtonPress` closures are used as the actions for the buttons.
  *         The foregroundColor, background, and cornerRadius modifiers are used to style the buttons.
  * - Fixme: ⚠️️ Store margin, spacing etc in const
- * - Fixme: ⚠️️ Rename to `ControlOverlayView`?
  */
-struct ControlOverlay: View {
+struct ControlOverlayView: View {
    /**
     * The current page number
     * - Abstract: Bind the current page number to the view
@@ -42,3 +43,4 @@ struct ControlOverlay: View {
     */
    internal var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress
 }
+#endif

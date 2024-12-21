@@ -1,9 +1,10 @@
+#if os(macOS)
 import SwiftUI
 import HybridColor
 /**
  * Components
  */
-extension ControlOverlay {
+extension ControlOverlayView {
    /**
     * Prev btn
     * - Abstract: The previous button is used to navigate to the previous page.
@@ -15,11 +16,10 @@ extension ControlOverlay {
     * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
     * - Fixme: ⚠️️ Use the arrow icons instead? or fine as is?
     * - Fixme: ⚠️️ Use relative sizing for icon?
-    * - Fixme: ⚠️️ Make this const in ConstLib etc
     * - Fixme: ⚠️️ Rename to `previousButton`?
     * - Fixme: ⚠️️ Move the style into this scope?
     * - Fixme: ⚠️️ Icon name Move to a const
-    * - Fixme: ⚠️️ use Metric.accessoryIconSize? 👈
+    * - Fixme: ⚠️️ use Metric.accessoryIconSize? or const?
     */
    internal var prevBtn: some View {
       Button(action: { self.onPrevButtonPress?() }) {}
@@ -64,7 +64,7 @@ extension ControlOverlay {
 /**
  * Style
  */
-extension ControlOverlay {
+extension ControlOverlayView {
    /**
     * Style
     * - Fixme: ⚠️️ Rename to buttonStyle? 👈
@@ -82,3 +82,4 @@ extension ControlOverlay {
       )
    }
 }
+#endif

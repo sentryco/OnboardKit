@@ -22,14 +22,7 @@ extension OnboardView {
     * - Note: The translucency is done in the `OnboardContainer`
     */
    public var body: some View {
-      ZStack {
-         pageContainer // Onboard-page
-         navView // Bottom onboarding navigation bar
-         #if os(macOS) // Only for macOS
-         controlOverlay // Makes sense to have this on a device where swiping isnt abvious
-          .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
-         #endif
-      }
+      stack
       #if os(macOS) // Only for macOS
       .ignoresSafeArea(.all) // ⚠️️ Removes some native default offset etc
       #endif

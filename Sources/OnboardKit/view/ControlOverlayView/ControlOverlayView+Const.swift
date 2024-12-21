@@ -1,8 +1,9 @@
+#if os(macOS)
 import Foundation
 /**
  * Const
  */
-extension ControlOverlay {
+extension ControlOverlayView {
    /**
     * Typealias for the closure when the previous button is pressed
     * - Description: Defines a closure type for handling actions when the
@@ -37,3 +38,4 @@ extension ControlOverlay {
       Swift.print("Default next")
    }
 }
+#endif

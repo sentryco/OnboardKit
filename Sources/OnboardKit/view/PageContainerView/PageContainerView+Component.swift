@@ -25,25 +25,26 @@ extension PageContainerView {
 extension PageContainerView {
    /**
     * This is the pages and the small indicator (iOS)
+    * - Fixme: ⚠️️ add abstract
     * - Description: This is the TabView for iOS that displays the onboarding
     *                pages with swipe capabilities. It also includes a small
     *                indicator to show the current page in the onboarding
     *                process.
-    * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
-    * - Fixme: ⚠️️ move the value to a const
+    * - Note: This will hide this : .tabViewStyle(.page(indexDisplayMode: .never))
     * - Note: The implementation of `tabView` and `pageController` differ
     *         between iOS and macOS. On iOS, a `TabView` is used with a custom
     *         appearance, while on macOS, a `PageControllerView` is used to
     *         manage the display of pages.
+    * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
     */
    #if os(iOS)
    fileprivate var tabView: some View {
-      TabView(selection: $currentPageIndex) { // currentPageIndex is the 2-way binding
-         content // This line injects the content view which dynamically generates the onboarding pages based on the pageModels data.
+      TabView(selection: $currentPageIndex) { // - Fixme: ⚠️️ doc this line
+         pageView // This line injects the content view which dynamically generates the onboarding pages based on the pageModels data.
       }
-      .padding(.bottom, 120) // Padding from the bottom
+      // .padding(.bottom, 0) // Padding from the bottom
       .onAppear(perform: setupPageControlAppearance) // Configs iOS
-      .tabViewStyle(.page) // This will hide this : .tabViewStyle(.page(indexDisplayMode: .never))
+      .tabViewStyle(.page) // - Fixme: ⚠️️ doc this line
    }
    #endif // macOS doesn't support tab-view yet, so we just fade in each view etc
    /**
@@ -89,7 +90,7 @@ extension PageContainerView {
     * - Fixme: ⚠️️ Doc more, use copilot
     */
    #if os(iOS)
-   fileprivate var content: some View {
+   fileprivate var pageView: some View {
       // Iterates over the enumerated array with a closure that takes an index and an element as parameters.
       ForEach(Array(pageModels.enumerated()), id: \.offset) { (_ index: Int, _ element: OnboardModel) in
          OnboardPageView(model: element) // This line creates an OnboardPageView for each model in the pageModels array.
