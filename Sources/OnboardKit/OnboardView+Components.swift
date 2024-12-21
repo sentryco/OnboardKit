@@ -96,7 +96,7 @@ extension OnboardView {
          onActionBtnPress: { // Action when action button is pressed
             goToNextPage() // Go to the next onboarding page
          }, onDismissBtnPress: { // Action when dismiss button is pressed
-            onComplete?() // Complete the onboarding process
+            onComplete?(currentPageIndex) // Complete the onboarding process
          }
       )
          .background(isTest ? .indigo : .clear) // ⚠️️ debug

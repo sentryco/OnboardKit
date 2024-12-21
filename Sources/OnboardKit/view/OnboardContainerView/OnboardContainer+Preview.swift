@@ -20,7 +20,7 @@ import HybridColor
             Swift.print("curPageIndex:  \(idx)")
             // TM.PageView.onboarding.pageView() // Ping telemetry
 //            pageIndex.wrappedValue = idx
-         }, onComplete: {
+         }, onComplete: { _ in
             needsOnboarding.wrappedValue = false // Set when finishing onboarding
          }
       )

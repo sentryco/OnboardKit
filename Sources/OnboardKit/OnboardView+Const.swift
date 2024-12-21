@@ -7,7 +7,7 @@ extension OnboardView {
     *                onboarding process. It can be used to perform any necessary
     *                actions or updates after the user has finished the onboarding.
     */
-   public typealias OnOnboardingComplete = () -> Void
+   public typealias OnOnboardingComplete = (_ pageIndex: Int) -> Void
    /**
     * The default closure that is called when the onboarding is complete.
     * - Description: This is the default closure that is called when the
@@ -16,8 +16,8 @@ extension OnboardView {
     *                any action that needs to be performed after the onboarding
     *                process.
     */
-   public static let defaultOnOnboardingComplete: OnOnboardingComplete = {
-      Swift.print("default onComplete")
+   public static let defaultOnOnboardingComplete: OnOnboardingComplete = { (_ idx: Int) in
+      Swift.print("default onComplete - idx: \(idx)")
    }  // Used to trigger login-view
    /**
     * - Fixme: ⚠️️ add doc

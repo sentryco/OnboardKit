@@ -16,7 +16,7 @@ extension OnboardView {
          if currentPageIndex + 1 < pageModels.count {
             currentPageIndex += 1 // itterate by one
          } else { // Loop to first step // currentPageIndex = 0
-            onComplete?() // Here we should dismiss onboarding
+            onComplete?(currentPageIndex) // Here we should dismiss onboarding
          }
       }
    }
