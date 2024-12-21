@@ -38,7 +38,7 @@ extension View {
     *            device is an iPad, or if the platform is macOS, otherwise the
     *            original view.
     */
-   @ViewBuilder // - Fixme: ⚠️️ might not be needed
+   @ViewBuilder
    internal func isMacOrIPad<Content: View>(_ closure: (Self) -> Content) -> some View {
       #if os(iOS) // Check if the platform is iOS
       if UIDevice.current.userInterfaceIdiom == .pad { // Check if the device is an iPad

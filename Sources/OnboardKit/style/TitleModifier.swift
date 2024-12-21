@@ -7,7 +7,7 @@ import SwiftUI
  *                prominent, attention-grabbing text is required.
  * - Important: ⚠️️ `TextFieldStyle` doesn't work on `Text`
  * - Note: This will work, but will apply to all view types
- * - Fixme: ⚠️️⚠️️ Add this: System font that also scales (relative): https://stackoverflow.com/a/75720217/5389500 add this later when we upgrade to scaled and relative sizing etc
+ * - Fixme: ⚠️️ Add this: System font that also scales (relative): https://stackoverflow.com/a/75720217/5389500 add this later when we upgrade to scaled and relative sizing etc
  */
 fileprivate struct TitleModifier: ViewModifier {
    /**

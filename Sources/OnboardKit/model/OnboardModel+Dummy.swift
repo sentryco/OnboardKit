@@ -1,8 +1,8 @@
+#if DEBUG //  Fence this as debug only
 import SwiftUI
 /**
  * Dummy
- * - Fixme: ⚠️️ Fence this as debug only
- * - Fixme: ⚠️️ Or move it to an xcode proj embedded in the package? See SlideViewKit etc
+ * - Fixme: ⚠️️ move it to an xcode proj embedded in the package? See SlideViewKit etc
  */
 extension OnboardModel {
    /**
@@ -82,3 +82,4 @@ extension OnboardModel {
             ])
    }
 }
+#endif

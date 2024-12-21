@@ -26,7 +26,7 @@ extension OnboardModel {
     * - Important: ⚠️️ Make sure button-title must be unique as it's used for for-each id
     * - Note: Alternative name: `OnBoardButton`, `OnboardActionItem`
     * - Fixme: ⚠️️ Add id again later etc? or use int etc?
-    * - Fixme: ⚠️️⚠️️⚠️️ Use a struct 👈 move to own file? maybe yes
+    * - Fixme: ⚠️️ Use a struct? move to own file? maybe yes
     * - Fixme: ⚠️️ Consider renaming to `OnboardButtonAction` for clarity and alignment with domain terminology.
     * - Fixme: ⚠️️ add abstract
     */

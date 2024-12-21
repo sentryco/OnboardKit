@@ -38,7 +38,6 @@ public struct OnboardView: View {
     * - Description: This is a callback that gets triggered when the onboarding
     *                process is completed. It can be used to perform any necessary
     *                actions or updates after the user has finished the onboarding.
-    * - Fixme: ⚠️️⚠️️ We should animate the transition to hide onboarding, a quick 0.2 alpha outro, similar to how the transition for lockscreen works for iPhone etc
     */
    internal var onComplete: OnOnboardingComplete?
    /**
@@ -57,4 +56,4 @@ public struct OnboardView: View {
       self.onComplete = onComplete
    }
 }
-internal let isTest: Bool = true
+internal let isTest: Bool = false // ⚠️️ debug
