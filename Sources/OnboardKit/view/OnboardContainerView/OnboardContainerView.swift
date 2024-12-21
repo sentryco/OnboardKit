@@ -20,7 +20,7 @@ public struct OnboardContainerView<Foreground: View, Background: View>: View {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   @Binding internal var pageIndex: Int
+//   @State internal var pageIndex: Int
    /**
     * Onboarding foreground cover
     * - Description: This covers the app beneath. We use a semi translucent background so that the app behind can be slightly visible
@@ -45,9 +45,9 @@ public struct OnboardContainerView<Foreground: View, Background: View>: View {
     *   - background: App main view
     *   - needsOnboarding: Use rebound user-default property
     */
-   public init(needsOnboarding: Binding<Bool>, pageIndex: Binding<Int>, @ViewBuilder foreground: @escaping ForegroundClosure, @ViewBuilder background: @escaping BackgroundClosure) {
+   public init(needsOnboarding: Binding<Bool>, /*pageIndex: Binding<Int>, */@ViewBuilder foreground: @escaping ForegroundClosure, @ViewBuilder background: @escaping BackgroundClosure) {
       self._needsOnboarding = needsOnboarding
-      self._pageIndex = pageIndex
+//      self._pageIndex = pageIndex
       self.foreground = foreground
       self.background = background
    }

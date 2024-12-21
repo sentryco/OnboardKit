@@ -8,7 +8,7 @@ extension OnboardContainerView {
     *                to a Boolean indicating the need for onboarding and returns a
     *                `Foreground` view component.
     */
-   public typealias ForegroundClosure = (_ needsOnboarding: Binding<Bool>, _ pageIndex: Binding<Int>) -> Foreground
+   public typealias ForegroundClosure = (_ needsOnboarding: Binding<Bool>/*, _ pageIndex: Binding<Int>*/) -> Foreground
    /**
     * Type alias for a closure that returns a `Background` view component.
     */

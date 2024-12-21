@@ -12,12 +12,14 @@ import HybridColor
 @available(iOS 18.0, macOS 15.0, *) // ⚠️️ Fix for GA
 #Preview(traits: .fixedLayout(width: 680, height: 440)) {
    @Previewable @State var isInNeedOfOnboarding: Bool = true
-   @Previewable @State var curPageIndex: Int = 0
-   OnboardContainerView(needsOnboarding: $isInNeedOfOnboarding, pageIndex: $curPageIndex) { (_ needsOnboarding: Binding<Bool>, _ pageIndex: Binding<Int>) in
+//   @Previewable @State var curPageIndex: Int = 0
+   OnboardContainerView(needsOnboarding: $isInNeedOfOnboarding/*, pageIndex: $curPageIndex*/) { (_ needsOnboarding: Binding<Bool>/*, _ pageIndex: Binding<Int>*/) in
       OnboardView(
          pageModels: OnboardModel.dummyModels,
-         onPageChange: { idx in
-            pageIndex.wrappedValue = idx
+         onPageChange: { idx in // This line triggers an action when currentPageIndex changes.
+            Swift.print("curPageIndex:  \(idx)")
+            // TM.PageView.onboarding.pageView() // Ping telemetry
+//            pageIndex.wrappedValue = idx
          }, onComplete: {
             needsOnboarding.wrappedValue = false // Set when finishing onboarding
          }
@@ -35,10 +37,6 @@ import HybridColor
       // } else {
       //    TM.Misc.completedOnboarding.event() // Ping telemetry
       // }
-   }
-   .onChange(of: curPageIndex) { _, _ in // This line triggers an action when currentPageIndex changes.
-      Swift.print("curPageIndex:  \(curPageIndex)")
-      // TM.PageView.onboarding.pageView() // Ping telemetry
    }
    #if os(macOS)
    .frame(width: 680, height: 440) // Must be here
