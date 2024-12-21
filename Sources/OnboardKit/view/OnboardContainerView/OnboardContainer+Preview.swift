@@ -9,7 +9,7 @@ import HybridColor
  * - Note: This shows the translucent background that works in preview
  * - Note: You can also put the `needOnboardin`g in a rebinder closure that changes userdefault
  */
-#if os(iOS) // ⚠️️ GA Fix
+@available(iOS 18.0, macOS 15.0, *) // ⚠️️ Fix for GA
 #Preview(traits: .fixedLayout(width: 680, height: 440)) {
    @Previewable @State var isInNeedOfOnboarding: Bool = true
    @Previewable @State var curPageIndex: Int = 0
@@ -45,4 +45,4 @@ import HybridColor
    #endif
    .environment(\.colorScheme, .dark)
 }
-#endif
+
