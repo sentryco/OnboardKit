@@ -39,12 +39,12 @@ extension PageContainerView {
     */
    #if os(iOS)
    fileprivate var tabView: some View {
-      TabView(selection: $currentPageIndex) { // - Fixme: ⚠️️ doc this line
+      TabView(selection: $currentPageIndex) { // Binds the current page index to control and track the currently visible page
          pageView // This line injects the content view which dynamically generates the onboarding pages based on the pageModels data.
       }
       // .padding(.bottom, 0) // Padding from the bottom
       .onAppear(perform: setupPageControlAppearance) // Configs iOS
-      .tabViewStyle(.page) // - Fixme: ⚠️️ doc this line
+      .tabViewStyle(.page) // Applies the page style to the TabView, enabling swipe navigation between pages with visual indicators
    }
    #endif // macOS doesn't support tab-view yet, so we just fade in each view etc
    /**

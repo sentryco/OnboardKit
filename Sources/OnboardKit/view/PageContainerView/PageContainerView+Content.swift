@@ -15,6 +15,6 @@ extension PageContainerView {
     * - Note: @ViewBuilder is not needed for OS clauses like this
     */
    internal var body: some View {
-      containerContent // - Fixme: ⚠️️ doc this line
+      containerContent // Displays either a TabView (iOS) or PageControllerView (macOS) depending on the platform
    }
 }
