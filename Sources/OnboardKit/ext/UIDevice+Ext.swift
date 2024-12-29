@@ -10,7 +10,7 @@ import UIKit
  *                device type.
  * - Note: We can get `isIpadOrMacos` by doin `!IsIphone` device
  */
-//@MainActor
+// @MainActor
 internal var isPhoneDevice: Bool {
    #if os(iOS) // Check if the target platform is iOS
       // var isPhoneDevice: Bool? // ⚠️️ hack to comply to swift 6.0 - Fixme: ⚠️️ We might want to make this MainActor

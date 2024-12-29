@@ -7,10 +7,10 @@ import HybridColor
  *                with the next step. This style emphasizes the button with a
  *                capsule shape and a clear call-to-action, ensuring high
  *                visibility and accessibility.
- * - Note: similar to SecondaryButtonStyle, - Fixme: ⚠️️ reuse that instead?
+ * - Note: similar to `SecondaryButtonStyle`, - Fixme: ⚠️️ reuse that instead?
  * - Fixme: ⚠️️ Move view-modifier into own file? with a preview etc?
  * - Fixme: ⚠️️ Move foregroundColor to buttonstyle?
- * - Fixme: ⚠️️ buttonstyle might not be needed .buttonStyle(.plain) 
+ * - Fixme: ⚠️️ buttonstyle might not be needed ? .buttonStyle(.plain)
  */
 fileprivate struct ActionButtonStyle: ButtonStyle {
    /**
@@ -35,7 +35,7 @@ fileprivate struct ActionButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Convenient
-    * - Fixme: ⚠️️ make this a var?
+    * - Fixme: ⚠️️ Make this a var?
     */
    internal func actionButtonStyle() -> some View {
       let style = ActionButtonStyle()
@@ -49,7 +49,7 @@ fileprivate struct ActionButtonViewModifier: ViewModifier {
    /**
     * body
     * - Parameter content: The content view that will be modified by this view modifier.
-    * - Fixme: ⚠️️ padding should be done in the caller?
+    * - Fixme: ⚠️️ Padding should be done in the caller?
     */
    fileprivate func body(content: Content) -> some View {
       content

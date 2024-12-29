@@ -8,8 +8,7 @@ import SwiftUI
  * - Note: Ref: https://www.kodeco.com/books/real-world-ios-by-tutorials/v1.0/chapters/7-multi-module-app
  * - Fixme: ⚠️️ Add potential custom toggle: https://toddhamilton.medium.com/prototype-a-custom-toggle-in-swiftui-312f29f3a6c9
  * - Fixme: ⚠️️ Reuse some text styles here: https://github.com/Krupanshu-Sharma/OnBoardingViewSwiftUI/blob/main/OnBoardingViewSwiftUI/OnBoardingViewSwiftUI/View/FruitCardView.swift
- * - Fixme: ⚠️️ Figure out a way to pass in the model into the onboard component. then we could move onboarding to a package?
- * - Fixme: ⚠️️ Add a demo model that can be used in preview in the package etc
+ * - Fixme: ⚠️️ Move links to readme?
  */
 public struct OnboardModel {
    /**

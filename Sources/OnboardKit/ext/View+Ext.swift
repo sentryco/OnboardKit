@@ -92,7 +92,7 @@ extension View {
     * - Fixme: ⚠️️ We could pass an enum instead of isFullScreen, the enum could have different sheet size configs etc, do it later if needed etc
     * - Fixme: ⚠️️ Move to prompt/sheet/View+Prompt
     * - Fixme: ⚠️️ Rename the param isShowing to isPresented?
-    * - Fixme: ⚠️️ a way to detect if sheet or alert is present on macOS is to reference the binding somewhere central, and then just check that binding when in need of checking if an alert or sheet is present. this is solved for iOS but not macOS. there might be other solutions as well, look into it.
+    * - Fixme: ⚠️️ A way to detect if sheet or alert is present on macOS is to reference the binding somewhere central, and then just check that binding when in need of checking if an alert or sheet is present. this is solved for iOS but not macOS. there might be other solutions as well, look into it.
     * - Fixme: ⚠️️⚠️️⚠️️ (very good) try this when adopting sheet indent for content size: https://stackoverflow.com/a/76915525/5389500
     * - Parameters:
     *   - isFullScreen: Determines if the sheet covers the full screen or not.

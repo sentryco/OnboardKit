@@ -2,7 +2,7 @@
 import SwiftUI
 /**
  * Dummy
- * - Fixme: ⚠️️ move it to an xcode proj embedded in the package? See SlideViewKit etc
+ * - Fixme: ⚠️️ Move it to an xcode proj embedded in the package? See SlideViewKit etc
  */
 extension OnboardModel {
    /**

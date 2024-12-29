@@ -35,6 +35,10 @@ fileprivate struct ContinueButtonStyle: ButtonStyle {
          .padding(.horizontal, 20) // Applies horizontal padding to the button
    }
 }
+/**
+ * Documentation for ContinueButtonStyle
+ * - Description: This section provides documentation for the `ContinueButtonStyle` struct, which defines the style for a button used primarily in onboarding flows. The style emphasizes a prominent, action-oriented appearance with a capsule shape and customizable colors for both the background and text.
+ */
 extension Button {
    /**
     * Continue
