@@ -14,7 +14,7 @@ import SwiftUI
  * - Note: Onboarding SwiftUI `iOS` and `macOS`: https://github.com/benjaminsage/iPages
  * - Note: https://github.com/demianturner/DTOnboarding
  */
-public struct OnboardView: View {
+public struct OnboardCover: View {
    /**
     * The current index of the onboarding page being displayed.
     * - Abstract: Desired page index to jump to
@@ -56,4 +56,7 @@ public struct OnboardView: View {
       self.onComplete = onComplete
    }
 }
-internal let isTest: Bool = false // ⚠️️ debug
+public var isOnboardTest: Bool = false // ⚠️️ debug
+// ⚠️️ DEPRECATED
+@available(*, deprecated, renamed: "OnboardCover")
+public typealias OnboardView = OnboardCover

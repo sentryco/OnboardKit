@@ -16,7 +16,7 @@ let package = Package(
       .package(url: "https://github.com/sentryco/HybridColor", branch: "main"),
       .package(url: "https://github.com/sentryco/PageControl", branch: "main"),
       .package(url: "https://github.com/sentryco/PageControllerView", branch: "main"),
-      .package(url: "https://github.com/sentryco/HapticFeedback", branch: "main"),
+//      .package(url: "https://github.com/sentryco/HapticFeedback", branch: "main"),
       .package(url: "https://github.com/sentryco/BlurView", branch: "main")
     ],
     targets: [
@@ -26,7 +26,7 @@ let package = Package(
             .product(name: "HybridColor", package: "HybridColor"),
             .product(name: "PageControl", package: "PageControl"),
             .product(name: "PageControllerView", package: "PageControllerView"),
-            .product(name: "HapticFeedback", package: "HapticFeedback"),
+//            .product(name: "HapticFeedback", package: "HapticFeedback"),
             .product(name: "BlurView", package: "BlurView")
          ]),
       .testTarget(

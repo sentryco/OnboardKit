@@ -14,7 +14,7 @@ import SwiftUI
          .fill(Color.secondaryBackground) // background
          .overlay(Color.black.opacity(0.4))
          .ignoresSafeArea(.all)
-      OnboardView(pageModels: OnboardModel.dummyModels)
+      OnboardCover(pageModels: OnboardModel.dummyModels)
          #if os(macOS)
          .frame(width: 420, height: 640) // ⚠️️ Must be here
          #endif

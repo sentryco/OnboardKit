@@ -13,7 +13,7 @@ import HybridColor
       @State var currentPage: Int = 1
       let numOfPages = 4
       var body: some View {
-         ControlOverlayView(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
+         ControlOverlay(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
             Swift.print("Prev button pressed")
             currentPage -= 1
          }, onNextButtonPress: {

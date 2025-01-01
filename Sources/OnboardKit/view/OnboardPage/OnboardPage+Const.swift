@@ -1,6 +1,6 @@
 import Foundation
 
-extension OnboardPageView {
+extension OnboardPage {
    /**
     * The standard vertical and horizontal spacing used between elements
     * - Description: This constant defines the vertical and horizontal spacing

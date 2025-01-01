@@ -2,7 +2,7 @@ import SwiftUI
 /**
  * Components
  */
-extension OnboardPageView {
+extension OnboardPage {
    /**
     * Stack
     * - Fixme: ⚠️️ add abstract
@@ -29,7 +29,7 @@ extension OnboardPageView {
 /**
  * Private
  */
-extension OnboardPageView {
+extension OnboardPage {
    /**
     * Top title
     * - Fixme: ⚠️️ add abstract
@@ -41,7 +41,7 @@ extension OnboardPageView {
       if let title: String = model?.title { // Top title
          Text("\(title)") // Title
             .titleStyle
-            .background(isTest ? .indigo : .clear) // ⚠️️ debug
+            .background(isOnboardTest ? .indigo : .clear) // ⚠️️ debug
             .isMacOrIPad { // target only iPad and mac
                $0.frame(maxWidth: Self.maxWidth) // Max width for medium or large devices
             }
@@ -59,7 +59,7 @@ extension OnboardPageView {
       if let description: String = model?.description { // bellow title
          Text("\(description)") // Description
             .descriptionStyle
-            .background(isTest ? .blue : .clear) // ⚠️️ debug
+            .background(isOnboardTest ? .blue : .clear) // ⚠️️ debug
             .isMacOrIPad { // Max width for medium or large devices
                $0.frame(maxWidth: Self.maxWidth) // by using maxWidth, the text grows vertically when there is little wide space available
             }
@@ -93,7 +93,7 @@ extension OnboardPageView {
                }
                .actionButtonStyle() // Applies the action button style
                .accessibilityIdentifier("pageButton") // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
-               .background(isTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
+               .background(isOnboardTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
             }
          }
       }

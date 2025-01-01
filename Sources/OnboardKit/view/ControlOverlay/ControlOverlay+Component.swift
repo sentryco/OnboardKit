@@ -4,7 +4,7 @@ import HybridColor
 /**
  * Components
  */
-extension ControlOverlayView {
+extension ControlOverlay {
    /**
     * Prev btn
     * - Abstract: The previous button is used to navigate to the previous page.
@@ -33,7 +33,7 @@ extension ControlOverlayView {
             strokeWidth: 1 // Set the stroke width to 1
          )
       // - Fixme: ⚠️️ Add isTest as internal var etc
-       .background(isTest ? .green : .clear) // ⚠️️ debug
+       .background(isOnboardTest ? .green : .clear) // ⚠️️ debug
    }
    /**
     * Next btn
@@ -58,13 +58,13 @@ extension ControlOverlayView {
             strokeColor: style.borderColor, // Set the stroke color to white or black with 0.5 opacity
             strokeWidth: 1 // Set the stroke width to 1
          )
-       .background(isTest ? .orange : .clear) // ⚠️️ debug
+       .background(isOnboardTest ? .orange : .clear) // ⚠️️ debug
    }
 }
 /**
  * Style
  */
-extension ControlOverlayView {
+extension ControlOverlay {
    /**
     * Style
     * - Fixme: ⚠️️ Rename to buttonStyle? 👈

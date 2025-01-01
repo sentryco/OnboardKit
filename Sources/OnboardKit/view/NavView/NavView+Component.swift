@@ -1,7 +1,6 @@
 import SwiftUI
 import PageControl
-import HybridColor
-import HapticFeedback
+//import HybridColor
 /**
  * Components
  */
@@ -11,7 +10,8 @@ extension NavView {
     * - Abstract: Dots that represents each page
     * - Description: This represents the dots indicating which page the user is currently on
     * - Remark: Custom dots: https://spin.atomicobject.com/2016/02/11/move-uipageviewcontroller-dots/
-    * - Note: PageControl doesn't have any interaction events yet, might add in the future, iOS has this etc
+    * - Note: `PageControl` doesn't have any interaction events yet, might add in the future, iOS has this etc
+    * - Note: iOS has this in the `TabView` that we add in `PageContainer`
     * - Fixme: ⚠️️ We can add interaction event for pagecontroller: `$0.addTarget(self, action: #selector(pageControlHandle), for: .valueChanged)` move this to pagecontrol github issues?
     */
    #if os(macOS)
@@ -29,19 +29,16 @@ extension NavView {
     * Continue-button - Button has text with: "Skip onboarding" etc
     * - Abstract: Action button "Continue" etc
     * - Description: Button with text: `Continue`, or if last page: `All done`
-    * - Fixme: ⚠️️ Try to add a more subtle stroke around continue-button ? 👈 yes maybe, do it later when tweaking design etc
+    * - Fixme: ⚠️️ Try to add a more subtle stroke around continue-button ? yes maybe, do it later when tweaking design etc
     * - Fixme: ⚠️️ Make a universal feedback generator for all OSes? so we can add it with one line? I think there is one now in HapticFeedbackkit etc add support for style for universal call etc
     * - Fixme: ⚠️️ Use const for access id ?
     */
    internal var actionBtn: some View {
       Button(buttonTitle) {
          onActionBtnPress?()
-         #if os(iOS)
-         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-         #endif
       }
       .continueButtonStyle() // - Fixme: ⚠️️ Move this into style folder in this scope
-      .background(isTest ? .green : .clear) // ⚠️️ Debug
+      .background(isOnboardTest ? .green : .clear) // ⚠️️ Debug
       .animation(nil, value: currentPage) // Animates next view
       .accessibilityIdentifier("actionButton") // Accessibility.Onboarding.actionButton
       // - Fixme: ⚠️️ Add this somehow, add View+Ext in ext folder
@@ -59,16 +56,16 @@ extension NavView {
     * - Fixme: ⚠️️ Rename to skipButton?
     * - Fixme: ⚠️️ Use const for access id?
     * - Fixme: ⚠️️ Move width value to const
+    * - Fixme: ⚠️️ Figure out how to set frame for mac or ipad more cleanly etc
     */
    internal var dismissBtn: some View {
       Button(action: {
          onDismissBtnPress?() // Invokes the dismiss button press action handler
-         HapticFeedback.play(.entry)
       }, label: {
          Text(skipButtonTitle)
       })
       .skipButtonStyle() // - Fixme: ⚠️️ Move this style to this scope
-       .background(isTest ? .pink : .clear) // ⚠️️ debug
+      .background(isOnboardTest ? .pink : .clear) // ⚠️️ debug
       .accessibilityIdentifier("dismissButton") // Accessibility.Onboarding.dismissButton
       .isMacOrIPad {
          $0.frame(width: 360) // - Fixme: ⚠️️ Probably build this into the modifier etc?

@@ -2,7 +2,7 @@ import SwiftUI
 /**
  * Sheet
  */
-extension OnboardPageView {
+extension OnboardPage {
    /**
     * Configures the sheet to be shown
     * - Description: This method configures a sheet to be shown on top of the

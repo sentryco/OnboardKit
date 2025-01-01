@@ -3,7 +3,7 @@ import BlurView
 /**
  * Content
  */
-extension OnboardContainerView {
+extension OnboardContainer {
    /**
     * Body
     * - Description: This is the main body of the OnboardContainer. It consists

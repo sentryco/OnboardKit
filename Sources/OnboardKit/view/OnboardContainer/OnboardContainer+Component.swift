@@ -3,7 +3,7 @@ import BlurView
 /**
  * Components
  */
-extension OnboardContainerView {
+extension OnboardContainer {
    /**
     * Adds the translucent background underlay
     * - Description: This method creates a translucent underlay for the

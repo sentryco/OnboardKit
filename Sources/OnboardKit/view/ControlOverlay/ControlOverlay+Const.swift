@@ -3,7 +3,7 @@ import Foundation
 /**
  * Const
  */
-extension ControlOverlayView {
+extension ControlOverlay {
    /**
     * Typealias for the closure when the previous button is pressed
     * - Description: Defines a closure type for handling actions when the

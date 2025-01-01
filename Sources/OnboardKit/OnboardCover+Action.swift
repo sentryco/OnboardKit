@@ -2,7 +2,7 @@ import SwiftUI
 /**
  * Action
  */
-extension OnboardView {
+extension OnboardCover {
    /**
     * Go to next page (called by tapping continue btn)
     * - Abstract: Step forward in the onboarding pages

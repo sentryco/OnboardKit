@@ -16,7 +16,6 @@
 ## Features
 
 - Dark / Light mode support 
-- Haptic feedback (iPhone only)
 - Subdued translucent background (app as background)
 - Prompt sheet via button actions (from bottom for iOS, from top for macOS)
 - Add custom steps via sheet (Great for aditional onboarding customizations)
@@ -25,13 +24,14 @@
 - Left / right chevron buttons are added for macOS (Expected UX)
 - Panning support for macOS (navigate left / right)
 
-## Installation
-
-To integrate OnboardKit into your Xcode project using Swift Package Manager, add the following as a dependency to your `Package.swift`:
-
-```swift
-.package(url: "https://github.com/sentryco/OnboardKit", branch: "main")
-```
+## Structure:
+- `OnboardContainer`: ZStack wrapper w/ app + onboard-cover
+- `OnboardCover`: VStack w/ contet + bottom-nav-bar  
+- `OnboardPage`: Title, description, action-buttons. And sheet binding
+- `PageContainer`: The swipe-carusel 
+- `NavView`: Continue-button, Skip-button and dots
+- `ControlOverlay` Has Previous and next arrow buttons (macOS only)
+- `OnboardModel`: Title, description and action
 
 ## Usage
 
@@ -71,15 +71,22 @@ struct ContentView: View {
    }
 }
 ```
+
+## Installation
+
+To integrate OnboardKit into your Xcode project using Swift Package Manager, add the following as a dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/sentryco/OnboardKit", branch: "main")
+```
       
 ## Dependencies
 
-OnboardKit utilizes several dependencies to enhance its functionality.
+OnboardKit utilizes these dependencies:
 
 - Light and dark mode: [HybridColor](https://github.com/sentryco/HybridColor) 
 - Page control for iOS: [PageControl](https://github.com/sentryco/PageControl) 
 - Page controller for macOS: [PageControllerView](https://github.com/sentryco/PageControllerView) 
-- Haptic feedback: [HapticFeedback](https://github.com/sentryco/HapticFeedback) 
 - Blur view support: [BlurView](https://github.com/sentryco/BlurView) 
 
 ## Resources: 
@@ -97,20 +104,18 @@ OnboardKit utilizes several dependencies to enhance its functionality.
 
 ## TODO: 
 
-- Clean up code
+- Clean up code ✅
 - Add gif for macOS / iPad
-- Add modal sheet example
-- Enable isTest in the scope of this package
+- Add modal sheet example ✅
+- Enable isTest in the scope of this package ✅
 - Add high level doc regarding the simplistic approch with models that can have btns, title, decription, and popover sheet, and how this ultimatly makes making multipleplatform onbiarding a breeze, yet makes it possible to build powerful and complex onboarding experiences, while leaving the nitty gritty to this kit
 - Add note regarding implemnting a lockable view with onboardview. How the structure will look etc, and link to the repo etc?
-- Better handling of platform-specific features or UI components.
 - Add a const struct that can be inject when initiating, that has variouse custom sizes etc
-- Make some sort of style struct we can inject on init of onboardkit?
+- Make some sort of style struct we can inject on init of onboardkit? ViewModifiers can be used with param drilliing etc
 - Add access-id struct as well?
-- Add demo xcodproj file like we do with SplitViewKit?
-- Add PreviewContainer class
-- Use struct or tuple to store style configs and default values
+- Add demo xcodproj file like we do with SplitViewKit? 👈 instead of having the dummy code in the preview etc
+- Add PreviewContainer class 👈
 - Bump spm package to 6.0 and iOS 18 and macOS 15 etc 👈
 - Add note in readme about importance of using frame width max infinity and edgeIgnores... etc
 - Add emojies to the features list. Use gpt
-- Add previewcontainer
+- Figure out how to offset dots for iOS ?

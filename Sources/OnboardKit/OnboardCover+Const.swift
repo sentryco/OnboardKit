@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension OnboardView {
+extension OnboardCover {
    /**
     * A closure that is called when the onboarding is complete.
     * - Description: This closure is triggered when the user completes the

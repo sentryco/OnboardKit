@@ -36,6 +36,7 @@ public struct OnboardModel {
     * Indicates if the sheet should be displayed in full screen.
     * - Description: This property determines whether the sheet presented during the onboarding process should occupy the entire screen.
     *                When set to `true`, the sheet will be displayed in full screen mode. When set to `false`, the sheet may be displayed with a different presentation style, such as a modal or a popover, depending on the context and platform.
+    * - Fixme: ⚠️️ rename to presentFullScreen?
     */
    internal var isSheetFullScreen: Bool
    /**

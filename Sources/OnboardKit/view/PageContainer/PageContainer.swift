@@ -18,7 +18,7 @@ import PageControllerView
  * - Note: We don't need preview for this, debug with `OnboardView+Preview` instead
  * - Note: This container is added to `OnboardView` as a subview
  */
-internal struct PageContainerView: View {
+internal struct PageContainer: View {
    /**
     * - Description: The PageContainer struct is a view that displays the
     *                onboarding pages with a dot component and swipe

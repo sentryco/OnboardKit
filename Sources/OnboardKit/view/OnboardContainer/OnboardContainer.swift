@@ -8,19 +8,19 @@ import SwiftUI
  *                It also adds a translucent underlay for better visual hierarchy.
  * - Note: Also adds the translucent underlay etc
  */
-public struct OnboardContainerView<Foreground: View, Background: View>: View {
+public struct OnboardContainer<Foreground: View, Background: View>: View {
    /**
     * The state is used to determine if the onboarding is needed.
     * - Description: This binding variable is used to control the visibility of the onboarding view.
     *                If 'needsOnboarding' is true, the onboarding view is displayed to the user. Otherwise,
     *                the main view of the application is shown.
-    * - Fixme: ⚠️️ rename to isOnboardingComplete? 
+    * - Fixme: ⚠️️ rename to isOnboardingComplete?
     */
    @Binding internal var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
-//   @State internal var pageIndex: Int
    /**
     * Onboarding foreground cover
     * - Description: This covers the app beneath. We use a semi translucent background so that the app behind can be slightly visible
+    * - Note: Has a `needsOnboarding` binding param that is used to change the state of this struct
     */
    internal let foreground: ForegroundClosure
    /**
@@ -44,10 +44,10 @@ public struct OnboardContainerView<Foreground: View, Background: View>: View {
     */
    public init(needsOnboarding: Binding<Bool>, /*pageIndex: Binding<Int>, */@ViewBuilder foreground: @escaping ForegroundClosure, @ViewBuilder background: @escaping BackgroundClosure) {
       self._needsOnboarding = needsOnboarding
-//      self._pageIndex = pageIndex
       self.foreground = foreground
       self.background = background
    }
 }
-@available(*, deprecated, renamed: "OnboardContainerView")
-public typealias OnboardContainer = OnboardContainerView
+// ⚠️️ Deprecated
+@available(*, deprecated, renamed: "OnboardContainer")
+public typealias OnboardContainerView = OnboardContainer

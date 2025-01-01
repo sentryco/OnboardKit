@@ -14,8 +14,9 @@ import SwiftUI
  * - Note: Design inspo: and https://github.com/costachung/neumorphic and https://www.figma.com/community/file/1133043795722403790/neumorphism-dark-theme-ui
  * - Fixme: ⚠️️ Maybe we should make each page a view? instead of using data as the model? consider it etc, or use viewmodel observedobject etc?
  * - Fixme: ⚠️️ Improve the abstract with copilot
+ * - Fixme: ⚠️️ Rename to OnboardView? or OnboardPage?
  */
-internal struct OnboardPageView: View {
+internal struct OnboardPage: View {
     /**
      * The model for the onboard page view
      * - Description: This property holds the data model for the onboard page, 
@@ -34,3 +35,6 @@ internal struct OnboardPageView: View {
     */
    @StateObject internal var observableSheet: ObservableSheet = .init()
 }
+// ⚠️️ Deprecated
+@available(*, deprecated, renamed: "OnboardPage")
+internal typealias OnboardPageView = OnboardPage

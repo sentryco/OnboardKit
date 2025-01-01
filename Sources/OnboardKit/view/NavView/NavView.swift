@@ -10,7 +10,7 @@ import SwiftUI
  * - Important: ⚠️️ Page-control is for macOS only, and is added automatically for iOS
  * - Note: https://github.com/nerd0geek1/NSPageControl
  * - Note: Inspo https://github.com/bfolder/BFPageControl
- * - Fixme: ⚠️️ Rename to something else? like? `PageNavView` or `PagerNavView`
+ * - Note: Alternative names: `PageNavView` or `PagerNavView`
  */
 struct NavView: View {
    /**
@@ -19,6 +19,7 @@ struct NavView: View {
     *                onboarding process. It is used to control the navigation and
     *                determine when the navigation buttons should be enabled or
     *                disabled.
+    * - Fixme: ⚠️️ Rename to totNumOf....
     */
    internal let numOfPages: Int
    /**

@@ -4,7 +4,7 @@ import SwiftUI
  * - Description: Each page consists of a title, description, button column
  * - Fixme: ⚠️️ Maybe make description have the same padding as action button
  */
-extension OnboardPageView {
+extension OnboardPage {
    /**
     * Body
     * - Description: This property represents the main content view of an
@@ -16,6 +16,6 @@ extension OnboardPageView {
     */
    internal var body: some View {
       configSheet(view: self.stack)
-         .background(isTest ? .teal : .clear) // ⚠️️ debug
+         .background(isOnboardTest ? .teal : .clear) // ⚠️️ debug
    }
 }

@@ -9,7 +9,7 @@ import SwiftUI
  *         The foregroundColor, background, and cornerRadius modifiers are used to style the buttons.
  * - Fixme: ⚠️️ Store margin, spacing etc in const
  */
-struct ControlOverlayView: View {
+struct ControlOverlay: View {
    /**
     * The current page number
     * - Abstract: Bind the current page number to the view
@@ -43,4 +43,7 @@ struct ControlOverlayView: View {
     */
    internal var onNextButtonPress: OnNextButtonPress? = defaultOnNextButtonPress
 }
+// ⚠️️ Deprecated
+@available(*, deprecated, renamed: "ControlOverlay")
+internal typealias ControlOverlayView = ControlOverlay
 #endif

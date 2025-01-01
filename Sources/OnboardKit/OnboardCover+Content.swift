@@ -10,7 +10,7 @@ import PageControllerView
  *                provides macOS navigation buttons.
  * - Fixme: ⚠️️ See old legacy text copy, maybe use some of it?
  */
-extension OnboardView {
+extension OnboardCover {
    /**
     * Body
     * - Description: This is the main body of the OnboardView, consisting of a

@@ -4,16 +4,13 @@ import PageControllerView
 /**
  * Components
  */
-extension OnboardView {
+extension OnboardCover {
    /**
     * Stack
     */
    internal var stack: some View {
       #if os(macOS) // Only for macOS
-      ZStack {
-         vStack
-         controlOverlay // Makes sense to have this on a device where swiping isnt abvious
-      }
+      zStack
       #elseif os(iOS)
       vStack
       #endif
@@ -22,7 +19,18 @@ extension OnboardView {
 /**
  * Private
  */
-extension OnboardView {
+extension OnboardCover {
+   /**
+    * zStack
+    */
+   #if os(macOS)
+   fileprivate var zStack: some View {
+      ZStack {
+         vStack // content + nav
+         controlOverlay // Makes sense to have this on a device where swiping isnt abvious
+      }
+   }
+   #endif
    /**
     * Vertical stack container for onboarding content
     * - Description: This view arranges the page container and navigation view in a vertical stack.
@@ -43,11 +51,11 @@ extension OnboardView {
     *                uses `pageModels` to populate the content of each page.
     */
    fileprivate var pageContainer: some View {
-      PageContainerView(
+      PageContainer(
          currentPageIndex: $currentPageIndex, // Index of the current page
          pageModels: self.pageModels // Array of page models
       )
-         .background(isTest ? Color.brown : .clear)
+         .background(isOnboardTest ? Color.brown : .clear)
    }
    /**
     * Create `ControlOverlay` (has `left-button` and `right-button`) (macOS only)
@@ -64,7 +72,7 @@ extension OnboardView {
     */
    #if os(macOS)
    fileprivate var controlOverlay: some View {
-      ControlOverlayView(
+      ControlOverlay(
          currentPage: $currentPageIndex, // Index of the current page
          numOfPages: pageModels.count, // Total number of pages
          onPrevButtonPress: { // Add event callbacks
@@ -73,7 +81,7 @@ extension OnboardView {
             goToNextPage() // Go to the next onboarding page
          }
       )
-         .background(isTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
+         .background(isOnboardTest ? .yellow.opacity(0.4) : .clear) // ⚠️️ debug
    }
    #endif
    /**
@@ -102,6 +110,6 @@ extension OnboardView {
             onComplete?(currentPageIndex) // Complete the onboarding process
          }
       )
-         .background(isTest ? .indigo : .clear) // ⚠️️ debug
+         .background(isOnboardTest ? .indigo : .clear) // ⚠️️ debug
    }
 }

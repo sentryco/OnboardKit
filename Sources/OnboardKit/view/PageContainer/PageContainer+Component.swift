@@ -4,25 +4,7 @@ import PageControllerView
 /**
  * Components
  */
-extension PageContainerView {
-   /**
-    * - Description: This property provides a view that adapts to different
-    *                operating systems, displaying a `TabView` on iOS and a
-    *                `PageControllerView` on macOS.
-    */
-   @ViewBuilder
-   internal var containerContent: some View {
-      #if os(iOS)
-      tabView
-      #elseif os(macOS)
-      pageController
-      #endif
-   }
-}
-/**
- * Private
- */
-extension PageContainerView {
+extension PageContainer {
    /**
     * This is the pages and the small indicator (iOS)
     * - Fixme: ⚠️️ add abstract
@@ -38,18 +20,17 @@ extension PageContainerView {
     * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
     */
    #if os(iOS)
-   fileprivate var tabView: some View {
+   internal var tabView: some View {
       TabView(selection: $currentPageIndex) { // Binds the current page index to control and track the currently visible page
          pageView // This line injects the content view which dynamically generates the onboarding pages based on the pageModels data.
       }
-      // .padding(.bottom, 0) // Padding from the bottom
       .onAppear(perform: setupPageControlAppearance) // Configs iOS
       .tabViewStyle(.page) // Applies the page style to the TabView, enabling swipe navigation between pages with visual indicators
    }
    #endif // macOS doesn't support tab-view yet, so we just fade in each view etc
    /**
     * PageControllerView (macOS)
-    * - Abstract: This is the PageControllerView for macOS that displays the onboarding
+    * - Abstract: This is the `PageControllerView` for macOS that displays the onboarding
     *             pages with swipe capabilities. It also includes a small indicator to show
     *             the current page in the onboarding process.
     * - Description: This method configures the `PageControllerView` for macOS. It converts
@@ -60,7 +41,7 @@ extension PageContainerView {
     *                of the page model, then returns a view for that page model.
     */
    #if os(macOS)
-   fileprivate var pageController: some View {
+   internal var pageController: some View {
       // Converts the indices of pageModels into an array of strings
       let dataModel: [String] = Array(pageModels.indices).map { String($0) }
       return PageControllerView( // Initializes a PageControllerView
@@ -74,12 +55,17 @@ extension PageContainerView {
          // Swift.print("idx: \(idx)")
          let pageModel: OnboardModel = pageModels[idx] // currentPageIndex
          return AnyView(
-            OnboardPageView(model: pageModel) // Display the onboarding page with the specified model
+            OnboardPage(model: pageModel) // Display the onboarding page with the specified model
             // .offset(y: -14) // ⚠️️ contentInset bug fix (might be NScroller.contentInset) not related to ignoresSafeArea
          )
       }
    }
    #endif
+}
+/**
+ * Private
+ */
+extension PageContainer {
    /**
     * The pages (iOS)
     * - Description: This is a view that generates the onboarding pages for iOS.
@@ -93,7 +79,7 @@ extension PageContainerView {
    fileprivate var pageView: some View {
       // Iterates over the enumerated array with a closure that takes an index and an element as parameters.
       ForEach(Array(pageModels.enumerated()), id: \.offset) { (_ index: Int, _ element: OnboardModel) in
-         OnboardPageView(model: element) // This line creates an OnboardPageView for each model in the pageModels array.
+         OnboardPage(model: element) // This line creates an OnboardPageView for each model in the pageModels array.
             .tag(index) // This makes the small indicator? not sure, could be more like id setter
       }
    }
@@ -102,7 +88,7 @@ extension PageContainerView {
 /**
  * Config
  */
-extension PageContainerView {
+extension PageContainer {
    /**
     * Setup Page Control Appearance
     * - Description: This method configures the appearance of the page control

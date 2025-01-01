@@ -1,7 +1,7 @@
 import SwiftUI
 import PageControl
 import HybridColor
-import HapticFeedback
+//import HapticFeedback
 /**
  * Content
  * - Fixme: ⚠️️ See legacy regarding how it used haptic feedback for onboarding etc
