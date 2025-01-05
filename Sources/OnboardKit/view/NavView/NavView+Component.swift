@@ -9,7 +9,7 @@ extension NavView {
     * - Fixme: ⚠️️ add doc
     */
    var stack: some View {
-      VStack(spacing: Self.verticalSpacing/*.zero*/) {
+      VStack(spacing: Self.verticalSpacing) {
          #if os(macOS)
          pageControl // Dots for macOS
          #endif
@@ -30,7 +30,7 @@ extension NavView {
     * - Note: `PageControl` doesn't have any interaction events yet, might add in the future, iOS has this etc
     * - Note: iOS has this in the `TabView` that we add in `PageContainer`
     * - Fixme: ⚠️️ We can add interaction event for pagecontroller: `$0.addTarget(self, action: #selector(pageControlHandle), for: .valueChanged)` move this to pagecontrol github issues?
-    * - Fixme: ⚠️️ move pageIndicatorTintColor and currentPageIndicatorTintColor to const?
+    * - Fixme: ⚠️️ Move pageIndicatorTintColor and currentPageIndicatorTintColor to const?
     */
    #if os(macOS)
    fileprivate var pageControl: some View {
@@ -54,6 +54,7 @@ extension NavView {
          onActionBtnPress?()
       }
       .continueButtonStyle() // - Fixme: ⚠️️ Move this into style folder in this scope
+      .padding(.horizontal, Self.horizontalPadding)
       .background(isOnboardTest ? .green : .clear) // ⚠️️ Debug
       .animation(nil, value: currentPage) // Animates next view
       .accessibilityIdentifier(OnboardAccessID.actionButtonID) // Accessibility.Onboarding.actionButton
@@ -79,6 +80,7 @@ extension NavView {
          Text(skipButtonTitle)
       })
       .skipButtonStyle() // - Fixme: ⚠️️ Move this style to this scope
+      .padding(.horizontal, Self.horizontalPadding)
       .background(isOnboardTest ? .pink : .clear) // ⚠️️ debug
       .accessibilityIdentifier(OnboardAccessID.dismissButtonID) // Accessibility.Onboarding.dismissButton
       .isMacOrIPad {

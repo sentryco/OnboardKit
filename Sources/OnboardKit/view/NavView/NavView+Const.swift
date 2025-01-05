@@ -38,4 +38,8 @@ extension NavView {
     * - Fixme: ⚠️️ add doc
     */
    static let verticalSpacing: CGFloat = 12
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   static let horizontalPadding: CGFloat = 12
 }
