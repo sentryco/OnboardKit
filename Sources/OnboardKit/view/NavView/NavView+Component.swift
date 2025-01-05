@@ -40,7 +40,7 @@ extension NavView {
       .continueButtonStyle() // - Fixme: ⚠️️ Move this into style folder in this scope
       .background(isOnboardTest ? .green : .clear) // ⚠️️ Debug
       .animation(nil, value: currentPage) // Animates next view
-      .accessibilityIdentifier("actionButton") // Accessibility.Onboarding.actionButton
+      .accessibilityIdentifier(OnboardID.actionButtonID) // Accessibility.Onboarding.actionButton
       // - Fixme: ⚠️️ Add this somehow, add View+Ext in ext folder
       .isMacOrIPad { // limit width of pad device
          $0.frame(width: 360) // - Fixme: ⚠️️ Move this value to a const?
@@ -66,7 +66,7 @@ extension NavView {
       })
       .skipButtonStyle() // - Fixme: ⚠️️ Move this style to this scope
       .background(isOnboardTest ? .pink : .clear) // ⚠️️ debug
-      .accessibilityIdentifier("dismissButton") // Accessibility.Onboarding.dismissButton
+      .accessibilityIdentifier(OnboardID.dismissButtonID) // Accessibility.Onboarding.dismissButton
       .isMacOrIPad {
          $0.frame(width: 360) // - Fixme: ⚠️️ Probably build this into the modifier etc?
       }

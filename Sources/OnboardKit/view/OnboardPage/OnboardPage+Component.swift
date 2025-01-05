@@ -92,7 +92,7 @@ extension OnboardPage {
                   action.action?(observableSheet) // Executes the action's closure with the observableSheet parameter
                }
                .actionButtonStyle() // Applies the action button style
-               .accessibilityIdentifier("pageButton") // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
+               .accessibilityIdentifier(OnboardID.pageButtonID) // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
                .background(isOnboardTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
             }
          }
