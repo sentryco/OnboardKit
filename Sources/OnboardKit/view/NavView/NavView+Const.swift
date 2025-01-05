@@ -34,4 +34,8 @@ extension NavView {
     *                dismissing the onboarding process.
     */
    typealias OnDismissBtnPress = () -> Void
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   static let verticalSpacing: CGFloat = 12
 }

@@ -106,30 +106,21 @@ extension Button {
  * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
-   let view = Button(action: {}) {}
-      .headerIconStyle(
-         iconName: "chevron.left",
-         iconSize: 16,
-         padding: 16,
-         iconColor: Color.whiteOrBlack,
-         backgroundColor: .gray.opacity(0.2),
-         strokeColor: Color.whiteOrBlack.opacity(0.5),
-         strokeWidth: 1
-      )
-      .padding()
-      .background(Color.blackOrWhite)
-      #if os(macOS)
-      .padding(.horizontal)
-      #endif
-   return ZStack {
-      Rectangle() // A rectangle to fill the background
-         .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color
-         .ignoresSafeArea(.all) // Ignores the safe area on all sides
-      VStack(spacing: .zero) { // A vertical stack with no spacing
-         view // The content view
-            .environment(\.colorScheme, .light) // Sets the environment to light mode
-         view // The content view again
-            .environment(\.colorScheme, .dark) // Sets the environment to dark mode
-      }
+   PreviewContainer {
+      Button(action: {}) {}
+         .headerIconStyle(
+            iconName: "chevron.left",
+            iconSize: 16,
+            padding: 16,
+            iconColor: Color.whiteOrBlack,
+            backgroundColor: .gray.opacity(0.2),
+            strokeColor: Color.whiteOrBlack.opacity(0.5),
+            strokeWidth: 1
+         )
+         .padding()
+         .background(Color.blackOrWhite)
+         #if os(macOS)
+         .padding(.horizontal)
+         #endif
    }
 }

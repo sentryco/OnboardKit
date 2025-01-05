@@ -23,7 +23,8 @@ fileprivate struct ActionButtonStyle: ButtonStyle {
    fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label
          .padding()
-         .frame(maxWidth: .infinity, maxHeight: 44) // Padding around text
+         .frame(maxWidth: .infinity/*, maxHeight: 44*/) // Padding around text
+//         .padding(.vertical, 12)
          .font(.system(.body)) // Text
          .foregroundColor(Color.whiteOrBlack)
          .actionButtonViewModifier // Resets button style I think
@@ -58,7 +59,7 @@ fileprivate struct ActionButtonViewModifier: ViewModifier {
                .stroke(Color.whiteOrBlack.opacity(0.8), lineWidth: 2) // Strokes the capsule with a semi-transparent white or black color
          )
          .contentShape(Capsule()) // hit area for the button
-         .padding(.horizontal, 20) // padding around background
+//         .padding(.horizontal, 20) // padding around background
          // - Fixme: ⚠️️ the max size should be done in the caller no?
          .isMacOrIPad {
             $0.frame(width: 360) // max width for medium or large devices
@@ -83,36 +84,18 @@ extension View {
  * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 300, height: 200)) {
-   let view = {
+   PreviewContainer {
       Button {
          Swift.print("action")
       } label: {
          Text("Action button")
       }
       .actionButtonStyle()
+      .padding(.horizontal, 20)
       .padding(.vertical)
       .background(Color.blackOrWhite)
       #if os(macOS)
       .padding(.horizontal)
       #endif
-   }()
-   return ZStack { // fix: add PreviewContainer as a debug helper etc
-      Rectangle() // A rectangle to fill the background
-         .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color
-         .ignoresSafeArea(.all) // Ignores the safe area on all sides
-      VStack(spacing: .zero) { // A vertical stack with no spacing
-         view // The content view
-            .environment(\.colorScheme, .light) // Sets the environment to light mode
-         view // The content view again
-            .environment(\.colorScheme, .dark) // Sets the environment to dark mode
-      }
    }
 }
-/**
- * - Fixme: ⚠️️ remove this?
- */
-//extension ButtonStyle where Self == ActionButtonStyle {
-//   static func actionButtonStyle() -> Self {
-//      return .init()
-//   }
-//}

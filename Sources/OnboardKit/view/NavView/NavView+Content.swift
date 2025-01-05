@@ -19,12 +19,6 @@ extension NavView {
     * - Fixme: ⚠️️ Add spacing in vstack?
     */
    var body: some View {
-      VStack(spacing: .zero) {
-         #if os(macOS)
-         pageControl // Dots for macOS
-         #endif
-         actionBtn // Continue / Finish
-         dismissBtn // Skip onboarding
-      }
+      stack
    }
 }

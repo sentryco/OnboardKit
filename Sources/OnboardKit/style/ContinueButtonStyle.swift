@@ -27,12 +27,13 @@ fileprivate struct ContinueButtonStyle: ButtonStyle {
     */
    fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label
-         .frame(maxWidth: .infinity, maxHeight: 52) // 44
+         .frame(maxWidth: .infinity/*, */) // 44
+         .padding(.vertical, 16)
          .background(color) // Sets the background color of the button based on the color scheme
          .clipShape(Capsule()) // Clips the button shape to a capsule
          .foregroundStyle(textColor)
          // .buttonStyle(.plain) // Resets the button style to plain
-         .padding(.horizontal, 20) // Applies horizontal padding to the button
+//         .padding(.horizontal, 20) // Applies horizontal padding to the button
    }
 }
 /**
@@ -53,18 +54,20 @@ extension Button {
     * - Returns: A view that applies the `ContinueButtonStyle` to the button.
     */
    internal func continueButtonStyle(isEnabled: Bool = true) -> some View {
-      let textColor = Color(
-         light: .black.opacity(isEnabled ? 0.8 : 0.4),
-         dark: .white.opacity(isEnabled ? 0.8 : 0.2)
-      )
-      let backgroundColor = Color(
-         light: .gray.opacity(isEnabled ? 0.4 : 0.2),
-         dark: .gray.opacity(isEnabled ? 0.3 : 0.2)
-      )
-      let style = ContinueButtonStyle(
-         color: backgroundColor,
-         textColor: textColor
-      )
+      let style: ContinueButtonStyle = {
+         let textColor = Color(
+            light: .black.opacity(isEnabled ? 0.8 : 0.4),
+            dark: .white.opacity(isEnabled ? 0.8 : 0.2)
+         )
+         let backgroundColor = Color(
+            light: .gray.opacity(isEnabled ? 0.4 : 0.2),
+            dark: .gray.opacity(isEnabled ? 0.3 : 0.2)
+         )
+         return .init(
+            color: backgroundColor,
+            textColor: textColor
+         )
+      }()
       return self.buttonStyle(style)
    }
 }
@@ -74,30 +77,19 @@ extension Button {
  */
 #Preview(traits: .fixedLayout(width: 340, height: 300)) {
    // The closure is a mechanism to show the two states
-   let closure: (_ isEnabled: Bool) -> some View = { isEnabled in
+   PreviewContainer {
       Button(action: {
          Swift.print("action")
       }, label: {
          Text("Button")
       })
-      .continueButtonStyle(isEnabled: isEnabled)
+      .continueButtonStyle(isEnabled: true) // - Fixme: ⚠️️ alternate somehow
       .frame(width: .infinity, height: 64)
+      .padding(.horizontal, 20)
       .padding(.vertical)
       .background(Color.blackOrWhite)
       #if os(macOS)
       .padding(.horizontal)
       #endif
    }
-   return ZStack {
-      Rectangle() // A rectangle to fill the background
-         .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color
-         .ignoresSafeArea(.all) // Ignores the safe area on all sides
-      VStack(spacing: .zero) { // A vertical stack with no spacing
-         closure(true) // The content view
-            .environment(\.colorScheme, .light) // Sets the environment to light mode
-         closure(false) // The content view again
-            .environment(\.colorScheme, .dark) // Sets the environment to dark mode
-      }
-   }
-   .environment(\.colorScheme, .dark)
 }

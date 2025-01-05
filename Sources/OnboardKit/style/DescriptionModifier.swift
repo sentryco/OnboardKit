@@ -46,7 +46,7 @@ extension Text {
  * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
-   let view = {
+   PreviewContainer {
       let brand: String = "Apple" // ?? MockGen.randomBrand?.capitalized
       return Text(brand)
          .descriptionStyle
@@ -56,17 +56,5 @@ extension Text {
          #if os(macOS)
          .padding(.horizontal)
          #endif
-   }()
-   return ZStack {
-      Rectangle() // A rectangle to fill the background
-         .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color
-         .ignoresSafeArea(.all) // Ignores the safe area on all sides
-      VStack(spacing: .zero) { // A vertical stack with no spacing
-         view // The content view
-            .environment(\.colorScheme, .light) // Sets the environment to light mode
-         view // The content view again
-            .environment(\.colorScheme, .dark) // Sets the environment to dark mode
-      }
    }
-   .environment(\.colorScheme, .dark)
 }
