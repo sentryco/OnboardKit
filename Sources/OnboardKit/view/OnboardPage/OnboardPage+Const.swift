@@ -35,4 +35,8 @@ extension OnboardPage {
     *  - Fixme: ⚠️️ Store in an injectable struct?
     */
    internal static let maxWidth: CGFloat = 500
+   /**
+    * horizontal padding for buttons
+    */
+   internal static let horizontalPadding: CGFloat = 24
 }

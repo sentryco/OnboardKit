@@ -16,6 +16,7 @@ extension NavView {
          continueButton // Continue / Finish
          skipButton // Skip onboarding
       }
+      .padding(.bottom, Self.bottomPadding)
    }
 }
 /**

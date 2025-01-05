@@ -23,6 +23,7 @@ extension OnboardCover {
     */
    public var body: some View {
       stack
+      // - Fixme: ⚠️️ should we call the bellow in the caller instead?
       #if os(macOS) // Only for macOS
       .ignoresSafeArea(.all) // ⚠️️ Removes some native default offset etc
       #endif

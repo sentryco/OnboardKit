@@ -32,9 +32,10 @@ extension OnboardPage {
 extension OnboardPage {
    /**
     * Top title
-    * - Fixme: ⚠️️ add abstract
+    * - Fixme: ⚠️️ Add abstract
     * - Description: This section of the code generates the title text for the onboarding view.
     *                The title is fetched from the model and displayed on the screen.
+    * - Fixme: ⚠️️ Add padding?
     */
    @ViewBuilder
    fileprivate var titleTextView: some View {
@@ -49,10 +50,11 @@ extension OnboardPage {
    }
    /**
     * Top description
-    * - Fixme: ⚠️️ add abstract
+    * - Fixme: ⚠️️ Add abstract
     * - Description: This section of the code generates the description text for the onboarding view.
     *                The description is fetched from the model and displayed on the screen.
     * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad?
+    * - Fixme: ⚠️️ Add padding?
     */
    @ViewBuilder
    fileprivate var descriptionTextView: some View {
@@ -92,6 +94,7 @@ extension OnboardPage {
                   action.action?(observableSheet) // Executes the action's closure with the observableSheet parameter
                }
                .actionButtonStyle() // Applies the action button style
+               .padding(.horizontal, Self.horizontalPadding)
                .accessibilityIdentifier(OnboardAccessID.pageButtonID) // Sets the accessibility identifier for the button // Accessibility.Onboarding.pageButton
                .background(isOnboardTest ? .pink : .clear) // Sets the background color to pink for debugging purposes if isTest is true, otherwise clear
             }
