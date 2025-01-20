@@ -15,14 +15,14 @@
 
 ## Features
 
-- Dark / Light mode support 
-- Subdued translucent background (app as background)
-- Prompt sheet via button actions (from bottom for iOS, from top for macOS)
-- Add custom steps via sheet (Great for aditional onboarding customizations)
-- BYO page model (easily create model via array of tuples)
-- Multiplatform iOS and macOS (iPad / iPhone / Mac)
-- Left / right chevron buttons are added for macOS (Expected UX)
-- Panning support for macOS (navigate left / right)
+- 🌙 **Dark / Light Mode Support**
+- 🌫️ **Subdued Translucent Background** (app as background)
+- 📋 **Prompt Sheets via Button Actions** (from bottom for iOS, from top for macOS)
+- ➕ **Add Custom Steps via Sheets** (great for additional onboarding customizations)
+- 🧩 **Bring Your Own (BYO) Page Model** (easily create model via array of tuples)
+- 📱 **Multiplatform Support** (iOS and macOS - iPad / iPhone / Mac)
+- ◀️▶️ **Left / Right Chevron Buttons** (macOS expected UX)
+- 🤚 **Panning Support for macOS** (navigate left / right)
 
 ## Structure:
 - `OnboardContainer`: ZStack wrapper w/ app + onboard-cover
@@ -88,6 +88,69 @@ OnboardKit utilizes these dependencies:
 - Page control for iOS: [PageControl](https://github.com/sentryco/PageControl) 
 - Page controller for macOS: [PageControllerView](https://github.com/sentryco/PageControllerView) 
 - Blur view support: [BlurView](https://github.com/sentryco/BlurView) 
+
+## Multiplatform Support
+
+OnboardKit seamlessly supports both iOS and macOS platforms, ensuring a consistent onboarding experience across devices. Platform-specific features include:
+
+- **iOS**
+   - Swipe navigation with `TabView`
+   - Page control indicators
+   - Sheets presented from the bottom
+- **macOS**
+   - Left/right chevron buttons for navigation
+   - Panning support (navigate left/right)
+   - Sheets presented from the top
+
+## Design Philosophy
+
+OnboardKit is built around a simple yet powerful model system. By supplying your own `OnboardModel` instances, each containing a `title`, `description`, and optional `actions`, you can quickly assemble a customized onboarding experience.
+
+This approach allows you to:
+
+- Easily define the content of each onboarding page.
+- Attach custom actions to buttons, including presenting sheets or performing other tasks.
+- Maintain a clean separation between your onboarding logic and UI components.
+
+Here's an example of defining custom page models:
+
+```swift
+let pageModels: [OnboardModel] = [
+   OnboardModel(
+      title: "Welcome",
+      description: "Explore the amazing features of our app.",
+      actions: []
+   ),
+   OnboardModel(
+      title: "Stay Informed",
+      description: "Enable notifications to stay updated.",
+      actions: [
+            (
+               buttonTitle: "Enable Notifications",
+               action: { observableSheet in
+                  // Handle enabling notifications
+               }
+            )
+      ]
+   ),
+   OnboardModel(
+      title: "Get Started",
+      description: "Let's start your journey!",
+      actions: []
+   )
+]
+```
+
+## Important Notes
+
+When integrating OnboardKit, ensure that your main app view uses:
+
+```swift
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+.edgesIgnoringSafeArea(.all)
+```
+
+This ensures that the onboarding views cover the entire screen and layouts are handled correctly across different devices and orientations.
 
 ## Resources: 
 - https://sarunw.com/posts/how-to-create-neomorphism-design-in-swiftui/

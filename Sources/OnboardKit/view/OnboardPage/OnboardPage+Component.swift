@@ -42,6 +42,8 @@ extension OnboardPage {
       if let title: String = model?.title { // Top title
          Text("\(title)") // Title
             .titleStyle
+            // add this later
+            // .accessibilityAddTraits(.isHeader)
             .background(isOnboardTest ? .indigo : .clear) // ⚠️️ debug
             .isMacOrIPad { // target only iPad and mac
                $0.frame(maxWidth: Self.maxWidth) // Max width for medium or large devices
@@ -65,11 +67,7 @@ extension OnboardPage {
             .isMacOrIPad { // Max width for medium or large devices
                $0.frame(maxWidth: Self.maxWidth) // by using maxWidth, the text grows vertically when there is little wide space available
             }
-            #if os(iOS)
             .padding(.horizontal, Self.horPadding)
-            #elseif os(macOS)
-            .padding(.horizontal, Self.horPadding)
-            #endif
       }
    }
    /**
