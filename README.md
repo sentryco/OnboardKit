@@ -1,5 +1,8 @@
 [![Tests](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/OnboardKit/actions/workflows/Tests.yml)
 [![codebeat badge](https://codebeat.co/badges/eb515b0e-475b-439a-81b9-28ec363ab04a)](https://codebeat.co/projects/github-com-sentryco-onboardkit-main)
+[![Platform](https://img.shields.io/badge/platform-iOS%20|%20macOS-lightgrey.svg)](#)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Swift Version](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org)
 
 # OnboardKit
 
@@ -182,3 +185,40 @@ This ensures that the onboarding views cover the entire screen and layouts are h
 - Add note in readme about importance of using frame width max infinity and edgeIgnores... etc
 - Add emojies to the features list. Use gpt
 - Figure out how to offset dots for iOS ?
+- Add onboardstyle:
+
+```swift
+ // Define a Style struct
+public struct OnboardStyle {
+      public var titleFont: Font
+      public var descriptionFont: Font
+      public var titleColor: Color
+      public var descriptionColor: Color
+      public var backgroundColor: Color
+      // Add other style properties as needed
+}
+```
+
+- Enhance Flexibility with Custom Views
+Allow users to supply custom views for onboarding pages.
+
+```swift
+public struct OnboardPage: View {
+   let content: AnyView?
+
+   public init(content: AnyView?) {
+      self.content = content
+   }
+
+   public var body: some View {
+      if let content = content {
+            content
+      } else {
+            // Fallback to default implementation
+      }
+   }
+}
+
+// Usage
+OnboardPage(content: AnyView(CustomOnboardingStep()))
+```
