@@ -16,8 +16,8 @@ extension OnboardCover {
     *                any action that needs to be performed after the onboarding
     *                process.
     */
-   public static let defaultOnOnboardingComplete: OnOnboardingComplete = { (_ idx: Int) in
-      Swift.print("default onComplete - idx: \(idx)")
+   public static let defaultOnOnboardingComplete: OnOnboardingComplete = { (pageIndex: Int) in
+      Swift.print("Default onboarding complete at page index: \(pageIndex)")
    }  // Used to trigger login-view
    /**
     * A closure that is called when the onboarding page changes.

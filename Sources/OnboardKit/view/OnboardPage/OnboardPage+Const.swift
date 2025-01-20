@@ -6,7 +6,7 @@ extension OnboardPage {
     * - Description: This constant defines the vertical and horizontal spacing
     *                between elements within the onboarding pages to ensure
     *                consistent layout and visual appeal.
-    * - Fixme: ⚠️️ Rename to xySpacing? or verHorSpacing?
+    * - Fixme: ⚠️️ Rename to xySpacing? or verHorSpacing? or verticalHorizontalSpacing?
     */
    internal static let spacing: CGFloat = 12
    /**
