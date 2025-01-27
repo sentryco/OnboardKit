@@ -10,7 +10,7 @@ import HybridColor
  * - Note: This shows the translucent background that works in preview
  * - Note: You can also put the `needOnboardin`g in a rebinder closure that changes userdefault
  */
-#Preview { // ⚠️️ seems to have issues with GA: (traits: .fixedLayout(width: 680, height: 440))
+#Preview(traits: .fixedLayout(width: 680, height: 440)) {
    @Previewable @State var isInNeedOfOnboarding: Bool = true
    let contentView = {
       OnboardContainer(needsOnboarding: $isInNeedOfOnboarding/*, pageIndex: $curPageIndex*/) { (_ needsOnboarding: Binding<Bool>/*, _ pageIndex: Binding<Int>*/) in
@@ -41,10 +41,10 @@ import HybridColor
    }()
    // ⚠️️ We need to return in preview or else Github actions doesn't build
    #if os(macOS)
-   return contentView.frame(width: 680, height: 440) // Must be here
+   contentView.frame(width: 680, height: 440) // Must be here
    #else
-   return contentView
+   contentView
    #endif
-//   .environment(\.colorScheme, .dark)
+// .environment(\.colorScheme, .dark)
 }
 #endif
