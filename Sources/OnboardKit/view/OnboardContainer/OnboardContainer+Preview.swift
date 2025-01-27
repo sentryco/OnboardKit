@@ -1,5 +1,4 @@
 #if DEBUG
-
 import SwiftUI
 import HybridColor
 /**
@@ -11,7 +10,7 @@ import HybridColor
  * - Note: This shows the translucent background that works in preview
  * - Note: You can also put the `needOnboardin`g in a rebinder closure that changes userdefault
  */
-#Preview(traits: .fixedLayout(width: 680, height: 440)) {
+#Preview { // ⚠️️ seems to have issues with GA: (traits: .fixedLayout(width: 680, height: 440))
    @Previewable @State var isInNeedOfOnboarding: Bool = true
    let contentView = {
       OnboardContainer(needsOnboarding: $isInNeedOfOnboarding/*, pageIndex: $curPageIndex*/) { (_ needsOnboarding: Binding<Bool>/*, _ pageIndex: Binding<Int>*/) in
