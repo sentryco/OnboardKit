@@ -39,7 +39,7 @@ import HybridColor
          Swift.print("isInNeedOfOnboarding:  \(isInNeedOfOnboarding)")
       }
    }()
-   // ⚠️️ We need to return in preview or else Github actions doesn't build
+   // ⚠️️ Avoid return, Github actions doesn't build if it returns
    #if os(macOS)
    contentView.frame(width: 680, height: 440) // Must be here
    #else
