@@ -1,3 +1,5 @@
+#if DEBUG
+
 import SwiftUI
 import HybridColor
 /**
@@ -46,3 +48,4 @@ import HybridColor
    #endif
 //   .environment(\.colorScheme, .dark)
 }
+#endif
