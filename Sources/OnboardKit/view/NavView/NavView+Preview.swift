@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 import HybridColor
 /**
@@ -18,8 +19,9 @@ import HybridColor
          onActionBtnPress: { Swift.print("action") },
          onDismissBtnPress: { Swift.print("dismiss") }
       )
-      #if os(macOS)
+      //#if os(macOS)
       .padding(.horizontal)
-      #endif
+      //#endif
    }
 }
+#endif

@@ -11,7 +11,7 @@ import HybridColor
 #Preview(traits: .fixedLayout(width: 300, height: 300)) {
    @Previewable @State var currentPage: Int = 1
    let numOfPages: Int = 4
-   PreviewContainer {
+   return PreviewContainer {
       ControlOverlay(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
          Swift.print("Prev button pressed")
          currentPage -= 1
