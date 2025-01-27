@@ -1,4 +1,4 @@
-#if os(macOS)
+#if canImport(SwiftUI) && compiler(>=6.0) // ⚠️️ fix for ga bug
 import SwiftUI
 import HybridColor
 /**
