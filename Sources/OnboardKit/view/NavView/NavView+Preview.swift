@@ -1,4 +1,4 @@
-#if os(macOS)
+#if canImport(SwiftUI) && compiler(>=5.9)
 import SwiftUI
 import HybridColor
 /**

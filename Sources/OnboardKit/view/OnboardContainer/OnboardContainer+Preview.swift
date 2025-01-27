@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(SwiftUI) && compiler(>=5.9)
 import SwiftUI
 import HybridColor
 /**
@@ -39,11 +39,10 @@ import HybridColor
          Swift.print("isInNeedOfOnboarding:  \(isInNeedOfOnboarding)")
       }
    }()
-   // ⚠️️ Avoid return, Github actions doesn't build if it returns
    #if os(macOS)
-   contentView.frame(width: 680, height: 440) // Must be here
+   return contentView.frame(width: 680, height: 440) // Must be here
    #else
-   contentView
+   return contentView
    #endif
 // .environment(\.colorScheme, .dark)
 }
