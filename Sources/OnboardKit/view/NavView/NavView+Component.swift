@@ -6,7 +6,11 @@ import PageControl
  */
 extension NavView {
    /**
-    * - Fixme: ⚠️️ add doc
+    * `NavView` Component Extension
+    *
+    * This extension of `NavView` provides the essential UI components for the navigation view,
+    * including the vertical stack that organizes the page control, continue button, and skip button.
+    * It ensures consistent spacing and padding to maintain a cohesive layout throughout the onboarding process.
     */
    var stack: some View {
       VStack(spacing: Self.verticalSpacing) {
