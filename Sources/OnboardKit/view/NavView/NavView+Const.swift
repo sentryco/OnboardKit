@@ -35,15 +35,26 @@ extension NavView {
     */
    typealias OnDismissBtnPress = () -> Void
    /**
-    * - Fixme: ⚠️️ add doc
+    * The vertical spacing between elements in the navigation view.
+    * - Description: This constant defines the vertical spacing used to separate 
+    *                various UI elements within the navigation view, ensuring 
+    *                consistent layout and spacing throughout the onboarding process.
     */
    static let verticalSpacing: CGFloat = 12
    /**
-    * - Fixme: ⚠️️ add doc
+    * The horizontal padding applied to the content of the navigation view.
+    * - Description: This constant defines the horizontal padding that is applied 
+    *                to the content within the navigation view. It ensures that 
+    *                the content is adequately spaced from the edges, providing a 
+    *                balanced and visually appealing layout.
     */
    static let horizontalPadding: CGFloat = 24 // 12
    /**
-    * - Fixme: ⚠️️ add doc
+    * The bottom padding of the navigation view.
+    * - Description: This constant defines the padding applied at the bottom of the 
+    *                navigation view. It ensures that the content does not touch 
+    *                the bottom edge, providing adequate spacing for aesthetic 
+    *                balance and usability.
     */
    static let bottomPadding: CGFloat = 12
 }
