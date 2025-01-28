@@ -1,4 +1,4 @@
-#if canImport(SwiftUI) && compiler(>=6.0) // ⚠️️ fix for ga bug
+#if canImport(SwiftUI) && compiler(>=6.0) && os(macOS) // ⚠️️ fix for ga bug
 import SwiftUI
 import HybridColor
 /**
@@ -11,7 +11,7 @@ import HybridColor
 #Preview(traits: .fixedLayout(width: 300, height: 300)) {
    @Previewable @State var currentPage: Int = 1
    let numOfPages: Int = 4
-   return PreviewContainer {
+   PreviewContainer {
       ControlOverlay(currentPage: $currentPage, numOfPages: numOfPages, onPrevButtonPress: {
          Swift.print("Prev button pressed")
          currentPage -= 1
