@@ -22,8 +22,8 @@ public class ObservableSheet: ObservableObject {
     *                false hides it.
     * - Note: @Published is a property wrapper that automatically notifies any observers (such as SwiftUI views) when the value of the property changes.
     * - Note: this must be public, can't be priv pub. Because we also set it
-    * - Fixme: ⚠️️ Add better abstract? use copilot?
-    * - Fixme: ⚠️️ add info regarding not using @Published vs using it in ObservableObject
+    * - Abstract: Indicates whether the sheet is currently being presented.
+    * - Fixme: ⚠️️ add info regarding not using @Published vs using it in ObservableObject, add discussion via copilot
     */
    @Published public var isPresenting: Bool = false
    /**

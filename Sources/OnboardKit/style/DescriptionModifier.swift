@@ -6,7 +6,7 @@ import HybridColor
  *                description text in onboarding screens, including color
  *                adjustments for light and dark modes, centered text
  *                alignment, and increased line spacing for better readability.
- * - Fixme: ⚠️️ Rename to `OnboardDescModifier`?
+ * - Note: Alt name: `OnboardDescModifier`
  */
 fileprivate struct DescriptionModifier: ViewModifier {
    /**
@@ -15,7 +15,7 @@ fileprivate struct DescriptionModifier: ViewModifier {
     * - Returns: A view with the DescriptionModifier applied
     */
    fileprivate func body(content: Content) -> some View {
-      // - Fixme: ⚠️️ Use a color from Pallet const lib?
+      // - Fixme: ⚠️️ Use a color from Pallet const lib? or move to const?
       let foregroundColor: Color = .init(
          light: .black.opacity(0.8),
          dark: .white.opacity(0.6)
@@ -46,7 +46,7 @@ extension Text {
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
    PreviewContainer {
-      let brand: String = "Apple" // ?? MockGen.randomBrand?.capitalized
+      let brand: String = "Apple" 
       return Text(brand)
          .descriptionStyle
          .padding()

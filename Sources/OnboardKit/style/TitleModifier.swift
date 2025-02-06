@@ -39,7 +39,6 @@ extension Text {
 }
 /**
  * Preview (Dark-mode / Light-mode)
- * - Fixme: ⚠️️ add PreviewContainer
  */
 #Preview(traits: .fixedLayout(width: 400, height: 400)) {
    PreviewContainer {

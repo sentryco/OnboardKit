@@ -21,13 +21,13 @@ fileprivate struct ContinueButtonStyle: ButtonStyle {
    fileprivate let textColor: Color
    /**
     * Body
-    * - Fixme: ⚠️️ we should probably use contentShape for hit area as well, or does the clipshape do the same?
+    * - Fixme: ⚠️️ we should probably use contentShape for hit area as well, or does the clipshape do the same? check with copilot etc
     * - Parameter content: The content view to be modified.
     * - Returns: The modified view with the continue button style applied.
     */
    fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label
-         .frame(maxWidth: .infinity/*, */) // 44
+         .frame(maxWidth: .infinity) // 44
          .padding(.vertical, 16)
          .background(color) // Sets the background color of the button based on the color scheme
          .clipShape(Capsule()) // Clips the button shape to a capsule
@@ -73,7 +73,7 @@ extension Button {
 }
 /**
  * Preview
- * - Fixme: ⚠️️ add PreviewContainer
+ * - Fixme: ⚠️️ add PreviewContainer, yes 
  */
 #Preview(traits: .fixedLayout(width: 340, height: 300)) {
    // The closure is a mechanism to show the two states

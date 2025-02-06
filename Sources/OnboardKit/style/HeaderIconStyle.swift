@@ -8,8 +8,6 @@ import HybridColor
  *                providing a clear and recognizable interactive element.
  * - Note: Used for back and more button in header and in onboarding
  * - Note: Alternative name: `HeaderIconButtonStyle`
- * - Fixme: ⚠️️ doc each variable
- * - Fixme: ⚠️️ Rename to something else
  * ## Examples:
  * IconButtonStyle(strokeColor, backgroundColor, iconColor, size, iconSize)
  */
@@ -85,7 +83,7 @@ extension Button {
     *   - strokeWidth: The width of the stroke around the icon. Defaults to 1.
     * - Fixme: ⚠️️ Move color consts to pallet?
     * - Fixme: ⚠️️ Make this as a view modifier as well?
-    * - Fixme: ⚠️️ Move default vals into const
+    * - Fixme: ⚠️️ Move default vals into struct 
     * - Note: This style is used in the onboarding navigation controls, specifically for the back/previous button that appears at the bottom of onboarding pages. It creates a circular button with an icon and stroke outline that matches the system appearance.
     */
    internal func headerIconStyle(iconName: String, iconSize: CGFloat = 16, padding: CGFloat = 16, iconColor: Color = Color.whiteOrBlack, backgroundColor: Color = Color(light: .lightGray, dark: .darkGray).opacity(0.2), strokeColor: Color = Color.whiteOrBlack.opacity(0.5), strokeWidth: CGFloat = 1) -> some View {
@@ -103,7 +101,7 @@ extension Button {
 }
 /**
  * Preview
- * - Fixme: ⚠️️ add PreviewContainer
+ * - Fixme: ⚠️️ add PreviewContainer, yes
  */
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
    PreviewContainer {

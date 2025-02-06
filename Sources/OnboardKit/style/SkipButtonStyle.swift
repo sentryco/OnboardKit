@@ -10,8 +10,8 @@ import HybridColor
 internal struct SkipButtonStyle: ButtonStyle {
    /**
     * body
-    * - Fixme: ⚠️️ use padding instead of height?
-    * - Fixme: ⚠️️ move height to const?
+    * - Fixme: ⚠️️ Use padding instead of height?
+    * - Fixme: ⚠️️ Move height to const?
     */
    internal func makeBody(configuration: Configuration) -> some View {
       configuration.label
@@ -38,7 +38,7 @@ extension Button {
 fileprivate struct SkipButtonViewModifier: ViewModifier {
    /**
     * body
-    * - Fixme: ⚠️️ move stroke values and padding to const?
+    * - Fixme: ⚠️️ Move stroke values and padding to const?
     */
    fileprivate func body(content: Content) -> some View {
       content

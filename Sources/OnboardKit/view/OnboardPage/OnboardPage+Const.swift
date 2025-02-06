@@ -31,7 +31,7 @@ extension OnboardPage {
     *                ensure that elements do not stretch excessively on larger
     *                screens, maintaining a visually appealing and consistent
     *                layout across different devices.
-    *  - Fixme: ⚠️️ Add abstract
+    * - Abstract: Defines the maximum width that elements in the OnboardPageView can occupy, ensuring a consistent and visually appealing layout across different devices by preventing elements from stretching excessively on larger screens.
     *  - Fixme: ⚠️️ Store in an injectable struct?
     */
    internal static let maxWidth: CGFloat = 500

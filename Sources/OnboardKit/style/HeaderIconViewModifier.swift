@@ -6,9 +6,8 @@ import HybridColor
  *                including icon name, size, color, background color, stroke color,
  *                stroke width, and padding.
  * - Note: Used in many places that has an Icon
- * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc
- * - Fixme: ⚠️️ Rename to something else?
- * - Fixme: ⚠️️ store style in tuple or struct?
+ * - Fixme: ⚠️️ Reuse other modifiers for some of the styling here etc, elaborate?
+ * - Fixme: ⚠️️ store style in tuple or struct? yes
  */
 fileprivate struct HeaderIconViewModifier: ViewModifier {
    /**

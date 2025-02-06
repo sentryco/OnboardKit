@@ -13,13 +13,13 @@ extension ControlOverlay {
     *                'onPrevButtonPress' closure when pressed.
     * - Note: The button has to be setup like it is now.
     * - Note: We can also use: `.chevronButtonStyle(systemName: "chevron.left")`
-    * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
+    * - Note: Alt name: `previousButton`
+    * - Fixme: ⚠️️ Maybe make a button convenience init that just takes action?
     * - Fixme: ⚠️️ Use the arrow icons instead? or fine as is?
     * - Fixme: ⚠️️ Use relative sizing for icon?
-    * - Fixme: ⚠️️ Rename to `previousButton`?
-    * - Fixme: ⚠️️ Move the style into this scope?
-    * - Fixme: ⚠️️ Icon name Move to a const
-    * - Fixme: ⚠️️ use Metric.accessoryIconSize? or const?
+    * - Fixme: ⚠️️ Move the style into this scope? or struct?
+    * - Fixme: ⚠️️ Icon name Move to a const, elaborate?
+    * - Fixme: ⚠️️ use `Metric.accessoryIconSize` or const?
     */
    internal var prevBtn: some View {
       Button(action: { self.onPrevButtonPress?() }) {}
@@ -43,8 +43,8 @@ extension ControlOverlay {
     *                'onNextButtonPress' closure when pressed.
     * - Note: The button has to be setup like it is now.
     * - Note: We can also use: .chevronButtonStyle(systemName: "chevron.right")
-    * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action?
-    * - Fixme: ⚠️️ Rename to nextButton
+    * - Note: Alt name: `nextButton`
+    * - Fixme: ⚠️️ Maybe a make a button convenience init that just takes action? elaborate?
     * - Fixme: ⚠️️ Move iconName to a const
     */
    internal var nextBtn: some View {
@@ -68,7 +68,7 @@ extension ControlOverlay {
    /**
     * Style
     * - Fixme: ⚠️️ Rename to buttonStyle? 👈
-    * - Fixme: ⚠️️ Move type to typealias? 👈 name it ControlOverlayStyle?
+    * - Fixme: ⚠️️ Move type to typealias? 👈 name it ControlOverlayStyle? yes
     */
    fileprivate var style: (iconColor: Color, bgColor: Color, borderColor: Color) {
       let iconColor = Color.whiteOrBlack // Palette.Button.icon

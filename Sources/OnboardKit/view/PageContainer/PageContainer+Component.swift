@@ -7,7 +7,7 @@ import PageControllerView
 extension PageContainer {
    /**
     * This is the pages and the small indicator (iOS)
-    * - Fixme: ⚠️️ add abstract
+    * - Abstract: A TabView component for iOS that enables users to navigate through onboarding pages using swipe gestures, complemented by a visual indicator to display the current page in the onboarding sequence.
     * - Description: This is the TabView for iOS that displays the onboarding
     *                pages with swipe capabilities. It also includes a small
     *                indicator to show the current page in the onboarding

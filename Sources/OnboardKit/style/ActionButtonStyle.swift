@@ -8,7 +8,6 @@ import HybridColor
  *                capsule shape and a clear call-to-action, ensuring high
  *                visibility and accessibility.
  * - Note: similar to `SecondaryButtonStyle`, - Fixme: ⚠️️ reuse that instead?
- * - Fixme: ⚠️️ Move view-modifier into own file? with a preview etc?
  * - Fixme: ⚠️️ Move foregroundColor to buttonstyle?
  * - Fixme: ⚠️️ buttonstyle might not be needed ? .buttonStyle(.plain)
  */
@@ -24,7 +23,7 @@ fileprivate struct ActionButtonStyle: ButtonStyle {
       configuration.label
          .padding()
          .frame(maxWidth: .infinity/*, maxHeight: 44*/) // Padding around text
-//         .padding(.vertical, 12)
+         // .padding(.vertical, 12)
          .font(.system(.body)) // Text
          .foregroundColor(Color.whiteOrBlack)
          .actionButtonViewModifier // Resets button style I think
@@ -36,7 +35,7 @@ fileprivate struct ActionButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Convenient
-    * - Fixme: ⚠️️ Make this a var?
+    * - Fixme: ⚠️️ Make this a var? yepp!
     */
    internal func actionButtonStyle() -> some View {
       let style = ActionButtonStyle()
@@ -59,7 +58,7 @@ fileprivate struct ActionButtonViewModifier: ViewModifier {
                .stroke(Color.whiteOrBlack.opacity(0.8), lineWidth: 2) // Strokes the capsule with a semi-transparent white or black color
          )
          .contentShape(Capsule()) // hit area for the button
-//         .padding(.horizontal, 20) // padding around background
+         // .padding(.horizontal, 20) // padding around background
          // - Fixme: ⚠️️ the max size should be done in the caller no?
          .isMacOrIPad {
             $0.frame(width: 360) // max width for medium or large devices

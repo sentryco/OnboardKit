@@ -5,7 +5,7 @@ import SwiftUI
 extension OnboardPage {
    /**
     * Stack
-    * - Fixme: ⚠️️ add abstract
+    * - Abstract: The Stack component organizes the title, description, and action buttons in a vertical layout, managing spacing and alignment to create a cohesive and user-friendly onboarding interface.
     * - Description: This view stacks the title, description, and action buttons
     *                vertically with custom spacing. It's designed to center these
     *                elements on the screen, providing a clear and focused user
@@ -32,7 +32,7 @@ extension OnboardPage {
 extension OnboardPage {
    /**
     * Top title
-    * - Fixme: ⚠️️ Add abstract
+    * - Abstract: This view displays the title text retrieved from the onboarding model, applying appropriate styling and adapting to different platforms for an optimal user experience.
     * - Description: This section of the code generates the title text for the onboarding view.
     *                The title is fetched from the model and displayed on the screen.
     * - Fixme: ⚠️️ Add padding?
@@ -52,7 +52,8 @@ extension OnboardPage {
    }
    /**
     * Top description
-    * - Fixme: ⚠️️ Add abstract
+        // Start of Selection
+        * - Abstract: This view displays the descriptive text retrieved from the onboarding model, applying appropriate styling and adapting to different platforms for an optimal user experience.
     * - Description: This section of the code generates the description text for the onboarding view.
     *                The description is fetched from the model and displayed on the screen.
     * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad?
@@ -72,7 +73,7 @@ extension OnboardPage {
    }
    /**
     * Create action-buttons (stacked from center vertically)
-    * - Fixme: ⚠️️ add abstract
+    * - Abstract: This view dynamically generates and displays a stack of action buttons based on the actions defined in the onboarding model. Each button is styled consistently and triggers the corresponding action when tapped, ensuring a cohesive and interactive onboarding experience.
     * - Description: This section of the code generates the action buttons
     *                for the onboarding view. Each button corresponds to an
     *                action defined in the model. When a button is clicked, it

@@ -12,7 +12,7 @@ extension OnboardModel {
     * - Note: Consider renaming `OnboardModelAction` to `OnboardInteraction`
     *         to better reflect its purpose of handling user interactions
     *         within the onboarding process.
-    * - Fixme: ⚠️️ add abstract, use copilot
+    * - Abstract: Represents a closure that performs an action within the onboarding model, optionally presenting an `ObservableSheet`.
     */
    public typealias OnboardModelAction = (_ observableSheet: ObservableSheet?) -> Void
    /**
@@ -27,7 +27,7 @@ extension OnboardModel {
     * - Fixme: ⚠️️ Add id again later etc? or use int etc?
     * - Fixme: ⚠️️ Use a struct? move to own file? maybe yes
     * - Fixme: ⚠️️ Consider renaming to `OnboardButtonAction` for clarity and alignment with domain terminology.
-    * - Fixme: ⚠️️ add abstract, use copilot
+    * - Abstract: Represents a single action within the onboarding process, defined by a unique button title and an optional callback function that is executed when the button is triggered.
     */
    public typealias OnboardAction = (
       buttonTitle: String, // Title of the button
