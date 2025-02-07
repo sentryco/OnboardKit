@@ -14,7 +14,7 @@ public struct OnboardContainer<Foreground: View, Background: View>: View {
     * - Description: This binding variable is used to control the visibility of the onboarding view.
     *                If 'needsOnboarding' is true, the onboarding view is displayed to the user. Otherwise,
     *                the main view of the application is shown.
-    * - Fixme: ⚠️️ rename to isOnboardingComplete?
+    * - Fixme: ⚠️️ Rename to isOnboardingComplete?
     */
    @Binding internal var needsOnboarding: Bool // This could potentially also be a state, ad then wrapp the binding in init
    /**
@@ -36,7 +36,7 @@ public struct OnboardContainer<Foreground: View, Background: View>: View {
     *                view). It also initializes the 'needsOnboarding' state
     *                variable based on the user's onboarding status stored in
     *                the PrefsStore.
-    * - Fixme: ⚠️️ Doc why we use viewbuilder etc and escaping, use copilot
+    * - Note: The initializer uses `@ViewBuilder` and `@escaping` closures for the `foreground` and `background` parameters to allow for flexible view composition. The `@ViewBuilder` attribute lets you pass a view-building closure, enabling the creation of complex view hierarchies. The closures are marked as `@escaping` because they are stored and used after the initialization completes, which requires them to outlive the initializer's execution scope.
     * - Parameters:
     *   - foreground: Onboarding cover
     *   - background: App main view

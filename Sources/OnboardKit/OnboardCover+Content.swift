@@ -20,10 +20,10 @@ extension OnboardCover {
     *                indicator, `navView` manages the navigation controls, and
     *                `controlOverlay` provides navigation buttons for macOS users.
     * - Note: The translucency is done in the `OnboardContainer`
+    * - Fixme: ⚠️️ should we call the ignoresSafeArea in the caller instead?
     */
    public var body: some View {
       stack
-      // - Fixme: ⚠️️ should we call the bellow in the caller instead?
       #if os(macOS) // Only for macOS
       .ignoresSafeArea(.all) // ⚠️️ Removes some native default offset etc
       #endif

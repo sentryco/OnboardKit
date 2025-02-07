@@ -95,8 +95,8 @@ extension PageContainer {
     * - Description: This method configures the appearance of the page control
     *                for iOS devices. It sets the current page indicator tint
     *                color to white.
-    * - Fixme: ⚠️️ Can we style the tab component more? is it needed? doc options?
-    * - Fixme: ⚠️️ See legacy project on how to style this more etc, still relevant?
+    * - Fixme: ⚠️️ Can we style the tab component more? is it needed? add doc regarding what we can change?
+    * - Fixme: ⚠️️ Move colors to the Style.swift file that we will inject on init
     */
    fileprivate func setupPageControlAppearance() {
       #if os(iOS)
