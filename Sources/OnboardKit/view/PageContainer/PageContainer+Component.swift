@@ -17,7 +17,7 @@ extension PageContainer {
     *         between iOS and macOS. On iOS, a `TabView` is used with a custom
     *         appearance, while on macOS, a `PageControllerView` is used to
     *         manage the display of pages.
-    * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom?
+    * - Fixme: ⚠️️ Move 120 into a const? or better, embed onboarding in a safeAreaInset, see mainview etc, figure out better way to add space at the bottom? still relevat?
     */
    #if os(iOS)
    internal var tabView: some View {
@@ -56,6 +56,7 @@ extension PageContainer {
          let pageModel: OnboardModel = pageModels[idx] // currentPageIndex
          return AnyView(
             OnboardPage(model: pageModel) // Display the onboarding page with the specified model
+            // fixme: is the bellow still relevant? remove?
             // .offset(y: -14) // ⚠️️ contentInset bug fix (might be NScroller.contentInset) not related to ignoresSafeArea
          )
       }
@@ -68,12 +69,12 @@ extension PageContainer {
 extension PageContainer {
    /**
     * The pages (iOS)
+    * - fixme: add abstract
     * - Description: This is a view that generates the onboarding pages for iOS.
     *                It iterates over the pageModels array and for each element,
     *                it creates an OnboardPageView with the corresponding model.
     *                The tag assigned to each page corresponds to its index in the array,
     *                which helps in tracking the current page during the onboarding process.
-    * - Fixme: ⚠️️ Doc more, use copilot
     */
    #if os(iOS)
    fileprivate var pageView: some View {

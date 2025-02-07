@@ -30,7 +30,8 @@ public struct OnboardCover: View {
     */
    internal let pageModels: OnboardModels
    /**
-    * - Note: Cann be used as a callback so we can add telemetry etc
+    * Fixme: add description
+    * - Note: Can be used as a callback so we can add telemetry etc
     */
    internal var onPageChange: OnOnboardingPageChange?
    /**
@@ -56,7 +57,7 @@ public struct OnboardCover: View {
       self.onComplete = onComplete
    }
 }
-// fixme: remove this, we have gridview for debugging now
+// fixme: remove this, we have gridview for debugging now etc
 public var isOnboardTest: Bool = false // ⚠️️ debug
 // ⚠️️ DEPRECATED
 @available(*, deprecated, renamed: "OnboardCover")

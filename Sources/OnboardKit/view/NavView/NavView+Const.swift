@@ -1,7 +1,7 @@
 import SwiftUI
 /**
  * Const
- * - Fixme: ⚠️️ figure out how to inject consts somehow in the init process etc. ask copilot etc
+ * - Fixme: ⚠️️ figure out how to inject consts somehow in the init process etc. we could have a struct named Titles.swift? and Spacing.swift? ask copilot etc
  */
 extension NavView {
    /**

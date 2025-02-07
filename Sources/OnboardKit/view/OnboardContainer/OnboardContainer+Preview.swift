@@ -13,7 +13,7 @@ import HybridColor
 #Preview(traits: .fixedLayout(width: 680, height: 440)) {
    @Previewable @State var isInNeedOfOnboarding: Bool = true
    let contentView = {
-      OnboardContainer(needsOnboarding: $isInNeedOfOnboarding/*, pageIndex: $curPageIndex*/) { (_ needsOnboarding: Binding<Bool>/*, _ pageIndex: Binding<Int>*/) in
+      OnboardContainer(needsOnboarding: $isInNeedOfOnboarding) { (_ needsOnboarding: Binding<Bool>) in
          OnboardCover(
             pageModels: OnboardModel.dummyModels,
             onPageChange: { (_ idx: Int) in // This line triggers an action when currentPageIndex changes.
@@ -44,6 +44,5 @@ import HybridColor
    #else
    return contentView
    #endif
-// .environment(\.colorScheme, .dark)
 }
 #endif

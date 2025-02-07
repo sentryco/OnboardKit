@@ -7,10 +7,7 @@ import PageControl
 extension NavView {
    /**
     * `NavView` Component Extension
-    *
-    * This extension of `NavView` provides the essential UI components for the navigation view,
-    * including the vertical stack that organizes the page control, continue button, and skip button.
-    * It ensures consistent spacing and padding to maintain a cohesive layout throughout the onboarding process.
+    * - Description: This extension of `NavView` provides the essential UI components for the navigation view, including the vertical stack that organizes the page control, continue button, and skip button. It ensures consistent spacing and padding to maintain a cohesive layout throughout the onboarding process.
     */
    var stack: some View {
       VStack(spacing: Self.verticalSpacing) {
@@ -74,9 +71,8 @@ extension NavView {
     * - Description: The skip button allows the user to bypass the onboarding
     *                process. It is visible on all pages except the last one,
     *                where it is hidden.
-    * - Fixme: ⚠️️ Use const for width etc?
-    * - Fixme: ⚠️️ Move width value to const
-    * - Fixme: ⚠️️ Figure out how to set frame for mac or iPad more cleanly etc
+    * - Fixme: ⚠️️ Use const for width etc? yes. maybe set from init size param struct etc
+    * - Fixme: ⚠️️ Figure out how to set frame for mac or iPad more cleanly etc, elaborate?
     */
    fileprivate var skipButton: some View {
       Button(action: {

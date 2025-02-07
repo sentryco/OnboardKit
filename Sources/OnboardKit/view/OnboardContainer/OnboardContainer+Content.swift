@@ -18,7 +18,7 @@ extension OnboardContainer {
          background() // Main view of the app
          if needsOnboarding { // if needs onboarding add the onboarding views
             underlay // Translucent background
-            foreground($needsOnboarding/*, $pageIndex*/) // Onboarding view
+            foreground($needsOnboarding) // Onboarding view
          }
       }
    }

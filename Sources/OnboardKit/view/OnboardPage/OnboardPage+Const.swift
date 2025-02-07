@@ -6,7 +6,7 @@ extension OnboardPage {
     * - Description: This constant defines the vertical and horizontal spacing
     *                between elements within the onboarding pages to ensure
     *                consistent layout and visual appeal.
-    * - Fixme: ⚠️️ Rename to xySpacing? or verHorSpacing? or verticalHorizontalSpacing?
+    * - Note: Alt name: `xySpacing`, `verHorSpacing`, `verticalHorizontalSpacing`
     */
    internal static let spacing: CGFloat = 12
    /**
@@ -15,7 +15,7 @@ extension OnboardPage {
     *                elements within the onboarding pages. The padding value is
     *                adjusted based on the operating system to ensure optimal
     *                spacing and alignment of content.
-    * - Fixme: ⚠️️ Rename to horizontalPadding
+    * - Note: Alt name: `horizontalPadding`
     */
    internal static let horPadding: CGFloat = {
       #if os(iOS)
@@ -32,11 +32,12 @@ extension OnboardPage {
     *                screens, maintaining a visually appealing and consistent
     *                layout across different devices.
     * - Abstract: Defines the maximum width that elements in the OnboardPageView can occupy, ensuring a consistent and visually appealing layout across different devices by preventing elements from stretching excessively on larger screens.
-    *  - Fixme: ⚠️️ Store in an injectable struct?
+    * - Fixme: ⚠️️ Store in an injectable struct? like Sizes.swift etc?
     */
    internal static let maxWidth: CGFloat = 500
    /**
     * horizontal padding for buttons
+    * - Fixme: ⚠️️ Store in an injectable struct? like Sizes.swift etc?
     */
    internal static let horizontalPadding: CGFloat = 24
 }

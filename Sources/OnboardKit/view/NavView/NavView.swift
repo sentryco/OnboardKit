@@ -19,7 +19,7 @@ struct NavView: View {
     *                onboarding process. It is used to control the navigation and
     *                determine when the navigation buttons should be enabled or
     *                disabled.
-    * - Fixme: ⚠️️ Rename to totNumOf....
+    * - Note: Alt name: `totNumOf...`
     */
    internal let numOfPages: Int
    /**

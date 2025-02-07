@@ -2,7 +2,7 @@ import SwiftUI
 /**
  * Content
  * - Description: Each page consists of a title, description, button column
- * - Fixme: ⚠️️ Maybe make description have the same padding as action button
+ * - Fixme: ⚠️️ Maybe make description have the same padding as action button, still relevant?
  */
 extension OnboardPage {
    /**

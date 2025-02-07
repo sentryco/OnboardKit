@@ -12,7 +12,7 @@ extension OnboardPage {
     *                interface for the onboarding process.
     * - Note: We use Spacers instead of VStack spacing, to have individual control
     *         over spacing, space between text and title and buttons differs etc
-    * - Fixme: ⚠️️ Rename to vStack?
+    * - Note: Alt name: `vStack`
     */
    @ViewBuilder
    internal var stack: some View {
@@ -35,7 +35,7 @@ extension OnboardPage {
     * - Abstract: This view displays the title text retrieved from the onboarding model, applying appropriate styling and adapting to different platforms for an optimal user experience.
     * - Description: This section of the code generates the title text for the onboarding view.
     *                The title is fetched from the model and displayed on the screen.
-    * - Fixme: ⚠️️ Add padding?
+    * - Fixme: ⚠️️ Add padding? for which part?
     */
    @ViewBuilder
    fileprivate var titleTextView: some View {
@@ -56,8 +56,8 @@ extension OnboardPage {
         * - Abstract: This view displays the descriptive text retrieved from the onboarding model, applying appropriate styling and adapting to different platforms for an optimal user experience.
     * - Description: This section of the code generates the description text for the onboarding view.
     *                The description is fetched from the model and displayed on the screen.
-    * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad?
-    * - Fixme: ⚠️️ Add padding?
+    * - Fixme: ⚠️️ Maybe make text bigger for macOS and iPad? move this comment to the style?
+    * - Fixme: ⚠️️ Add padding? elaborate?
     */
    @ViewBuilder
    fileprivate var descriptionTextView: some View {
@@ -81,7 +81,7 @@ extension OnboardPage {
     *                observableSheet as a parameter. This allows for dynamic
     *                control over the presentation of sheets within the
     *                onboarding process.
-    * - Fixme: ⚠️️ Seems like adding type to actions isn't straight forward
+    * - Fixme: ⚠️️ Seems like adding type to actions isn't straight forward, check with copilot?
     */
    @ViewBuilder
    fileprivate var actionButtons: some View {

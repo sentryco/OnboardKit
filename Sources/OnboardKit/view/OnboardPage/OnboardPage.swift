@@ -1,7 +1,7 @@
 import SwiftUI
 /**
  * Standard onboard page
- * - Abstract: The "main-view" for the onboarding
+ * - Abstract: A view that represents a standard onboarding page, displaying content from a provided model and managing user interactions through sheet presentations.
  * - Description: This view represents a single page in the onboarding
  *                process. It uses the provided model to display the page's
  *                title, description, and actions. It also manages the
@@ -12,16 +12,15 @@ import SwiftUI
  * - Note: Design inspo: Neumorphic to button?: https://sarunw.com/posts/swiftui-buttonstyle/
  * - Note: Design inspo: and https://sarunw.com/posts/how-to-create-neomorphism-design-in-swiftui/
  * - Note: Design inspo: and https://github.com/costachung/neumorphic and https://www.figma.com/community/file/1133043795722403790/neumorphism-dark-theme-ui
- * - Fixme: ⚠️️ Maybe we should make each page a view? instead of using data as the model? consider it etc, or use viewmodel observedobject etc?
- * - Fixme: ⚠️️ Improve the abstract with copilot
- * - Fixme: ⚠️️ Rename to OnboardView? or OnboardPage?
+ * - Note: Alt names: `OnboardView`, `OnboardPage`
+ * - Fixme: ⚠️️ Maybe we should make each page a view? instead of using data as the model? consider it etc, or use viewmodel observedobject etc? needs elaboration, how would it look? check with copilot etc?
  */
 internal struct OnboardPage: View {
     /**
      * The model for the onboard page view
      * - Description: This property holds the data model for the onboard page, 
      *                which includes the necessary information to display the content of the page.
-     * - Fixme: ⚠️️ Why is this optional?
+     * - Fixme: ⚠️️ Why is this optional? cosnider just removing the optionality?
      */
    internal let model: OnboardModel?
    /**
@@ -31,7 +30,7 @@ internal struct OnboardPage: View {
     *                It allows for easy control over the presentation and dismissal of sheets,
     *                making it a convenient tool for handling modal views in the onboarding process.
     * - Fixme: ⚠️️ We could get this from the above, some way, still relevant?
-    * - Fixme: ⚠️️ We don't have to pass the entire object down, we can actually just pass the binding etc, see mainview, still relevant?
+    * - Fixme: ⚠️️ We don't have to pass the entire object down, we can actually just pass the binding etc, see mainview, elaborate? still relevant?
     */
    @StateObject internal var observableSheet: ObservableSheet = .init()
 }

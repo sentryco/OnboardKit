@@ -7,8 +7,8 @@ import HybridColor
  *                modes. It helps in visualizing the appearance and
  *                functionality of the navigation controls during the
  *                onboarding process.
- * - Fixme: ⚠️️ Add some extra background with gray tone etc
- * - Fixme: ⚠️️ Add fixed layout again?
+ * - Fixme: ⚠️️ Add some extra background with gray tone etc, or add the newer version of previewcontainer that has that? 
+ * - Fixme: ⚠️️ Add fixed layout again? for macOS etc?
  */
 #Preview { // ⚠️️ We don't need fixed layout for this (traits: .fixedLayout(width: 300, height: 300))
    @Previewable @State var currentPage = 0

@@ -45,6 +45,7 @@ extension OnboardCover {
    }
    /**
     * Page-container (has pages and dots controller) (iOS / macOS)
+    * - fixme: add abstract
     * - Description: The `PageContainer` view manages the display of onboarding
     *                pages and the page control indicator. It binds to the
     *                `currentPageIndex` to update the currently visible page and
@@ -68,7 +69,7 @@ extension OnboardCover {
     *                includes both previous and next buttons, allowing users to
     *                move through the onboarding pages at their own pace.
     * - Fixme: ⚠️️ Add the hide and show logic for control-overlay for macos, or less is more? (maybe do it!) just needs activating and some styling, elaborate?
-    * - Fixme: ⚠️️ Should we add this for iPad as well? Probably not?
+    * - Fixme: ⚠️️ Should we add this for iPad as well? Probably not? yepp thats a no, ipad may be opened in narrow window etc, which would make things look strange. also swiping is a well known gesture on ipad etc, add this as a discussion point in the code docs instead?
     */
    #if os(macOS)
    fileprivate var controlOverlay: some View {
