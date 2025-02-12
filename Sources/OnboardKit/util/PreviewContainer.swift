@@ -84,7 +84,7 @@ public struct PreviewContainer<Content: View>: View {
          Spacer()
       })
       .padding(12)
-      .background(Color.blackOrWhite.opacity(1))
+      .background(Color.blackOrWhite)
    }
    .environment(\.colorScheme, .dark) // Sets the environment to dark mode
 }
