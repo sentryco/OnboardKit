@@ -30,7 +30,8 @@ public struct OnboardCover: View {
     */
    internal let pageModels: OnboardModels
    /**
-    * Fixme: add description
+    * Callback signature for when the current page changes
+    * - Description: This is a callback that gets triggered whenever the current page in the onboarding flow changes. It can be used to perform actions like updating UI components or recording analytics data.
     * - Note: Can be used as a callback so we can add telemetry etc
     */
    internal var onPageChange: OnOnboardingPageChange?

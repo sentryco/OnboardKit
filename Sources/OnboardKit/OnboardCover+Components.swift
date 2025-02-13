@@ -45,7 +45,7 @@ extension OnboardCover {
    }
    /**
     * Page-container (has pages and dots controller) (iOS / macOS)
-    * - fixme: add abstract
+    * - Abstract: A container view that displays onboarding pages and their page indicators.
     * - Description: The `PageContainer` view manages the display of onboarding
     *                pages and the page control indicator. It binds to the
     *                `currentPageIndex` to update the currently visible page and

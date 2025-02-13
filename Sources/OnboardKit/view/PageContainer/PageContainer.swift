@@ -20,7 +20,7 @@ import PageControllerView
  */
 internal struct PageContainer: View {
    /**
-    * - fixme: add abstract
+    * - Abstract: Binding to the index of the current onboarding page.
     * - Description: The PageContainer struct is a view that displays the
     *                onboarding pages with a dot component and swipe
     *                capabilities. It also keeps track of the current page
@@ -28,7 +28,7 @@ internal struct PageContainer: View {
     */
    @Binding internal var currentPageIndex: Int
    /**
-    * - fixme: add abstract
+    * - Abstract: An array of models representing the onboarding pages.
     * - Description: This binding variable keeps track of the current page index in the onboarding process.
     */
    internal let pageModels: OnboardModels

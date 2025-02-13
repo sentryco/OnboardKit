@@ -69,7 +69,7 @@ extension PageContainer {
 extension PageContainer {
    /**
     * The pages (iOS)
-    * - fixme: add abstract
+    * - Abstract: Generates the onboarding pages for iOS by iterating through the page models and creating corresponding OnboardPage views. It assigns a unique tag to each page to track the current page index during the onboarding process.
     * - Description: This is a view that generates the onboarding pages for iOS.
     *                It iterates over the pageModels array and for each element,
     *                it creates an OnboardPageView with the corresponding model.
@@ -95,7 +95,7 @@ extension PageContainer {
     * - Description: This method configures the appearance of the page control
     *                for iOS devices. It sets the current page indicator tint
     *                color to white.
-    * - Fixme: ⚠️️ Can we style the tab component more? is it needed? add doc regarding what we can change?
+    * - Fixme: ⚠️️ Can we style the tab component more? is it needed? add info regarding what we can change?
     * - Fixme: ⚠️️ Move colors to the Style.swift file that we will inject on init
     */
    fileprivate func setupPageControlAppearance() {
